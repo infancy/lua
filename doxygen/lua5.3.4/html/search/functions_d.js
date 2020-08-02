@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['need_5fvalue_3038',['need_value',['../lcode_8c.html#af4b1d063270645304b0642c1f1d79cb3',1,'lcode.c']]],
+  ['negatecondition_3039',['negatecondition',['../lcode_8c.html#a70d4b286b84e3322bb81af111b5c3a77',1,'lcode.c']]],
+  ['new_5flocalvar_3040',['new_localvar',['../lparser_8c.html#a574ef1fc07450a9bb947badea9f1f7d6',1,'lparser.c']]],
+  ['new_5flocalvarliteral_5f_3041',['new_localvarliteral_',['../lparser_8c.html#a6d7842332c47d1f9dc803977228e4179',1,'lparser.c']]],
+  ['newbox_3042',['newbox',['../lauxlib_8c.html#a48ce842bce537df89aa9c13594263c73',1,'lauxlib.c']]],
+  ['newfile_3043',['newfile',['../liolib_8c.html#a57c6c258a611b738f0ef34584ca6e7ab',1,'liolib.c']]],
+  ['newlabelentry_3044',['newlabelentry',['../lparser_8c.html#ac8408d50bc1af7533968d363841bcf27',1,'lparser.c']]],
+  ['newprefile_3045',['newprefile',['../liolib_8c.html#ab456fc51383d039a5a24c702060aba8e',1,'liolib.c']]],
+  ['newupvalue_3046',['newupvalue',['../lparser_8c.html#a840fa0de24ef09efda91ce6ebae3876d',1,'lparser.c']]],
+  ['nextc_3047',['nextc',['../liolib_8c.html#ab75f5f85c38ee22fc9884f0bd7ef836d',1,'liolib.c']]],
+  ['nilk_3048',['nilK',['../lcode_8c.html#a96b95ed8f53ee7aba7c6e81a27df6d63',1,'lcode.c']]],
+  ['noenv_3049',['noenv',['../loadlib_8c.html#a10314b90f6fd35b69745366d3f4961ce',1,'loadlib.c']]],
+  ['nospecials_3050',['nospecials',['../lstrlib_8c.html#a83e7db07fd9aab6eb84c649f0d9f4a0a',1,'lstrlib.c']]],
+  ['numarith_3051',['numarith',['../lobject_8c.html#adf4b8d51ae5cde26912864b83cdf6e36',1,'lobject.c']]],
+  ['numusearray_3052',['numusearray',['../ltable_8c.html#aa1bb1405b21d33c8b3c41b78ef555d22',1,'ltable.c']]],
+  ['numusehash_3053',['numusehash',['../ltable_8c.html#a383b5912900c91c788f78adb36c9d3f9',1,'ltable.c']]]
+];

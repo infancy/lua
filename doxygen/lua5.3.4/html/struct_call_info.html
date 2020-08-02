@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lua5.3.4: CallInfo结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">lua5.3.4
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="struct_call_info-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">CallInfo结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="lstate_8h_source.html">lstate.h</a>&gt;</code></p>
+<div class="dynheader">
+CallInfo 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="struct_call_info__coll__graph.svg" width="1083" height="638"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a378cfb37136fabfe59d1c38071c6c9d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lobject_8h.html#a8ae6e3aac34ea1643f095db7dcfd705d">StkId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_call_info.html#a378cfb37136fabfe59d1c38071c6c9d1">func</a></td></tr>
+<tr class="separator:a378cfb37136fabfe59d1c38071c6c9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae782b06ef00ccfe0720625ffa99b093a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lobject_8h.html#a8ae6e3aac34ea1643f095db7dcfd705d">StkId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_call_info.html#ae782b06ef00ccfe0720625ffa99b093a">top</a></td></tr>
+<tr class="separator:ae782b06ef00ccfe0720625ffa99b093a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3e7558ecf4218dd0e3b367c077733b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_call_info.html">CallInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_call_info.html#a1b3e7558ecf4218dd0e3b367c077733b">previous</a></td></tr>
+<tr class="separator:a1b3e7558ecf4218dd0e3b367c077733b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b69e9acba8caa2d8e833d8a79fdf9d"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_call_info.html">CallInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_call_info.html#a71b69e9acba8caa2d8e833d8a79fdf9d">next</a></td></tr>
+<tr class="separator:a71b69e9acba8caa2d8e833d8a79fdf9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a328434f0958ae44badade61645bb6c8f"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a3de57fb1252ca5d215e9eb7e742711d0"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:ac6823f075eee8c31049605521077f264"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="lobject_8h.html#a8ae6e3aac34ea1643f095db7dcfd705d">StkId</a>&#160;&#160;&#160;<a class="el" href="struct_call_info.html#a7b8303ad59b7ba200cd5e3a26b118fbf">base</a></td></tr>
+<tr class="separator:ac6823f075eee8c31049605521077f264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a06122978197f529f051c84c8412930"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;const <a class="el" href="llimits_8h.html#af6c47c68c1e6b0387c915031e0e681e3">Instruction</a> *&#160;&#160;&#160;<a class="el" href="struct_call_info.html#a4f8b835724037f01569452eab143948f">savedpc</a></td></tr>
+<tr class="separator:a7a06122978197f529f051c84c8412930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de57fb1252ca5d215e9eb7e742711d0"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="struct_call_info.html#abc40d4d8065c84a5cfcc402247aa75a4">l</a></td></tr>
+<tr class="separator:a3de57fb1252ca5d215e9eb7e742711d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12dc09921689856f0d569d982924d975"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a67fd548afb8b899db976f3d94b62ebda"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="lua_8h.html#a4bfd58d9192edfdcb7238de00bd0202c">lua_KFunction</a>&#160;&#160;&#160;<a class="el" href="struct_call_info.html#a861d3b2fbd9d287c22b0d9324f578e7b">k</a></td></tr>
+<tr class="separator:a67fd548afb8b899db976f3d94b62ebda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7b61f260e9fc13faea9bb7bab4eaeb"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;ptrdiff_t&#160;&#160;&#160;<a class="el" href="struct_call_info.html#ae18597139d0d00b65683efed8ccd3c64">old_errfunc</a></td></tr>
+<tr class="separator:a2e7b61f260e9fc13faea9bb7bab4eaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a162955f02cac3daf4d1ec9ac608d747f"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="lua_8h.html#a0c565e13b66764da08aa2c68fe4365f0">lua_KContext</a>&#160;&#160;&#160;<a class="el" href="struct_call_info.html#a7c410e045297e80c91e9737f959e7ef9">ctx</a></td></tr>
+<tr class="separator:a162955f02cac3daf4d1ec9ac608d747f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12dc09921689856f0d569d982924d975"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="struct_call_info.html#a279a9240249848f39c9126970e77d70d">c</a></td></tr>
+<tr class="separator:a12dc09921689856f0d569d982924d975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a328434f0958ae44badade61645bb6c8f"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_call_info.html#a328434f0958ae44badade61645bb6c8f">u</a></td></tr>
+<tr class="separator:a328434f0958ae44badade61645bb6c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ebaf591a47102099de117ef0e29d0b9"><td class="memItemLeft" align="right" valign="top">ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_call_info.html#a6ebaf591a47102099de117ef0e29d0b9">extra</a></td></tr>
+<tr class="separator:a6ebaf591a47102099de117ef0e29d0b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0955b3fe49462610d53f082ac3cdac0e"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_call_info.html#a0955b3fe49462610d53f082ac3cdac0e">nresults</a></td></tr>
+<tr class="separator:a0955b3fe49462610d53f082ac3cdac0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4a0c29c9872277adb03d946a392d31"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_call_info.html#acc4a0c29c9872277adb03d946a392d31">callstatus</a></td></tr>
+<tr class="separator:acc4a0c29c9872277adb03d946a392d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a7b8303ad59b7ba200cd5e3a26b118fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8303ad59b7ba200cd5e3a26b118fbf">&#9670;&nbsp;</a></span>base</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lobject_8h.html#a8ae6e3aac34ea1643f095db7dcfd705d">StkId</a> CallInfo::base</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a279a9240249848f39c9126970e77d70d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a279a9240249848f39c9126970e77d70d">&#9670;&nbsp;</a></span>c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  CallInfo::c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc4a0c29c9872277adb03d946a392d31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc4a0c29c9872277adb03d946a392d31">&#9670;&nbsp;</a></span>callstatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short CallInfo::callstatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c410e045297e80c91e9737f959e7ef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c410e045297e80c91e9737f959e7ef9">&#9670;&nbsp;</a></span>ctx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lua_8h.html#a0c565e13b66764da08aa2c68fe4365f0">lua_KContext</a> CallInfo::ctx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ebaf591a47102099de117ef0e29d0b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ebaf591a47102099de117ef0e29d0b9">&#9670;&nbsp;</a></span>extra</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ptrdiff_t CallInfo::extra</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a378cfb37136fabfe59d1c38071c6c9d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378cfb37136fabfe59d1c38071c6c9d1">&#9670;&nbsp;</a></span>func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lobject_8h.html#a8ae6e3aac34ea1643f095db7dcfd705d">StkId</a> CallInfo::func</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a861d3b2fbd9d287c22b0d9324f578e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a861d3b2fbd9d287c22b0d9324f578e7b">&#9670;&nbsp;</a></span>k</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lua_8h.html#a4bfd58d9192edfdcb7238de00bd0202c">lua_KFunction</a> CallInfo::k</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc40d4d8065c84a5cfcc402247aa75a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc40d4d8065c84a5cfcc402247aa75a4">&#9670;&nbsp;</a></span>l</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  CallInfo::l</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71b69e9acba8caa2d8e833d8a79fdf9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b69e9acba8caa2d8e833d8a79fdf9d">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_call_info.html">CallInfo</a> * CallInfo::next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0955b3fe49462610d53f082ac3cdac0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0955b3fe49462610d53f082ac3cdac0e">&#9670;&nbsp;</a></span>nresults</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short CallInfo::nresults</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae18597139d0d00b65683efed8ccd3c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18597139d0d00b65683efed8ccd3c64">&#9670;&nbsp;</a></span>old_errfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ptrdiff_t CallInfo::old_errfunc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b3e7558ecf4218dd0e3b367c077733b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3e7558ecf4218dd0e3b367c077733b">&#9670;&nbsp;</a></span>previous</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_call_info.html">CallInfo</a>* CallInfo::previous</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f8b835724037f01569452eab143948f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f8b835724037f01569452eab143948f">&#9670;&nbsp;</a></span>savedpc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="llimits_8h.html#af6c47c68c1e6b0387c915031e0e681e3">Instruction</a>* CallInfo::savedpc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae782b06ef00ccfe0720625ffa99b093a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae782b06ef00ccfe0720625ffa99b093a">&#9670;&nbsp;</a></span>top</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lobject_8h.html#a8ae6e3aac34ea1643f095db7dcfd705d">StkId</a> CallInfo::top</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a328434f0958ae44badade61645bb6c8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a328434f0958ae44badade61645bb6c8f">&#9670;&nbsp;</a></span>u</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... }  CallInfo::u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>D:/desktop/read/lua/<a class="el" href="lstate_8h_source.html">lstate.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

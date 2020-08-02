@@ -1,0 +1,39 @@
+<map id="luaL_buffinit" name="luaL_buffinit">
+<area shape="rect" id="node1" title=" " alt="" coords="969,588,1060,615"/>
+<area shape="rect" id="node2" href="$loadlib_8c.html#aeea4101591c7cab25273f4dfe7d811d6" title=" " alt="" coords="825,81,903,108"/>
+<area shape="rect" id="node4" href="$lauxlib_8h.html#ab8f18fe563cab9ea411ae84d2c1c2518" title=" " alt="" coords="807,183,921,209"/>
+<area shape="rect" id="node10" href="$lauxlib_8h.html#a46672be75da57e1a464c5c6d80f19064" title=" " alt="" coords="823,360,905,387"/>
+<area shape="rect" id="node16" href="$loadlib_8c.html#a9aa5433859d896c2db1a7af366e04b65" title=" " alt="" coords="672,411,759,437"/>
+<area shape="rect" id="node21" href="$loslib_8c.html#a6520f2562b500aee87a6a475995adefb" title=" " alt="" coords="830,461,898,488"/>
+<area shape="rect" id="node22" href="$liolib_8c.html#a48a16089fed2e802a76635a3f8bfe8e3" title=" " alt="" coords="831,512,897,539"/>
+<area shape="rect" id="node30" href="$liolib_8c.html#a6735c0513432f83bfa1b88b056ab379b" title=" " alt="" coords="821,563,907,589"/>
+<area shape="rect" id="node31" href="$liolib_8c.html#ae697e23c2b1ea23d8935f579aa21200c" title=" " alt="" coords="827,613,901,640"/>
+<area shape="rect" id="node32" href="$lstrlib_8c.html#abc94e3a13f1b6ddb2c9b20c9fd89e87f" title=" " alt="" coords="826,664,902,691"/>
+<area shape="rect" id="node33" href="$lstrlib_8c.html#ae26a9374857058119e59d0328208c2f2" title=" " alt="" coords="824,715,904,741"/>
+<area shape="rect" id="node34" href="$lstrlib_8c.html#a42337c674d265175bcc2b2f3809c7339" title=" " alt="" coords="828,765,900,792"/>
+<area shape="rect" id="node35" href="$lstrlib_8c.html#abcf8553ae8937fd4f4bf85c72f528710" title=" " alt="" coords="828,816,900,843"/>
+<area shape="rect" id="node36" href="$ltablib_8c.html#add6973c515a288f41265aca8e0ae6412" title=" " alt="" coords="831,867,897,893"/>
+<area shape="rect" id="node37" href="$lutf8lib_8c.html#a7269a837d8746044cb3f33e6db94b00f" title=" " alt="" coords="833,917,895,944"/>
+<area shape="rect" id="node3" href="$loadlib_8c.html#a136874f5faa236dc52fb50109281e157" title=" " alt="" coords="678,5,753,32"/>
+<area shape="rect" id="node5" href="$lstrlib_8c.html#a3f7db8b2258dca5459ad52d2cbf9f28c" title=" " alt="" coords="681,56,750,83"/>
+<area shape="rect" id="node6" href="$lstrlib_8c.html#ab2235f81205d0482d03c8ae456a98992" title=" " alt="" coords="678,107,753,133"/>
+<area shape="rect" id="node7" href="$lstrlib_8c.html#acaee4c84f29e2ec7366728ca04d3569c" title=" " alt="" coords="684,157,747,184"/>
+<area shape="rect" id="node8" href="$lstrlib_8c.html#a4b2ffac60e817b9bfc54b32f8da3a6b4" title=" " alt="" coords="673,208,758,235"/>
+<area shape="rect" id="node9" href="$lstrlib_8c.html#a38ed99b74af58070449ca344a7351f6a" title=" " alt="" coords="677,259,753,285"/>
+<area shape="rect" id="node11" href="$loadlib_8c.html#a91ac5b5231cf039af46226806dcc3884" title=" " alt="" coords="539,360,610,387"/>
+<area shape="rect" id="node20" href="$loadlib_8c.html#ad3773b767d767b19dc36cab61cf5c57d" title=" " alt="" coords="215,323,280,349"/>
+<area shape="rect" id="node12" href="$loadlib_8c.html#a9a915ea950c831cee2f1e7b0a3bd9005" title=" " alt="" coords="378,360,466,387"/>
+<area shape="rect" id="node15" href="$loadlib_8c.html#a1ec05cd98a045c271aeda9f9c6041e1c" title=" " alt="" coords="367,411,477,437"/>
+<area shape="rect" id="node13" href="$loadlib_8c.html#a8fc66c8b852ee2960dc20797521d1d9e" title=" " alt="" coords="176,385,319,412"/>
+<area shape="rect" id="node14" href="$lualib_8h.html#a05e0befc0439f926b6152129ab4f8dea" title=" " alt="" coords="5,355,128,381"/>
+<area shape="rect" id="node17" href="$loadlib_8c.html#af8f7333f1a59f3d7aab8c9b79b7a4ab2" title=" " alt="" coords="545,411,604,437"/>
+<area shape="rect" id="node19" href="$loadlib_8c.html#a3e9eb01c860846336b6f50d6c77448a2" title=" " alt="" coords="525,461,624,488"/>
+<area shape="rect" id="node18" href="$loadlib_8c.html#a8b2f1d86fe37c0829143579a6b568243" title=" " alt="" coords="372,461,472,488"/>
+<area shape="rect" id="node23" href="$liolib_8c.html#addece2406777a40f0f591e3518293932" title=" " alt="" coords="685,563,746,589"/>
+<area shape="rect" id="node24" href="$liolib_8c.html#add5250a74576076467531e4eb8f5f68e" title=" " alt="" coords="546,512,603,539"/>
+<area shape="rect" id="node25" href="$liolib_8c.html#a45307aa59a628966c6ea270e9b476d9a" title=" " alt="" coords="543,563,607,589"/>
+<area shape="rect" id="node26" href="$liolib_8c.html#ac37d80ee2cc364b4adafcb6f7c20f28b" title=" " alt="" coords="533,613,617,640"/>
+<area shape="rect" id="node27" href="$liolib_8c.html#a66325940a0248cee288153edb061c0c4" title=" " alt="" coords="383,613,461,640"/>
+<area shape="rect" id="node28" href="$liolib_8c.html#a6a36f72d8b3966c1ebafab8a4791cb6c" title=" " alt="" coords="218,588,277,615"/>
+<area shape="rect" id="node29" href="$liolib_8c.html#ab08031b51605d4ef676ec33a3b96a286" title=" " alt="" coords="214,639,281,665"/>
+</map>

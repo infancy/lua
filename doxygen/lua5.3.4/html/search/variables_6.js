@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['g_3292',['g',['../struct_l_g.html#a3be25175d7c64b86674fdcc303b2148c',1,'LG']]],
+  ['gc_3293',['gc',['../union_value.html#afc72971d7fb256f8286b0a763be3e543',1,'Value::gc()'],['../union_g_c_union.html#a13ae493ad805f4272526bbb154ea469e',1,'GCUnion::gc()']]],
+  ['gcdebt_3294',['GCdebt',['../structglobal___state.html#a238d1f76279f013961d01abb93a74a47',1,'global_State']]],
+  ['gcestimate_3295',['GCestimate',['../structglobal___state.html#ae23429c806265058502b09625ba3249f',1,'global_State']]],
+  ['gcfinnum_3296',['gcfinnum',['../structglobal___state.html#abd905b3cd2c5c626e0bdb94b5339383c',1,'global_State']]],
+  ['gckind_3297',['gckind',['../structglobal___state.html#acf4c834918cf4766f13dd91306360802',1,'global_State']]],
+  ['gclist_3298',['gclist',['../struct_proto.html#a7991ec396b493a42b5c7f38b4e162959',1,'Proto::gclist()'],['../struct_table.html#a1b6f3d76efed2011a36ee7c78f65aa70',1,'Table::gclist()'],['../structlua___state.html#a0d446661e92287c8409076c970771217',1,'lua_State::gclist()']]],
+  ['gcmemtrav_3299',['GCmemtrav',['../structglobal___state.html#a772d53fa9c456c43ed8196948214f07e',1,'global_State']]],
+  ['gcpause_3300',['gcpause',['../structglobal___state.html#ac043711149aed55ef1d8b911e795b04d',1,'global_State']]],
+  ['gcrunning_3301',['gcrunning',['../structglobal___state.html#a2e17e6957e466e8c99c1d8d89701cd12',1,'global_State']]],
+  ['gcstate_3302',['gcstate',['../structglobal___state.html#aea4d494b8b9accef389f2be8830f7a84',1,'global_State']]],
+  ['gcstepmul_3303',['gcstepmul',['../structglobal___state.html#acd2271d481c60fa86f30577f88227e1e',1,'global_State']]],
+  ['globall_3304',['globalL',['../lua_8c.html#af2f256e94f7ca1748abb736e9b311cc4',1,'lua.c']]],
+  ['gray_3305',['gray',['../structglobal___state.html#a2d96e2afbc62ff832ab660ed4c357696',1,'global_State']]],
+  ['grayagain_3306',['grayagain',['../structglobal___state.html#a2ccaa5d2e98c086489c04e2045082535',1,'global_State']]],
+  ['gt_3307',['gt',['../struct_dyndata.html#a0e4b4f8cf1af3f8e4398e705f22e09cb',1,'Dyndata']]]
+];

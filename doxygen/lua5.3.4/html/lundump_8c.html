@@ -1,0 +1,1065 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lua5.3.4: D:/desktop/read/lua/lundump.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">lua5.3.4
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1d77ce7c9f7e81c3be5142cf18682616.html">lua</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">lundump.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lprefix_8h_source.html">lprefix.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="lua_8h_source.html">lua.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ldebug_8h_source.html">ldebug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ldo_8h_source.html">ldo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lfunc_8h_source.html">lfunc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lmem_8h_source.html">lmem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lobject_8h_source.html">lobject.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lstring_8h_source.html">lstring.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lundump_8h_source.html">lundump.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lzio_8h_source.html">lzio.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+lundump.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c__incl.svg" width="1008" height="724"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_load_state.html">LoadState</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:aa480de4ebd1ff43b613879e98ab2bcd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#aa480de4ebd1ff43b613879e98ab2bcd8">lundump_c</a></td></tr>
+<tr class="separator:aa480de4ebd1ff43b613879e98ab2bcd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0b3947b59218777a8e928a10be205b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#abf0b3947b59218777a8e928a10be205b">LUA_CORE</a></td></tr>
+<tr class="separator:abf0b3947b59218777a8e928a10be205b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b48fe97157a282aaef3aaab996f457"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#ad9b48fe97157a282aaef3aaab996f457">luai_verifycode</a>(L,  b,  f)&#160;&#160;&#160;/* empty */</td></tr>
+<tr class="separator:ad9b48fe97157a282aaef3aaab996f457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58315c7a22483217ca3d7c2aeecd962"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#ae58315c7a22483217ca3d7c2aeecd962">LoadVector</a>(S,  b,  n)&#160;&#160;&#160;<a class="el" href="lundump_8c.html#a7a5d13b3653a25432f167162f585ffa4">LoadBlock</a>(S, b, (n) * sizeof((b)[0]))</td></tr>
+<tr class="separator:ae58315c7a22483217ca3d7c2aeecd962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a556b2b40a69c0b870ca1c3b46643a4f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a556b2b40a69c0b870ca1c3b46643a4f9">LoadVar</a>(S,  x)&#160;&#160;&#160;<a class="el" href="lundump_8c.html#ae58315c7a22483217ca3d7c2aeecd962">LoadVector</a>(S, &amp;x, 1)</td></tr>
+<tr class="separator:a556b2b40a69c0b870ca1c3b46643a4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a022b57a9b68e60fd3daa99a557d9b92f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a022b57a9b68e60fd3daa99a557d9b92f">checksize</a>(S,  t)&#160;&#160;&#160;<a class="el" href="lundump_8c.html#adc6b144eed9f7f11d35f27ef83901e99">fchecksize</a>(S, sizeof(t), #t)</td></tr>
+<tr class="separator:a022b57a9b68e60fd3daa99a557d9b92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a4359a67dfcb96fbedf2becab47365599"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="llimits_8h.html#a9f743fcc9a5278cb9ee10355f09f7302">l_noret</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a4359a67dfcb96fbedf2becab47365599">error</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, const char *why)</td></tr>
+<tr class="separator:a4359a67dfcb96fbedf2becab47365599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5d13b3653a25432f167162f585ffa4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a7a5d13b3653a25432f167162f585ffa4">LoadBlock</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, void *b, size_t size)</td></tr>
+<tr class="separator:a7a5d13b3653a25432f167162f585ffa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a4db284ed54b608e8e95e1404be2a8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="llimits_8h.html#ae1fe9ac10d9803bd1d7bdf30b18bad68">lu_byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#aa6a4db284ed54b608e8e95e1404be2a8">LoadByte</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S)</td></tr>
+<tr class="separator:aa6a4db284ed54b608e8e95e1404be2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0e8462baca39c1599c55689ab68d49"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a9f0e8462baca39c1599c55689ab68d49">LoadInt</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S)</td></tr>
+<tr class="separator:a9f0e8462baca39c1599c55689ab68d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a373560dc80f918430160b6aefdd690af"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a373560dc80f918430160b6aefdd690af">LoadNumber</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S)</td></tr>
+<tr class="separator:a373560dc80f918430160b6aefdd690af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160d628b681eb8c6dd09ea1924fb2e81"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a160d628b681eb8c6dd09ea1924fb2e81">LoadInteger</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S)</td></tr>
+<tr class="separator:a160d628b681eb8c6dd09ea1924fb2e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b73637582e9f1a3ee8991124d47ce0d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_t_string.html">TString</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a4b73637582e9f1a3ee8991124d47ce0d">LoadString</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, <a class="el" href="struct_proto.html">Proto</a> *p)</td></tr>
+<tr class="separator:a4b73637582e9f1a3ee8991124d47ce0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf31b58c8223f0aaed42909670403b2d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#adf31b58c8223f0aaed42909670403b2d">LoadCode</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, <a class="el" href="struct_proto.html">Proto</a> *f)</td></tr>
+<tr class="separator:adf31b58c8223f0aaed42909670403b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb80904e547ca41184ece3351e61f05d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#adb80904e547ca41184ece3351e61f05d">LoadFunction</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, <a class="el" href="struct_proto.html">Proto</a> *f, <a class="el" href="struct_t_string.html">TString</a> *psource)</td></tr>
+<tr class="separator:adb80904e547ca41184ece3351e61f05d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1854dcefef99e90599873a480c49da5f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a1854dcefef99e90599873a480c49da5f">LoadConstants</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, <a class="el" href="struct_proto.html">Proto</a> *f)</td></tr>
+<tr class="separator:a1854dcefef99e90599873a480c49da5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7e793e9d9afdc0da0bb8540a3f556b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a0b7e793e9d9afdc0da0bb8540a3f556b">LoadProtos</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, <a class="el" href="struct_proto.html">Proto</a> *f)</td></tr>
+<tr class="separator:a0b7e793e9d9afdc0da0bb8540a3f556b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a841d820b1d5922371773399d275dfe42"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a841d820b1d5922371773399d275dfe42">LoadUpvalues</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, <a class="el" href="struct_proto.html">Proto</a> *f)</td></tr>
+<tr class="separator:a841d820b1d5922371773399d275dfe42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f9807f8a7395e26b0bce7b7f208d20"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a89f9807f8a7395e26b0bce7b7f208d20">LoadDebug</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, <a class="el" href="struct_proto.html">Proto</a> *f)</td></tr>
+<tr class="separator:a89f9807f8a7395e26b0bce7b7f208d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005ddaa01fdc44c5223b2b641fcb1653"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a005ddaa01fdc44c5223b2b641fcb1653">checkliteral</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, const char *s, const char *msg)</td></tr>
+<tr class="separator:a005ddaa01fdc44c5223b2b641fcb1653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc6b144eed9f7f11d35f27ef83901e99"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#adc6b144eed9f7f11d35f27ef83901e99">fchecksize</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S, size_t size, const char *tname)</td></tr>
+<tr class="separator:adc6b144eed9f7f11d35f27ef83901e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0399a03c281a51786c05a14b74b637"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#aef0399a03c281a51786c05a14b74b637">checkHeader</a> (<a class="el" href="struct_load_state.html">LoadState</a> *S)</td></tr>
+<tr class="separator:aef0399a03c281a51786c05a14b74b637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388a74bf67456b3abf167ef9fc85b3db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_l_closure.html">LClosure</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lundump_8c.html#a388a74bf67456b3abf167ef9fc85b3db">luaU_undump</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, <a class="el" href="lzio_8h.html#a3a6756c936bdfffa304b1d808ce7dc17">ZIO</a> *Z, const char *name)</td></tr>
+<tr class="separator:a388a74bf67456b3abf167ef9fc85b3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a022b57a9b68e60fd3daa99a557d9b92f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a022b57a9b68e60fd3daa99a557d9b92f">&#9670;&nbsp;</a></span>checksize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define checksize</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">S, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="lundump_8c.html#adc6b144eed9f7f11d35f27ef83901e99">fchecksize</a>(S, sizeof(t), #t)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a556b2b40a69c0b870ca1c3b46643a4f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a556b2b40a69c0b870ca1c3b46643a4f9">&#9670;&nbsp;</a></span>LoadVar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LoadVar</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">S, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="lundump_8c.html#ae58315c7a22483217ca3d7c2aeecd962">LoadVector</a>(S, &amp;x, 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae58315c7a22483217ca3d7c2aeecd962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae58315c7a22483217ca3d7c2aeecd962">&#9670;&nbsp;</a></span>LoadVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LoadVector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">S, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="lundump_8c.html#a7a5d13b3653a25432f167162f585ffa4">LoadBlock</a>(S, b, (n) * sizeof((b)[0]))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf0b3947b59218777a8e928a10be205b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0b3947b59218777a8e928a10be205b">&#9670;&nbsp;</a></span>LUA_CORE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUA_CORE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9b48fe97157a282aaef3aaab996f457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b48fe97157a282aaef3aaab996f457">&#9670;&nbsp;</a></span>luai_verifycode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define luai_verifycode</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">L, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">f&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;/* empty */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa480de4ebd1ff43b613879e98ab2bcd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa480de4ebd1ff43b613879e98ab2bcd8">&#9670;&nbsp;</a></span>lundump_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define lundump_c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="aef0399a03c281a51786c05a14b74b637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef0399a03c281a51786c05a14b74b637">&#9670;&nbsp;</a></span>checkHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void checkHeader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_aef0399a03c281a51786c05a14b74b637_cgraph.svg" width="2859" height="923"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_aef0399a03c281a51786c05a14b74b637_icgraph.svg" width="992" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a005ddaa01fdc44c5223b2b641fcb1653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005ddaa01fdc44c5223b2b641fcb1653">&#9670;&nbsp;</a></span>checkliteral()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void checkliteral </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a005ddaa01fdc44c5223b2b641fcb1653_cgraph.svg" width="2716" height="986"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a005ddaa01fdc44c5223b2b641fcb1653_icgraph.svg" width="1128" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4359a67dfcb96fbedf2becab47365599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4359a67dfcb96fbedf2becab47365599">&#9670;&nbsp;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="llimits_8h.html#a9f743fcc9a5278cb9ee10355f09f7302">l_noret</a> error </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>why</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a4359a67dfcb96fbedf2becab47365599_cgraph.svg" width="2580" height="1012"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a4359a67dfcb96fbedf2becab47365599_icgraph.svg" width="1224" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adc6b144eed9f7f11d35f27ef83901e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc6b144eed9f7f11d35f27ef83901e99">&#9670;&nbsp;</a></span>fchecksize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void fchecksize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>tname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_adc6b144eed9f7f11d35f27ef83901e99_cgraph.svg" width="2731" height="998"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7a5d13b3653a25432f167162f585ffa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a5d13b3653a25432f167162f585ffa4">&#9670;&nbsp;</a></span>LoadBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LoadBlock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a7a5d13b3653a25432f167162f585ffa4_cgraph.svg" width="2731" height="886"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa6a4db284ed54b608e8e95e1404be2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a4db284ed54b608e8e95e1404be2a8">&#9670;&nbsp;</a></span>LoadByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="llimits_8h.html#ae1fe9ac10d9803bd1d7bdf30b18bad68">lu_byte</a> LoadByte </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_aa6a4db284ed54b608e8e95e1404be2a8_icgraph.svg" width="1408" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adf31b58c8223f0aaed42909670403b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf31b58c8223f0aaed42909670403b2d">&#9670;&nbsp;</a></span>LoadCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LoadCode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_proto.html">Proto</a> *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_adf31b58c8223f0aaed42909670403b2d_cgraph.svg" width="203" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_adf31b58c8223f0aaed42909670403b2d_icgraph.svg" width="1122" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1854dcefef99e90599873a480c49da5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1854dcefef99e90599873a480c49da5f">&#9670;&nbsp;</a></span>LoadConstants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LoadConstants </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_proto.html">Proto</a> *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a1854dcefef99e90599873a480c49da5f_cgraph.svg" width="1980" height="1071"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a1854dcefef99e90599873a480c49da5f_icgraph.svg" width="1151" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a89f9807f8a7395e26b0bce7b7f208d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f9807f8a7395e26b0bce7b7f208d20">&#9670;&nbsp;</a></span>LoadDebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LoadDebug </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_proto.html">Proto</a> *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a89f9807f8a7395e26b0bce7b7f208d20_cgraph.svg" width="1971" height="1340"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a89f9807f8a7395e26b0bce7b7f208d20_icgraph.svg" width="1128" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adb80904e547ca41184ece3351e61f05d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb80904e547ca41184ece3351e61f05d">&#9670;&nbsp;</a></span>LoadFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LoadFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_proto.html">Proto</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_t_string.html">TString</a> *&#160;</td>
+          <td class="paramname"><em>psource</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_adb80904e547ca41184ece3351e61f05d_cgraph.svg" width="2139" height="1136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_adb80904e547ca41184ece3351e61f05d_icgraph.svg" width="994" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9f0e8462baca39c1599c55689ab68d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0e8462baca39c1599c55689ab68d49">&#9670;&nbsp;</a></span>LoadInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int LoadInt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a9f0e8462baca39c1599c55689ab68d49_icgraph.svg" width="1263" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a160d628b681eb8c6dd09ea1924fb2e81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a160d628b681eb8c6dd09ea1924fb2e81">&#9670;&nbsp;</a></span>LoadInteger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a> LoadInteger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a160d628b681eb8c6dd09ea1924fb2e81_icgraph.svg" width="1288" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a373560dc80f918430160b6aefdd690af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a373560dc80f918430160b6aefdd690af">&#9670;&nbsp;</a></span>LoadNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a> LoadNumber </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a373560dc80f918430160b6aefdd690af_icgraph.svg" width="1294" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0b7e793e9d9afdc0da0bb8540a3f556b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7e793e9d9afdc0da0bb8540a3f556b">&#9670;&nbsp;</a></span>LoadProtos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LoadProtos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_proto.html">Proto</a> *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a0b7e793e9d9afdc0da0bb8540a3f556b_cgraph.svg" width="2271" height="1011"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a0b7e793e9d9afdc0da0bb8540a3f556b_icgraph.svg" width="1130" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4b73637582e9f1a3ee8991124d47ce0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b73637582e9f1a3ee8991124d47ce0d">&#9670;&nbsp;</a></span>LoadString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_t_string.html">TString</a>* LoadString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_proto.html">Proto</a> *&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a4b73637582e9f1a3ee8991124d47ce0d_cgraph.svg" width="1836" height="1242"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a4b73637582e9f1a3ee8991124d47ce0d_icgraph.svg" width="1283" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a841d820b1d5922371773399d275dfe42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a841d820b1d5922371773399d275dfe42">&#9670;&nbsp;</a></span>LoadUpvalues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LoadUpvalues </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_load_state.html">LoadState</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_proto.html">Proto</a> *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a841d820b1d5922371773399d275dfe42_cgraph.svg" width="239" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a841d820b1d5922371773399d275dfe42_icgraph.svg" width="1144" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a388a74bf67456b3abf167ef9fc85b3db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388a74bf67456b3abf167ef9fc85b3db">&#9670;&nbsp;</a></span>luaU_undump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_l_closure.html">LClosure</a>* luaU_undump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lzio_8h.html#a3a6756c936bdfffa304b1d808ce7dc17">ZIO</a> *&#160;</td>
+          <td class="paramname"><em>Z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a388a74bf67456b3abf167ef9fc85b3db_cgraph.svg" width="2151" height="822"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lundump_8c_a388a74bf67456b3abf167ef9fc85b3db_icgraph.svg" width="846" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,1115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lua5.3.4: D:/desktop/read/lua/lobject.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">lua5.3.4
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1d77ce7c9f7e81c3be5142cf18682616.html">lua</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">lobject.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lprefix_8h_source.html">lprefix.h</a>&quot;</code><br />
+<code>#include &lt;locale.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdarg.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="lua_8h_source.html">lua.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lctype_8h_source.html">lctype.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ldebug_8h_source.html">ldebug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ldo_8h_source.html">ldo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lmem_8h_source.html">lmem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lobject_8h_source.html">lobject.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lstate_8h_source.html">lstate.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lstring_8h_source.html">lstring.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lvm_8h_source.html">lvm.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+lobject.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c__incl.svg" width="1300" height="724"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a38dc0318b49040ead76a3cbd8bdc573f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a38dc0318b49040ead76a3cbd8bdc573f">lobject_c</a></td></tr>
+<tr class="separator:a38dc0318b49040ead76a3cbd8bdc573f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0b3947b59218777a8e928a10be205b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#abf0b3947b59218777a8e928a10be205b">LUA_CORE</a></td></tr>
+<tr class="separator:abf0b3947b59218777a8e928a10be205b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d71ac135df4047b2f051fcc7a1f40f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a98d71ac135df4047b2f051fcc7a1f40f">L_MAXLENNUM</a>&#160;&#160;&#160;200</td></tr>
+<tr class="separator:a98d71ac135df4047b2f051fcc7a1f40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35cd00c271dac7479b5a1812648be3a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a35cd00c271dac7479b5a1812648be3a6">MAXBY10</a>&#160;&#160;&#160;<a class="el" href="llimits_8h.html#af17d62ec9e237a7644de6b9b34a48a34">cast</a>(<a class="el" href="lua_8h.html#a2357bdcd9af1aaef0a6895a9c3b7eccf">lua_Unsigned</a>, LUA_MAXINTEGER / 10)</td></tr>
+<tr class="separator:a35cd00c271dac7479b5a1812648be3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a297bd7005980375f9df0c1f8204aca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a3a297bd7005980375f9df0c1f8204aca">MAXLASTD</a>&#160;&#160;&#160;<a class="el" href="llimits_8h.html#a37a9e2c4b53433d34bad0f12a1500c08">cast_int</a>(LUA_MAXINTEGER % 10)</td></tr>
+<tr class="separator:a3a297bd7005980375f9df0c1f8204aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b113179539a4006182c822ee7da5d0c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a1b113179539a4006182c822ee7da5d0c">MAXNUMBER2STR</a>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:a1b113179539a4006182c822ee7da5d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6185afb135442b229d91201b1a3c6eb2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a6185afb135442b229d91201b1a3c6eb2">LL</a>(x)&#160;&#160;&#160;(sizeof(x) / sizeof(char) - 1)</td></tr>
+<tr class="separator:a6185afb135442b229d91201b1a3c6eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa932c88a1737cf31f4e16c6d72254f59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#aa932c88a1737cf31f4e16c6d72254f59">RETS</a>&#160;&#160;&#160;&quot;...&quot;</td></tr>
+<tr class="separator:aa932c88a1737cf31f4e16c6d72254f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a349316092037fdd0773335fab4e15ee8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a349316092037fdd0773335fab4e15ee8">PRE</a>&#160;&#160;&#160;&quot;[string \&quot;&quot;</td></tr>
+<tr class="separator:a349316092037fdd0773335fab4e15ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63cb3834e6075ddad87f8ce324e53988"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a63cb3834e6075ddad87f8ce324e53988">POS</a>&#160;&#160;&#160;&quot;\&quot;]&quot;</td></tr>
+<tr class="separator:a63cb3834e6075ddad87f8ce324e53988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cbd5d41f14d898a5bacbe8935b01d0c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a0cbd5d41f14d898a5bacbe8935b01d0c">addstr</a>(a,  b,  l)&#160;&#160;&#160;(memcpy(a, b, (l) * sizeof(char)), a += (l))</td></tr>
+<tr class="separator:a0cbd5d41f14d898a5bacbe8935b01d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:acbb799248ff2c18c780d58034b448361"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#acbb799248ff2c18c780d58034b448361">luaO_int2fb</a> (unsigned int x)</td></tr>
+<tr class="separator:acbb799248ff2c18c780d58034b448361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343c0628f26c31dfeb37043a67d7cc63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a343c0628f26c31dfeb37043a67d7cc63">luaO_fb2int</a> (int x)</td></tr>
+<tr class="separator:a343c0628f26c31dfeb37043a67d7cc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731a3a2f9db35aaddeadf8cb19d507bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a731a3a2f9db35aaddeadf8cb19d507bd">luaO_ceillog2</a> (unsigned int x)</td></tr>
+<tr class="separator:a731a3a2f9db35aaddeadf8cb19d507bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6eb9701fada64e32960f82c8d24d8da"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#aa6eb9701fada64e32960f82c8d24d8da">intarith</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, int op, <a class="el" href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a> v1, <a class="el" href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a> v2)</td></tr>
+<tr class="separator:aa6eb9701fada64e32960f82c8d24d8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4b8d51ae5cde26912864b83cdf6e36"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#adf4b8d51ae5cde26912864b83cdf6e36">numarith</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, int op, <a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a> v1, <a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a> v2)</td></tr>
+<tr class="separator:adf4b8d51ae5cde26912864b83cdf6e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c6970da5da797534079c9cdef236ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a16c6970da5da797534079c9cdef236ae">luaO_arith</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, int op, const <a class="el" href="lobject_8h.html#acc020f047af0af5832034c2af5d0b0b8">TValue</a> *p1, const <a class="el" href="lobject_8h.html#acc020f047af0af5832034c2af5d0b0b8">TValue</a> *p2, <a class="el" href="lobject_8h.html#acc020f047af0af5832034c2af5d0b0b8">TValue</a> *res)</td></tr>
+<tr class="separator:a16c6970da5da797534079c9cdef236ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73b1325bd3b1a6f9affc08fb46c07ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#ab73b1325bd3b1a6f9affc08fb46c07ec">luaO_hexavalue</a> (int c)</td></tr>
+<tr class="separator:ab73b1325bd3b1a6f9affc08fb46c07ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3234b1ccb9cfbbd0892dcc6190a45876"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a3234b1ccb9cfbbd0892dcc6190a45876">isneg</a> (const char **s)</td></tr>
+<tr class="separator:a3234b1ccb9cfbbd0892dcc6190a45876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58b5660686590a5ed833cc0f89fbe832"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a58b5660686590a5ed833cc0f89fbe832">l_str2dloc</a> (const char *s, <a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a> *result, int mode)</td></tr>
+<tr class="separator:a58b5660686590a5ed833cc0f89fbe832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a331ebab44d182775ef47eeebeeb58dbd"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a331ebab44d182775ef47eeebeeb58dbd">l_str2d</a> (const char *s, <a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a> *result)</td></tr>
+<tr class="separator:a331ebab44d182775ef47eeebeeb58dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f6271088cb629a2359a93c283dc6ce"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#ac5f6271088cb629a2359a93c283dc6ce">l_str2int</a> (const char *s, <a class="el" href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a> *result)</td></tr>
+<tr class="separator:ac5f6271088cb629a2359a93c283dc6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1956c979ca7ff39b07534390714505d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#ab1956c979ca7ff39b07534390714505d">luaO_str2num</a> (const char *s, <a class="el" href="lobject_8h.html#acc020f047af0af5832034c2af5d0b0b8">TValue</a> *o)</td></tr>
+<tr class="separator:ab1956c979ca7ff39b07534390714505d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3136de4693789b08f78aafda9604676"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#af3136de4693789b08f78aafda9604676">luaO_utf8esc</a> (char *buff, unsigned long x)</td></tr>
+<tr class="separator:af3136de4693789b08f78aafda9604676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c5c37438b02ff7efcf8e8dfa98da7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a00c5c37438b02ff7efcf8e8dfa98da7c">luaO_tostring</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, <a class="el" href="lobject_8h.html#a8ae6e3aac34ea1643f095db7dcfd705d">StkId</a> obj)</td></tr>
+<tr class="separator:a00c5c37438b02ff7efcf8e8dfa98da7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa65db03553a5abd73e466d307bb17a37"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#aa65db03553a5abd73e466d307bb17a37">pushstr</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, const char *str, size_t l)</td></tr>
+<tr class="separator:aa65db03553a5abd73e466d307bb17a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83fa444a36d79521e846a766fa083d5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#aa83fa444a36d79521e846a766fa083d5">luaO_pushvfstring</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, const char *fmt, va_list argp)</td></tr>
+<tr class="separator:aa83fa444a36d79521e846a766fa083d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e224db7123c74d695076a96d1bfda61"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a8e224db7123c74d695076a96d1bfda61">luaO_pushfstring</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, const char *fmt,...)</td></tr>
+<tr class="separator:a8e224db7123c74d695076a96d1bfda61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4708cca3615b7fafb7ea4631f486983b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a4708cca3615b7fafb7ea4631f486983b">luaO_chunkid</a> (char *out, const char *source, size_t bufflen)</td></tr>
+<tr class="separator:a4708cca3615b7fafb7ea4631f486983b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a2b29ab1bdd62259b6e5f028e11470d62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="luaconf_8h.html#affa3a74c87c69373c262fdbdc7f97837">LUAI_DDEF</a> const <a class="el" href="lobject_8h.html#acc020f047af0af5832034c2af5d0b0b8">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lobject_8c.html#a2b29ab1bdd62259b6e5f028e11470d62">luaO_nilobject_</a> = { <a class="el" href="lobject_8h.html#ae2c44cfb065c891fb7ee9acefe6fef29">NILCONSTANT</a> }</td></tr>
+<tr class="separator:a2b29ab1bdd62259b6e5f028e11470d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a0cbd5d41f14d898a5bacbe8935b01d0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cbd5d41f14d898a5bacbe8935b01d0c">&#9670;&nbsp;</a></span>addstr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define addstr</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">l&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(memcpy(a, b, (l) * sizeof(char)), a += (l))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98d71ac135df4047b2f051fcc7a1f40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d71ac135df4047b2f051fcc7a1f40f">&#9670;&nbsp;</a></span>L_MAXLENNUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define L_MAXLENNUM&#160;&#160;&#160;200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6185afb135442b229d91201b1a3c6eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6185afb135442b229d91201b1a3c6eb2">&#9670;&nbsp;</a></span>LL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(sizeof(x) / sizeof(char) - 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38dc0318b49040ead76a3cbd8bdc573f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38dc0318b49040ead76a3cbd8bdc573f">&#9670;&nbsp;</a></span>lobject_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define lobject_c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf0b3947b59218777a8e928a10be205b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0b3947b59218777a8e928a10be205b">&#9670;&nbsp;</a></span>LUA_CORE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUA_CORE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35cd00c271dac7479b5a1812648be3a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35cd00c271dac7479b5a1812648be3a6">&#9670;&nbsp;</a></span>MAXBY10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAXBY10&#160;&#160;&#160;<a class="el" href="llimits_8h.html#af17d62ec9e237a7644de6b9b34a48a34">cast</a>(<a class="el" href="lua_8h.html#a2357bdcd9af1aaef0a6895a9c3b7eccf">lua_Unsigned</a>, LUA_MAXINTEGER / 10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a297bd7005980375f9df0c1f8204aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a297bd7005980375f9df0c1f8204aca">&#9670;&nbsp;</a></span>MAXLASTD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAXLASTD&#160;&#160;&#160;<a class="el" href="llimits_8h.html#a37a9e2c4b53433d34bad0f12a1500c08">cast_int</a>(LUA_MAXINTEGER % 10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b113179539a4006182c822ee7da5d0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b113179539a4006182c822ee7da5d0c">&#9670;&nbsp;</a></span>MAXNUMBER2STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAXNUMBER2STR&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63cb3834e6075ddad87f8ce324e53988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63cb3834e6075ddad87f8ce324e53988">&#9670;&nbsp;</a></span>POS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POS&#160;&#160;&#160;&quot;\&quot;]&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a349316092037fdd0773335fab4e15ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a349316092037fdd0773335fab4e15ee8">&#9670;&nbsp;</a></span>PRE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PRE&#160;&#160;&#160;&quot;[string \&quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa932c88a1737cf31f4e16c6d72254f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa932c88a1737cf31f4e16c6d72254f59">&#9670;&nbsp;</a></span>RETS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RETS&#160;&#160;&#160;&quot;...&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="aa6eb9701fada64e32960f82c8d24d8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6eb9701fada64e32960f82c8d24d8da">&#9670;&nbsp;</a></span>intarith()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a> intarith </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a>&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a>&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_aa6eb9701fada64e32960f82c8d24d8da_cgraph.svg" width="1628" height="1238"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_aa6eb9701fada64e32960f82c8d24d8da_icgraph.svg" width="2618" height="847"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3234b1ccb9cfbbd0892dcc6190a45876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3234b1ccb9cfbbd0892dcc6190a45876">&#9670;&nbsp;</a></span>isneg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int isneg </td>
+          <td>(</td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a3234b1ccb9cfbbd0892dcc6190a45876_icgraph.svg" width="1686" height="1215"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a331ebab44d182775ef47eeebeeb58dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331ebab44d182775ef47eeebeeb58dbd">&#9670;&nbsp;</a></span>l_str2d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* l_str2d </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a> *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a331ebab44d182775ef47eeebeeb58dbd_cgraph.svg" width="199" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a331ebab44d182775ef47eeebeeb58dbd_icgraph.svg" width="1578" height="1203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a58b5660686590a5ed833cc0f89fbe832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b5660686590a5ed833cc0f89fbe832">&#9670;&nbsp;</a></span>l_str2dloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* l_str2dloc </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a> *&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a58b5660686590a5ed833cc0f89fbe832_icgraph.svg" width="1704" height="1215"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac5f6271088cb629a2359a93c283dc6ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f6271088cb629a2359a93c283dc6ce">&#9670;&nbsp;</a></span>l_str2int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* l_str2int </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a> *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_ac5f6271088cb629a2359a93c283dc6ce_cgraph.svg" width="240" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_ac5f6271088cb629a2359a93c283dc6ce_icgraph.svg" width="1584" height="1203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a16c6970da5da797534079c9cdef236ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16c6970da5da797534079c9cdef236ae">&#9670;&nbsp;</a></span>luaO_arith()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void luaO_arith </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="lobject_8h.html#acc020f047af0af5832034c2af5d0b0b8">TValue</a> *&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="lobject_8h.html#acc020f047af0af5832034c2af5d0b0b8">TValue</a> *&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lobject_8h.html#acc020f047af0af5832034c2af5d0b0b8">TValue</a> *&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a16c6970da5da797534079c9cdef236ae_cgraph.svg" width="2444" height="1075"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a16c6970da5da797534079c9cdef236ae_icgraph.svg" width="2627" height="847"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a731a3a2f9db35aaddeadf8cb19d507bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731a3a2f9db35aaddeadf8cb19d507bd">&#9670;&nbsp;</a></span>luaO_ceillog2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luaO_ceillog2 </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a731a3a2f9db35aaddeadf8cb19d507bd_icgraph.svg" width="1599" height="899"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4708cca3615b7fafb7ea4631f486983b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4708cca3615b7fafb7ea4631f486983b">&#9670;&nbsp;</a></span>luaO_chunkid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void luaO_chunkid </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>bufflen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a4708cca3615b7fafb7ea4631f486983b_icgraph.svg" width="1358" height="1695"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a343c0628f26c31dfeb37043a67d7cc63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343c0628f26c31dfeb37043a67d7cc63">&#9670;&nbsp;</a></span>luaO_fb2int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luaO_fb2int </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a343c0628f26c31dfeb37043a67d7cc63_icgraph.svg" width="1943" height="1139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab73b1325bd3b1a6f9affc08fb46c07ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73b1325bd3b1a6f9affc08fb46c07ec">&#9670;&nbsp;</a></span>luaO_hexavalue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luaO_hexavalue </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_ab73b1325bd3b1a6f9affc08fb46c07ec_icgraph.svg" width="1743" height="1370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acbb799248ff2c18c780d58034b448361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbb799248ff2c18c780d58034b448361">&#9670;&nbsp;</a></span>luaO_int2fb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luaO_int2fb </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_acbb799248ff2c18c780d58034b448361_icgraph.svg" width="2318" height="1235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8e224db7123c74d695076a96d1bfda61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e224db7123c74d695076a96d1bfda61">&#9670;&nbsp;</a></span>luaO_pushfstring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* luaO_pushfstring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a8e224db7123c74d695076a96d1bfda61_cgraph.svg" width="2484" height="1062"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a8e224db7123c74d695076a96d1bfda61_icgraph.svg" width="1691" height="1544"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa83fa444a36d79521e846a766fa083d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83fa444a36d79521e846a766fa083d5">&#9670;&nbsp;</a></span>luaO_pushvfstring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* luaO_pushvfstring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list&#160;</td>
+          <td class="paramname"><em>argp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_aa83fa444a36d79521e846a766fa083d5_cgraph.svg" width="1872" height="1136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_aa83fa444a36d79521e846a766fa083d5_icgraph.svg" width="1260" height="2102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab1956c979ca7ff39b07534390714505d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1956c979ca7ff39b07534390714505d">&#9670;&nbsp;</a></span>luaO_str2num()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t luaO_str2num </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lobject_8h.html#acc020f047af0af5832034c2af5d0b0b8">TValue</a> *&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_ab1956c979ca7ff39b07534390714505d_cgraph.svg" width="391" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_ab1956c979ca7ff39b07534390714505d_icgraph.svg" width="1468" height="1266"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a00c5c37438b02ff7efcf8e8dfa98da7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c5c37438b02ff7efcf8e8dfa98da7c">&#9670;&nbsp;</a></span>luaO_tostring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void luaO_tostring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lobject_8h.html#a8ae6e3aac34ea1643f095db7dcfd705d">StkId</a>&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a00c5c37438b02ff7efcf8e8dfa98da7c_cgraph.svg" width="1851" height="1250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_a00c5c37438b02ff7efcf8e8dfa98da7c_icgraph.svg" width="1051" height="1479"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af3136de4693789b08f78aafda9604676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3136de4693789b08f78aafda9604676">&#9670;&nbsp;</a></span>luaO_utf8esc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luaO_utf8esc </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_af3136de4693789b08f78aafda9604676_icgraph.svg" width="927" height="2118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adf4b8d51ae5cde26912864b83cdf6e36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4b8d51ae5cde26912864b83cdf6e36">&#9670;&nbsp;</a></span>numarith()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a> numarith </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a>&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a>&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_adf4b8d51ae5cde26912864b83cdf6e36_icgraph.svg" width="2628" height="847"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa65db03553a5abd73e466d307bb17a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa65db03553a5abd73e466d307bb17a37">&#9670;&nbsp;</a></span>pushstr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void pushstr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_aa65db03553a5abd73e466d307bb17a37_cgraph.svg" width="1818" height="1226"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lobject_8c_aa65db03553a5abd73e466d307bb17a37_icgraph.svg" width="894" height="2216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a2b29ab1bdd62259b6e5f028e11470d62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b29ab1bdd62259b6e5f028e11470d62">&#9670;&nbsp;</a></span>luaO_nilobject_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="luaconf_8h.html#affa3a74c87c69373c262fdbdc7f97837">LUAI_DDEF</a> const <a class="el" href="lobject_8h.html#acc020f047af0af5832034c2af5d0b0b8">TValue</a> luaO_nilobject_ = { <a class="el" href="lobject_8h.html#ae2c44cfb065c891fb7ee9acefe6fef29">NILCONSTANT</a> }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

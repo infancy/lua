@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lua5.3.4: D:/desktop/read/lua/lundump.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">lua5.3.4
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1d77ce7c9f7e81c3be5142cf18682616.html">lua</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">lundump.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lundump_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">** $Id: lundump.h,v 1.45.1.1 2017/04/19 17:20:42 roberto Exp $</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">** load precompiled Lua chunks</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">** See Copyright Notice in lua.h</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef lundump_h</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define lundump_h</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="llimits_8h.html">llimits.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lobject_8h.html">lobject.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lzio_8h.html">lzio.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/* data to catch conversion errors */</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define LUAC_DATA &quot;\x19\x93\r\n\x1a\n&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="lundump_8h.html#ad6f33b546a90e78ddb67428b712b48ae">   16</a></span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define LUAC_INT 0x5678</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="lundump_8h.html#af8b5bd7f864ed14aef7a9e7405ce6aad">   18</a></span>&#160;<span class="preprocessor">#define LUAC_NUM cast_num(370.5)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="lundump_8h.html#a83a08bb2d400b526bb4a2f449523dd62">   19</a></span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define MYINT(s)     (s[0] - &#39;0&#39;)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="lundump_8h.html#a8b5a7241ca8624862545e5fdfb94cf3b">   21</a></span>&#160;<span class="preprocessor">#define LUAC_VERSION (MYINT(LUA_VERSION_MAJOR) * 16 + MYINT(LUA_VERSION_MINOR))</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="lundump_8h.html#aaef225d352d4ab1461adc02e4fa027cd">   22</a></span>&#160;<span class="preprocessor">#define LUAC_FORMAT  0 </span><span class="comment">/* this is the official format */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="lundump_8h.html#a1898203259aab6e1d60737b1e95c2adc">   23</a></span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* load one chunk; from lundump.c */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="luaconf_8h.html#a3f43b35a70c93f2cfde1db42a5a24f1e">LUAI_FUNC</a> <a class="code" href="struct_l_closure.html">LClosure</a>* <a class="code" href="lundump_8h.html#ae777344c08970a8fc2de3624c4067dde">luaU_undump</a>(<a class="code" href="structlua___state.html">lua_State</a>* L, <a class="code" href="struct_zio.html">ZIO</a>* Z, <span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/* dump one chunk; from ldump.c */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="luaconf_8h.html#a3f43b35a70c93f2cfde1db42a5a24f1e">LUAI_FUNC</a> <span class="keywordtype">int</span> <a class="code" href="lundump_8h.html#a2b9d33dfd898f6284de183d168556786">luaU_dump</a>(<a class="code" href="structlua___state.html">lua_State</a>* L, <span class="keyword">const</span> <a class="code" href="struct_proto.html">Proto</a>* f, <a class="code" href="lua_8h.html#a855729196d7066b2da21178284868a8d">lua_Writer</a> w, <span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> strip);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="alundump_8c_html_a373560dc80f918430160b6aefdd690af"><div class="ttname"><a href="lundump_8c.html#a373560dc80f918430160b6aefdd690af">LoadNumber</a></div><div class="ttdeci">static lua_Number LoadNumber(LoadState *S)</div><div class="ttdef"><b>Definition:</b> lundump.c:70</div></div>
+<div class="ttc" id="alundump_8h_html_af8b5bd7f864ed14aef7a9e7405ce6aad"><div class="ttname"><a href="lundump_8h.html#af8b5bd7f864ed14aef7a9e7405ce6aad">LUAC_INT</a></div><div class="ttdeci">#define LUAC_INT</div><div class="ttdef"><b>Definition:</b> lundump.h:17</div></div>
+<div class="ttc" id="astruct_proto_html_a028070514796b4accbd99c59e6b83930"><div class="ttname"><a href="struct_proto.html#a028070514796b4accbd99c59e6b83930">Proto::upvalues</a></div><div class="ttdeci">Upvaldesc * upvalues</div><div class="ttdef"><b>Definition:</b> lobject.h:459</div></div>
+<div class="ttc" id="aluaconf_8h_html_a3f43b35a70c93f2cfde1db42a5a24f1e"><div class="ttname"><a href="luaconf_8h.html#a3f43b35a70c93f2cfde1db42a5a24f1e">LUAI_FUNC</a></div><div class="ttdeci">#define LUAI_FUNC</div><div class="ttdef"><b>Definition:</b> luaconf.h:260</div></div>
+<div class="ttc" id="allimits_8h_html_a9f743fcc9a5278cb9ee10355f09f7302"><div class="ttname"><a href="llimits_8h.html#a9f743fcc9a5278cb9ee10355f09f7302">l_noret</a></div><div class="ttdeci">#define l_noret</div><div class="ttdef"><b>Definition:</b> llimits.h:127</div></div>
+<div class="ttc" id="astruct_proto_html_a53b66e4e4ac4b612a41b67a0ace9b6a5"><div class="ttname"><a href="struct_proto.html#a53b66e4e4ac4b612a41b67a0ace9b6a5">Proto::code</a></div><div class="ttdeci">Instruction * code</div><div class="ttdef"><b>Definition:</b> lobject.h:455</div></div>
+<div class="ttc" id="alundump_8c_html_a388a74bf67456b3abf167ef9fc85b3db"><div class="ttname"><a href="lundump_8c.html#a388a74bf67456b3abf167ef9fc85b3db">luaU_undump</a></div><div class="ttdeci">LClosure * luaU_undump(lua_State *L, ZIO *Z, const char *name)</div><div class="ttdef"><b>Definition:</b> lundump.c:252</div></div>
+<div class="ttc" id="astructlua___t_value_html"><div class="ttname"><a href="structlua___t_value.html">lua_TValue</a></div><div class="ttdef"><b>Definition:</b> lobject.h:104</div></div>
+<div class="ttc" id="allimits_8h_html_a54fe4797308d6b24bf84fa0129a155bd"><div class="ttname"><a href="llimits_8h.html#a54fe4797308d6b24bf84fa0129a155bd">LUAI_MAXSHORTLEN</a></div><div class="ttdeci">#define LUAI_MAXSHORTLEN</div><div class="ttdef"><b>Definition:</b> llimits.h:155</div></div>
+<div class="ttc" id="alundump_8c_html_aef0399a03c281a51786c05a14b74b637"><div class="ttname"><a href="lundump_8c.html#aef0399a03c281a51786c05a14b74b637">checkHeader</a></div><div class="ttdeci">static void checkHeader(LoadState *S)</div><div class="ttdef"><b>Definition:</b> lundump.c:230</div></div>
+<div class="ttc" id="alstring_8c_html_ab41fb084ce3ea5e2779f6659ccc2484d"><div class="ttname"><a href="lstring_8c.html#ab41fb084ce3ea5e2779f6659ccc2484d">luaS_newlstr</a></div><div class="ttdeci">TString * luaS_newlstr(lua_State *L, const char *str, size_t l)</div><div class="ttdef"><b>Definition:</b> lstring.c:202</div></div>
+<div class="ttc" id="algc_8h_html_a90ac4f3c7085a418025edcc7215e8983"><div class="ttname"><a href="lgc_8h.html#a90ac4f3c7085a418025edcc7215e8983">luaC_objbarrier</a></div><div class="ttdeci">#define luaC_objbarrier(L, p, o)</div><div class="ttdef"><b>Definition:</b> lgc.h:118</div></div>
+<div class="ttc" id="astruct_loc_var_html_acf62684d78349320b90b4acfa3b6d22a"><div class="ttname"><a href="struct_loc_var.html#acf62684d78349320b90b4acfa3b6d22a">LocVar::varname</a></div><div class="ttdeci">TString * varname</div><div class="ttdef"><b>Definition:</b> lobject.h:432</div></div>
+<div class="ttc" id="astruct_proto_html_a9ef7fae1b22b11f5a145cfee8150059c"><div class="ttname"><a href="struct_proto.html#a9ef7fae1b22b11f5a145cfee8150059c">Proto::lastlinedefined</a></div><div class="ttdeci">int lastlinedefined</div><div class="ttdef"><b>Definition:</b> lobject.h:453</div></div>
+<div class="ttc" id="alua_8h_html_a855729196d7066b2da21178284868a8d"><div class="ttname"><a href="lua_8h.html#a855729196d7066b2da21178284868a8d">lua_Writer</a></div><div class="ttdeci">int(* lua_Writer)(lua_State *L, const void *p, size_t sz, void *ud)</div><div class="ttdef"><b>Definition:</b> lua.h:102</div></div>
+<div class="ttc" id="astruct_proto_html_a54dc8e2e8973007794fa0ab0e4a71461"><div class="ttname"><a href="struct_proto.html#a54dc8e2e8973007794fa0ab0e4a71461">Proto::p</a></div><div class="ttdeci">struct Proto ** p</div><div class="ttdef"><b>Definition:</b> lobject.h:456</div></div>
+<div class="ttc" id="alundump_8c_html_a1854dcefef99e90599873a480c49da5f"><div class="ttname"><a href="lundump_8c.html#a1854dcefef99e90599873a480c49da5f">LoadConstants</a></div><div class="ttdeci">static void LoadConstants(LoadState *S, Proto *f)</div><div class="ttdef"><b>Definition:</b> lundump.c:117</div></div>
+<div class="ttc" id="alua_8h_html_a611808ed12d4c2aee2a9e298a9d9a9bf"><div class="ttname"><a href="lua_8h.html#a611808ed12d4c2aee2a9e298a9d9a9bf">LUA_TBOOLEAN</a></div><div class="ttdeci">#define LUA_TBOOLEAN</div><div class="ttdef"><b>Definition:</b> lua.h:56</div></div>
+<div class="ttc" id="astruct_proto_html_a82302f2e9040b681d5b34c1239dcd673"><div class="ttname"><a href="struct_proto.html#a82302f2e9040b681d5b34c1239dcd673">Proto::is_vararg</a></div><div class="ttdeci">lu_byte is_vararg</div><div class="ttdef"><b>Definition:</b> lobject.h:444</div></div>
+<div class="ttc" id="alundump_8h_html_ad6f33b546a90e78ddb67428b712b48ae"><div class="ttname"><a href="lundump_8h.html#ad6f33b546a90e78ddb67428b712b48ae">LUAC_DATA</a></div><div class="ttdeci">#define LUAC_DATA</div><div class="ttdef"><b>Definition:</b> lundump.h:15</div></div>
+<div class="ttc" id="alua_8h_html_af0a6ed3b852d680769cfc410a0672172"><div class="ttname"><a href="lua_8h.html#af0a6ed3b852d680769cfc410a0672172">lua_Number</a></div><div class="ttdeci">LUA_NUMBER lua_Number</div><div class="ttdef"><b>Definition:</b> lua.h:76</div></div>
+<div class="ttc" id="allimits_8h_html"><div class="ttname"><a href="llimits_8h.html">llimits.h</a></div></div>
+<div class="ttc" id="alzio_8c_html_a8f724436a986edc42726b43aded0759a"><div class="ttname"><a href="lzio_8c.html#a8f724436a986edc42726b43aded0759a">luaZ_read</a></div><div class="ttdeci">size_t luaZ_read(ZIO *z, void *b, size_t n)</div><div class="ttdef"><b>Definition:</b> lzio.c:46</div></div>
+<div class="ttc" id="alundump_8h_html_a2b9d33dfd898f6284de183d168556786"><div class="ttname"><a href="lundump_8h.html#a2b9d33dfd898f6284de183d168556786">luaU_dump</a></div><div class="ttdeci">LUAI_FUNC int luaU_dump(lua_State *L, const Proto *f, lua_Writer w, void *data, int strip)</div><div class="ttdef"><b>Definition:</b> ldump.c:186</div></div>
+<div class="ttc" id="alundump_8c_html_adc6b144eed9f7f11d35f27ef83901e99"><div class="ttname"><a href="lundump_8c.html#adc6b144eed9f7f11d35f27ef83901e99">fchecksize</a></div><div class="ttdeci">static void fchecksize(LoadState *S, size_t size, const char *tname)</div><div class="ttdef"><b>Definition:</b> lundump.c:222</div></div>
+<div class="ttc" id="alundump_8c_html_a89f9807f8a7395e26b0bce7b7f208d20"><div class="ttname"><a href="lundump_8c.html#a89f9807f8a7395e26b0bce7b7f208d20">LoadDebug</a></div><div class="ttdeci">static void LoadDebug(LoadState *S, Proto *f)</div><div class="ttdef"><b>Definition:</b> lundump.c:173</div></div>
+<div class="ttc" id="alundump_8c_html_a022b57a9b68e60fd3daa99a557d9b92f"><div class="ttname"><a href="lundump_8c.html#a022b57a9b68e60fd3daa99a557d9b92f">checksize</a></div><div class="ttdeci">#define checksize(S, t)</div><div class="ttdef"><b>Definition:</b> lundump.c:228</div></div>
+<div class="ttc" id="astruct_upvaldesc_html_a8870289fbc6611275d093ef1c08cf9ed"><div class="ttname"><a href="struct_upvaldesc.html#a8870289fbc6611275d093ef1c08cf9ed">Upvaldesc::name</a></div><div class="ttdeci">TString * name</div><div class="ttdef"><b>Definition:</b> lobject.h:421</div></div>
+<div class="ttc" id="alobject_8h_html_a22e86755164a1bc172b40f344d7ce70e"><div class="ttname"><a href="lobject_8h.html#a22e86755164a1bc172b40f344d7ce70e">setbvalue</a></div><div class="ttdeci">#define setbvalue(obj, x)</div><div class="ttdef"><b>Definition:</b> lobject.h:222</div></div>
+<div class="ttc" id="astruct_proto_html_a43e4d3849b5859112d93bdc2534a7cc0"><div class="ttname"><a href="struct_proto.html#a43e4d3849b5859112d93bdc2534a7cc0">Proto::sizecode</a></div><div class="ttdeci">int sizecode</div><div class="ttdef"><b>Definition:</b> lobject.h:448</div></div>
+<div class="ttc" id="alundump_8c_html_a4359a67dfcb96fbedf2becab47365599"><div class="ttname"><a href="lundump_8c.html#a4359a67dfcb96fbedf2becab47365599">error</a></div><div class="ttdeci">static l_noret error(LoadState *S, const char *why)</div><div class="ttdef"><b>Definition:</b> lundump.c:36</div></div>
+<div class="ttc" id="almem_8h_html_a715cc368a85506c7a104cda58f270f3e"><div class="ttname"><a href="lmem_8h.html#a715cc368a85506c7a104cda58f270f3e">luaM_newvector</a></div><div class="ttdeci">#define luaM_newvector(L, n, t)</div><div class="ttdef"><b>Definition:</b> lmem.h:43</div></div>
+<div class="ttc" id="astruct_proto_html_a73ddad1a18b7c46be46ec32aa2a08632"><div class="ttname"><a href="struct_proto.html#a73ddad1a18b7c46be46ec32aa2a08632">Proto::sizep</a></div><div class="ttdeci">int sizep</div><div class="ttdef"><b>Definition:</b> lobject.h:450</div></div>
+<div class="ttc" id="astruct_proto_html_a92b6ec319e7aa1ee8b8ff7807353ad96"><div class="ttname"><a href="struct_proto.html#a92b6ec319e7aa1ee8b8ff7807353ad96">Proto::source</a></div><div class="ttdeci">TString * source</div><div class="ttdef"><b>Definition:</b> lobject.h:461</div></div>
+<div class="ttc" id="alundump_8h_html_a83a08bb2d400b526bb4a2f449523dd62"><div class="ttname"><a href="lundump_8h.html#a83a08bb2d400b526bb4a2f449523dd62">LUAC_NUM</a></div><div class="ttdeci">#define LUAC_NUM</div><div class="ttdef"><b>Definition:</b> lundump.h:18</div></div>
+<div class="ttc" id="alfunc_8c_html_a20ec9afa92ebc6716c348f7c6cf9312e"><div class="ttname"><a href="lfunc_8c.html#a20ec9afa92ebc6716c348f7c6cf9312e">luaF_newLclosure</a></div><div class="ttdeci">LClosure * luaF_newLclosure(lua_State *L, int n)</div><div class="ttdef"><b>Definition:</b> lfunc.c:30</div></div>
+<div class="ttc" id="alobject_8h_html_af9a67f8fd350ab79a3e3df20920f4f01"><div class="ttname"><a href="lobject_8h.html#af9a67f8fd350ab79a3e3df20920f4f01">LUA_TNUMFLT</a></div><div class="ttdeci">#define LUA_TNUMFLT</div><div class="ttdef"><b>Definition:</b> lobject.h:50</div></div>
+<div class="ttc" id="astruct_loc_var_html_ac5a8bf5a59430eea070db5b1a97d8b88"><div class="ttname"><a href="struct_loc_var.html#ac5a8bf5a59430eea070db5b1a97d8b88">LocVar::startpc</a></div><div class="ttdeci">int startpc</div><div class="ttdef"><b>Definition:</b> lobject.h:433</div></div>
+<div class="ttc" id="astruct_proto_html_a3f106f177af6c68ffd8b042713266b98"><div class="ttname"><a href="struct_proto.html#a3f106f177af6c68ffd8b042713266b98">Proto::numparams</a></div><div class="ttdeci">lu_byte numparams</div><div class="ttdef"><b>Definition:</b> lobject.h:443</div></div>
+<div class="ttc" id="alobject_8h_html_a172ee6a03a4f4298cd82703d094b4e34"><div class="ttname"><a href="lobject_8h.html#a172ee6a03a4f4298cd82703d094b4e34">LUA_TNUMINT</a></div><div class="ttdeci">#define LUA_TNUMINT</div><div class="ttdef"><b>Definition:</b> lobject.h:51</div></div>
+<div class="ttc" id="alundump_8h_html_aaef225d352d4ab1461adc02e4fa027cd"><div class="ttname"><a href="lundump_8h.html#aaef225d352d4ab1461adc02e4fa027cd">LUAC_VERSION</a></div><div class="ttdeci">#define LUAC_VERSION</div><div class="ttdef"><b>Definition:</b> lundump.h:21</div></div>
+<div class="ttc" id="alobject_8h_html_ad9034def7bbc1965ec3d714d84620b07"><div class="ttname"><a href="lobject_8h.html#ad9034def7bbc1965ec3d714d84620b07">setnilvalue</a></div><div class="ttdeci">#define setnilvalue(obj)</div><div class="ttdef"><b>Definition:</b> lobject.h:206</div></div>
+<div class="ttc" id="astruct_proto_html_a62cf1c61b70bfaa4f1fb839b7398160b"><div class="ttname"><a href="struct_proto.html#a62cf1c61b70bfaa4f1fb839b7398160b">Proto::linedefined</a></div><div class="ttdeci">int linedefined</div><div class="ttdef"><b>Definition:</b> lobject.h:452</div></div>
+<div class="ttc" id="alua_8h_html"><div class="ttname"><a href="lua_8h.html">lua.h</a></div></div>
+<div class="ttc" id="alundump_8c_html_a0b7e793e9d9afdc0da0bb8540a3f556b"><div class="ttname"><a href="lundump_8c.html#a0b7e793e9d9afdc0da0bb8540a3f556b">LoadProtos</a></div><div class="ttdeci">static void LoadProtos(LoadState *S, Proto *f)</div><div class="ttdef"><b>Definition:</b> lundump.c:142</div></div>
+<div class="ttc" id="astruct_load_state_html_a53f2d5fa2c176bdf96701c983afb8182"><div class="ttname"><a href="struct_load_state.html#a53f2d5fa2c176bdf96701c983afb8182">LoadState::Z</a></div><div class="ttdeci">ZIO * Z</div><div class="ttdef"><b>Definition:</b> lundump.c:32</div></div>
+<div class="ttc" id="astruct_load_state_html_a8eabd10510332ab5eaf5244bb347bac2"><div class="ttname"><a href="struct_load_state.html#a8eabd10510332ab5eaf5244bb347bac2">LoadState::L</a></div><div class="ttdeci">lua_State * L</div><div class="ttdef"><b>Definition:</b> lundump.c:31</div></div>
+<div class="ttc" id="astruct_t_string_html"><div class="ttname"><a href="struct_t_string.html">TString</a></div><div class="ttdef"><b>Definition:</b> lobject.h:334</div></div>
+<div class="ttc" id="alundump_8c_html_ad9b48fe97157a282aaef3aaab996f457"><div class="ttname"><a href="lundump_8c.html#ad9b48fe97157a282aaef3aaab996f457">luai_verifycode</a></div><div class="ttdeci">#define luai_verifycode(L, b, f)</div><div class="ttdef"><b>Definition:</b> lundump.c:26</div></div>
+<div class="ttc" id="alprefix_8h_html"><div class="ttname"><a href="lprefix_8h.html">lprefix.h</a></div></div>
+<div class="ttc" id="aldebug_8h_html"><div class="ttname"><a href="ldebug_8h.html">ldebug.h</a></div></div>
+<div class="ttc" id="astruct_proto_html_a5bd719e0486168f6ecd4b01bf41a7444"><div class="ttname"><a href="struct_proto.html#a5bd719e0486168f6ecd4b01bf41a7444">Proto::sizek</a></div><div class="ttdeci">int sizek</div><div class="ttdef"><b>Definition:</b> lobject.h:447</div></div>
+<div class="ttc" id="allimits_8h_html_ae1fe9ac10d9803bd1d7bdf30b18bad68"><div class="ttname"><a href="llimits_8h.html#ae1fe9ac10d9803bd1d7bdf30b18bad68">lu_byte</a></div><div class="ttdeci">unsigned char lu_byte</div><div class="ttdef"><b>Definition:</b> llimits.h:32</div></div>
+<div class="ttc" id="alobject_8h_html_acb05d3ab238923581a9c629b8e11a6ac"><div class="ttname"><a href="lobject_8h.html#acb05d3ab238923581a9c629b8e11a6ac">getstr</a></div><div class="ttdeci">#define getstr(ts)</div><div class="ttdef"><b>Definition:</b> lobject.h:359</div></div>
+<div class="ttc" id="alua_8h_html_af21c9fa681dc005c17a7b288882cae1b"><div class="ttname"><a href="lua_8h.html#af21c9fa681dc005c17a7b288882cae1b">LUA_SIGNATURE</a></div><div class="ttdeci">#define LUA_SIGNATURE</div><div class="ttdef"><b>Definition:</b> lua.h:26</div></div>
+<div class="ttc" id="aldo_8c_html_a4dd006aa3210fdc854d0441e2a98c9af"><div class="ttname"><a href="ldo_8c.html#a4dd006aa3210fdc854d0441e2a98c9af">luaD_inctop</a></div><div class="ttdeci">void luaD_inctop(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldo.c:262</div></div>
+<div class="ttc" id="alundump_8c_html_adf31b58c8223f0aaed42909670403b2d"><div class="ttname"><a href="lundump_8c.html#adf31b58c8223f0aaed42909670403b2d">LoadCode</a></div><div class="ttdeci">static void LoadCode(LoadState *S, Proto *f)</div><div class="ttdef"><b>Definition:</b> lundump.c:107</div></div>
+<div class="ttc" id="alundump_8c_html_a556b2b40a69c0b870ca1c3b46643a4f9"><div class="ttname"><a href="lundump_8c.html#a556b2b40a69c0b870ca1c3b46643a4f9">LoadVar</a></div><div class="ttdeci">#define LoadVar(S, x)</div><div class="ttdef"><b>Definition:</b> lundump.c:54</div></div>
+<div class="ttc" id="alundump_8h_html_ae777344c08970a8fc2de3624c4067dde"><div class="ttname"><a href="lundump_8h.html#ae777344c08970a8fc2de3624c4067dde">luaU_undump</a></div><div class="ttdeci">LUAI_FUNC LClosure * luaU_undump(lua_State *L, ZIO *Z, const char *name)</div><div class="ttdef"><b>Definition:</b> lundump.c:252</div></div>
+<div class="ttc" id="alobject_8h_html"><div class="ttname"><a href="lobject_8h.html">lobject.h</a></div></div>
+<div class="ttc" id="astruct_proto_html_a7b35e79a276933f7e71edceec5b4593d"><div class="ttname"><a href="struct_proto.html#a7b35e79a276933f7e71edceec5b4593d">Proto::lineinfo</a></div><div class="ttdeci">int * lineinfo</div><div class="ttdef"><b>Definition:</b> lobject.h:457</div></div>
+<div class="ttc" id="alundump_8h_html_a1898203259aab6e1d60737b1e95c2adc"><div class="ttname"><a href="lundump_8h.html#a1898203259aab6e1d60737b1e95c2adc">LUAC_FORMAT</a></div><div class="ttdeci">#define LUAC_FORMAT</div><div class="ttdef"><b>Definition:</b> lundump.h:22</div></div>
+<div class="ttc" id="astructlua___state_html"><div class="ttname"><a href="structlua___state.html">lua_State</a></div><div class="ttdef"><b>Definition:</b> lstate.h:174</div></div>
+<div class="ttc" id="alua_8h_html_a362144baa0cfb14dc38fd21438053d73"><div class="ttname"><a href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a></div><div class="ttdeci">LUA_INTEGER lua_Integer</div><div class="ttdef"><b>Definition:</b> lua.h:79</div></div>
+<div class="ttc" id="astruct_l_closure_html_a4cf173817d3897b0e70822e70d241d6c"><div class="ttname"><a href="struct_l_closure.html#a4cf173817d3897b0e70822e70d241d6c">LClosure::p</a></div><div class="ttdeci">struct Proto * p</div><div class="ttdef"><b>Definition:</b> lobject.h:489</div></div>
+<div class="ttc" id="allimits_8h_html_af6c47c68c1e6b0387c915031e0e681e3"><div class="ttname"><a href="llimits_8h.html#af6c47c68c1e6b0387c915031e0e681e3">Instruction</a></div><div class="ttdeci">unsigned long Instruction</div><div class="ttdef"><b>Definition:</b> llimits.h:145</div></div>
+<div class="ttc" id="alundump_8h_html"><div class="ttname"><a href="lundump_8h.html">lundump.h</a></div></div>
+<div class="ttc" id="astruct_proto_html_ae292fb0c0558679704933824ce96eac2"><div class="ttname"><a href="struct_proto.html#ae292fb0c0558679704933824ce96eac2">Proto::k</a></div><div class="ttdeci">TValue * k</div><div class="ttdef"><b>Definition:</b> lobject.h:454</div></div>
+<div class="ttc" id="alfunc_8c_html_a4ffd9d8ef515a7f785d007de7ceb9e4f"><div class="ttname"><a href="lfunc_8c.html#a4ffd9d8ef515a7f785d007de7ceb9e4f">luaF_newproto</a></div><div class="ttdeci">Proto * luaF_newproto(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lfunc.c:103</div></div>
+<div class="ttc" id="astruct_l_closure_html"><div class="ttname"><a href="struct_l_closure.html">LClosure</a></div><div class="ttdef"><b>Definition:</b> lobject.h:487</div></div>
+<div class="ttc" id="astruct_proto_html_a65303ae1d815313f3358a578113fcc6e"><div class="ttname"><a href="struct_proto.html#a65303ae1d815313f3358a578113fcc6e">Proto::sizelineinfo</a></div><div class="ttdeci">int sizelineinfo</div><div class="ttdef"><b>Definition:</b> lobject.h:449</div></div>
+<div class="ttc" id="astruct_proto_html_a9c9ed4e9d996233f75cdf56b912e4803"><div class="ttname"><a href="struct_proto.html#a9c9ed4e9d996233f75cdf56b912e4803">Proto::maxstacksize</a></div><div class="ttdeci">lu_byte maxstacksize</div><div class="ttdef"><b>Definition:</b> lobject.h:445</div></div>
+<div class="ttc" id="astruct_upvaldesc_html_a1e5182ac7b8b72848ed71b7b4844e3d1"><div class="ttname"><a href="struct_upvaldesc.html#a1e5182ac7b8b72848ed71b7b4844e3d1">Upvaldesc::instack</a></div><div class="ttdeci">lu_byte instack</div><div class="ttdef"><b>Definition:</b> lobject.h:422</div></div>
+<div class="ttc" id="alua_8h_html_a779d4c0fc1c9da41b7d983646267e11f"><div class="ttname"><a href="lua_8h.html#a779d4c0fc1c9da41b7d983646267e11f">LUA_ERRSYNTAX</a></div><div class="ttdeci">#define LUA_ERRSYNTAX</div><div class="ttdef"><b>Definition:</b> lua.h:43</div></div>
+<div class="ttc" id="alobject_8c_html_a8e224db7123c74d695076a96d1bfda61"><div class="ttname"><a href="lobject_8c.html#a8e224db7123c74d695076a96d1bfda61">luaO_pushfstring</a></div><div class="ttdeci">const char * luaO_pushfstring(lua_State *L, const char *fmt,...)</div><div class="ttdef"><b>Definition:</b> lobject.c:533</div></div>
+<div class="ttc" id="astruct_load_state_html_a0cd70a73d5f61472258ebb5256abbaef"><div class="ttname"><a href="struct_load_state.html#a0cd70a73d5f61472258ebb5256abbaef">LoadState::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> lundump.c:33</div></div>
+<div class="ttc" id="astruct_proto_html_a6ecec897497ba7d94df6ef69289ef5c0"><div class="ttname"><a href="struct_proto.html#a6ecec897497ba7d94df6ef69289ef5c0">Proto::sizeupvalues</a></div><div class="ttdeci">int sizeupvalues</div><div class="ttdef"><b>Definition:</b> lobject.h:446</div></div>
+<div class="ttc" id="alundump_8c_html_aa6a4db284ed54b608e8e95e1404be2a8"><div class="ttname"><a href="lundump_8c.html#aa6a4db284ed54b608e8e95e1404be2a8">LoadByte</a></div><div class="ttdeci">static lu_byte LoadByte(LoadState *S)</div><div class="ttdef"><b>Definition:</b> lundump.c:56</div></div>
+<div class="ttc" id="alundump_8c_html_a9f0e8462baca39c1599c55689ab68d49"><div class="ttname"><a href="lundump_8c.html#a9f0e8462baca39c1599c55689ab68d49">LoadInt</a></div><div class="ttdeci">static int LoadInt(LoadState *S)</div><div class="ttdef"><b>Definition:</b> lundump.c:63</div></div>
+<div class="ttc" id="alua_8h_html_ae38a6fb8c687b8bfab211b7675a695ef"><div class="ttname"><a href="lua_8h.html#ae38a6fb8c687b8bfab211b7675a695ef">LUA_TNIL</a></div><div class="ttdeci">#define LUA_TNIL</div><div class="ttdef"><b>Definition:</b> lua.h:55</div></div>
+<div class="ttc" id="aldo_8c_html_a2b46d9db5b9ca3d5402a0c2ac640a6b0"><div class="ttname"><a href="ldo_8c.html#a2b46d9db5b9ca3d5402a0c2ac640a6b0">luaD_throw</a></div><div class="ttdeci">l_noret luaD_throw(lua_State *L, int errcode)</div><div class="ttdef"><b>Definition:</b> ldo.c:124</div></div>
+<div class="ttc" id="alobject_8h_html_af9dd109ba186841ab26efb2d62baf4f6"><div class="ttname"><a href="lobject_8h.html#af9dd109ba186841ab26efb2d62baf4f6">setivalue</a></div><div class="ttdeci">#define setivalue(obj, x)</div><div class="ttdef"><b>Definition:</b> lobject.h:192</div></div>
+<div class="ttc" id="alobject_8h_html_a05b3f524bbf2f1a7446009e6536fce15"><div class="ttname"><a href="lobject_8h.html#a05b3f524bbf2f1a7446009e6536fce15">LUA_TSHRSTR</a></div><div class="ttdeci">#define LUA_TSHRSTR</div><div class="ttdef"><b>Definition:</b> lobject.h:46</div></div>
+<div class="ttc" id="alobject_8h_html_ac1765c700e6c8eaa1e36b397cc5439f7"><div class="ttname"><a href="lobject_8h.html#ac1765c700e6c8eaa1e36b397cc5439f7">setclLvalue</a></div><div class="ttdeci">#define setclLvalue(L, obj, x)</div><div class="ttdef"><b>Definition:</b> lobject.h:264</div></div>
+<div class="ttc" id="astruct_proto_html"><div class="ttname"><a href="struct_proto.html">Proto</a></div><div class="ttdef"><b>Definition:</b> lobject.h:441</div></div>
+<div class="ttc" id="allimits_8h_html_a5978f5fda715bd80e845df1e16ad7780"><div class="ttname"><a href="llimits_8h.html#a5978f5fda715bd80e845df1e16ad7780">lua_assert</a></div><div class="ttdeci">#define lua_assert(c)</div><div class="ttdef"><b>Definition:</b> llimits.h:77</div></div>
+<div class="ttc" id="alobject_8h_html_a603cc7453f26d8d5aec48bb5f10f96f1"><div class="ttname"><a href="lobject_8h.html#a603cc7453f26d8d5aec48bb5f10f96f1">LUA_TLNGSTR</a></div><div class="ttdeci">#define LUA_TLNGSTR</div><div class="ttdef"><b>Definition:</b> lobject.h:47</div></div>
+<div class="ttc" id="alundump_8c_html_a841d820b1d5922371773399d275dfe42"><div class="ttname"><a href="lundump_8c.html#a841d820b1d5922371773399d275dfe42">LoadUpvalues</a></div><div class="ttdeci">static void LoadUpvalues(LoadState *S, Proto *f)</div><div class="ttdef"><b>Definition:</b> lundump.c:158</div></div>
+<div class="ttc" id="alstring_8h_html"><div class="ttname"><a href="lstring_8h.html">lstring.h</a></div></div>
+<div class="ttc" id="alundump_8c_html_a160d628b681eb8c6dd09ea1924fb2e81"><div class="ttname"><a href="lundump_8c.html#a160d628b681eb8c6dd09ea1924fb2e81">LoadInteger</a></div><div class="ttdeci">static lua_Integer LoadInteger(LoadState *S)</div><div class="ttdef"><b>Definition:</b> lundump.c:77</div></div>
+<div class="ttc" id="astruct_upvaldesc_html"><div class="ttname"><a href="struct_upvaldesc.html">Upvaldesc</a></div><div class="ttdef"><b>Definition:</b> lobject.h:420</div></div>
+<div class="ttc" id="astruct_upvaldesc_html_a8478ecca9cb593200c562a0837aedfac"><div class="ttname"><a href="struct_upvaldesc.html#a8478ecca9cb593200c562a0837aedfac">Upvaldesc::idx</a></div><div class="ttdeci">lu_byte idx</div><div class="ttdef"><b>Definition:</b> lobject.h:423</div></div>
+<div class="ttc" id="alobject_8h_html_aa7a9ab918b0322fa100f3f7af16d2375"><div class="ttname"><a href="lobject_8h.html#aa7a9ab918b0322fa100f3f7af16d2375">setsvalue2n</a></div><div class="ttdeci">#define setsvalue2n</div><div class="ttdef"><b>Definition:</b> lobject.h:316</div></div>
+<div class="ttc" id="astruct_load_state_html"><div class="ttname"><a href="struct_load_state.html">LoadState</a></div><div class="ttdef"><b>Definition:</b> lundump.c:30</div></div>
+<div class="ttc" id="almem_8h_html"><div class="ttname"><a href="lmem_8h.html">lmem.h</a></div></div>
+<div class="ttc" id="astructlua___state_html_a195f448e76fd404953fa1962d28212a3"><div class="ttname"><a href="structlua___state.html#a195f448e76fd404953fa1962d28212a3">lua_State::top</a></div><div class="ttdeci">StkId top</div><div class="ttdef"><b>Definition:</b> lstate.h:178</div></div>
+<div class="ttc" id="astruct_loc_var_html"><div class="ttname"><a href="struct_loc_var.html">LocVar</a></div><div class="ttdef"><b>Definition:</b> lobject.h:431</div></div>
+<div class="ttc" id="alobject_8h_html_ae357382324a8220a3cf77607752de887"><div class="ttname"><a href="lobject_8h.html#ae357382324a8220a3cf77607752de887">setfltvalue</a></div><div class="ttdeci">#define setfltvalue(obj, x)</div><div class="ttdef"><b>Definition:</b> lobject.h:178</div></div>
+<div class="ttc" id="astruct_zio_html"><div class="ttname"><a href="struct_zio.html">Zio</a></div><div class="ttdef"><b>Definition:</b> lzio.h:47</div></div>
+<div class="ttc" id="alundump_8c_html_a4b73637582e9f1a3ee8991124d47ce0d"><div class="ttname"><a href="lundump_8c.html#a4b73637582e9f1a3ee8991124d47ce0d">LoadString</a></div><div class="ttdeci">static TString * LoadString(LoadState *S, Proto *p)</div><div class="ttdef"><b>Definition:</b> lundump.c:84</div></div>
+<div class="ttc" id="alundump_8c_html_a7a5d13b3653a25432f167162f585ffa4"><div class="ttname"><a href="lundump_8c.html#a7a5d13b3653a25432f167162f585ffa4">LoadBlock</a></div><div class="ttdeci">static void LoadBlock(LoadState *S, void *b, size_t size)</div><div class="ttdef"><b>Definition:</b> lundump.c:48</div></div>
+<div class="ttc" id="alstring_8c_html_a8790c7d6e706f935dd6e9eefd068921c"><div class="ttname"><a href="lstring_8c.html#a8790c7d6e706f935dd6e9eefd068921c">luaS_createlngstrobj</a></div><div class="ttdeci">TString * luaS_createlngstrobj(lua_State *L, size_t l)</div><div class="ttdef"><b>Definition:</b> lstring.c:148</div></div>
+<div class="ttc" id="alzio_8h_html"><div class="ttname"><a href="lzio_8h.html">lzio.h</a></div></div>
+<div class="ttc" id="astruct_proto_html_a41d627972548e1a6aaf358480ed46f69"><div class="ttname"><a href="struct_proto.html#a41d627972548e1a6aaf358480ed46f69">Proto::locvars</a></div><div class="ttdeci">LocVar * locvars</div><div class="ttdef"><b>Definition:</b> lobject.h:458</div></div>
+<div class="ttc" id="astruct_loc_var_html_af7f0f7d509579ffec5610e329f85693b"><div class="ttname"><a href="struct_loc_var.html#af7f0f7d509579ffec5610e329f85693b">LocVar::endpc</a></div><div class="ttdeci">int endpc</div><div class="ttdef"><b>Definition:</b> lobject.h:434</div></div>
+<div class="ttc" id="astruct_proto_html_ac2ab37e941e8866687f44f7b2f4b95a9"><div class="ttname"><a href="struct_proto.html#ac2ab37e941e8866687f44f7b2f4b95a9">Proto::sizelocvars</a></div><div class="ttdeci">int sizelocvars</div><div class="ttdef"><b>Definition:</b> lobject.h:451</div></div>
+<div class="ttc" id="alundump_8c_html_a005ddaa01fdc44c5223b2b641fcb1653"><div class="ttname"><a href="lundump_8c.html#a005ddaa01fdc44c5223b2b641fcb1653">checkliteral</a></div><div class="ttdeci">static void checkliteral(LoadState *S, const char *s, const char *msg)</div><div class="ttdef"><b>Definition:</b> lundump.c:213</div></div>
+<div class="ttc" id="alundump_8c_html_adb80904e547ca41184ece3351e61f05d"><div class="ttname"><a href="lundump_8c.html#adb80904e547ca41184ece3351e61f05d">LoadFunction</a></div><div class="ttdeci">static void LoadFunction(LoadState *S, Proto *f, TString *psource)</div><div class="ttdef"><b>Definition:</b> lundump.c:196</div></div>
+<div class="ttc" id="alfunc_8h_html"><div class="ttname"><a href="lfunc_8h.html">lfunc.h</a></div></div>
+<div class="ttc" id="aldo_8h_html"><div class="ttname"><a href="ldo_8h.html">ldo.h</a></div></div>
+<div class="ttc" id="alundump_8c_html_ae58315c7a22483217ca3d7c2aeecd962"><div class="ttname"><a href="lundump_8c.html#ae58315c7a22483217ca3d7c2aeecd962">LoadVector</a></div><div class="ttdeci">#define LoadVector(S, b, n)</div><div class="ttdef"><b>Definition:</b> lundump.c:46</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

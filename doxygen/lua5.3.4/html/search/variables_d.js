@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['n_3380',['n',['../struct_load_f.html#ad9ad8babe60118da09b9844d0237eaff',1,'LoadF::n()'],['../structlua_l___buffer.html#a85c23e8716842c83ee8e9d80f1652812',1,'luaL_Buffer::n()'],['../struct_r_n.html#a16fa407d44704913972eebe2960ab323',1,'RN::n()'],['../union_l___umaxalign.html#a0521a79b4c0468baf3cfe1eaa67442e6',1,'L_Umaxalign::n()'],['../union_value.html#ae8663f45c016d5fbf827cb308b2f3df8',1,'Value::n()'],['../struct_labellist.html#a68f90673b9dc53b9a816bc981525f2a8',1,'Labellist::n()'],['../struct_dyndata.html#ab7b4e1b3f94ab7cad0cf0991172dca47',1,'Dyndata::n()'],['../structc_d.html#ab78d28879dfb6fb0537b3d9c8115d781',1,'cD::n()'],['../union_ftypes.html#af0a9635555f4b6cf88f7d970242018c9',1,'Ftypes::n()'],['../struct_mbuffer.html#abd195588f24e02b6f5bfb1a39a109380',1,'Mbuffer::n()'],['../struct_zio.html#a7e086aa8f8c620f46c4697dc14c186ce',1,'Zio::n()']]],
+  ['na_3381',['na',['../struct_cons_control.html#abb136d2c320d052e5a7dd5518f490c11',1,'ConsControl']]],
+  ['nactvar_3382',['nactvar',['../struct_block_cnt.html#a02cb8afbdb34955d5499d4ee49c34ae8',1,'BlockCnt::nactvar()'],['../struct_labeldesc.html#a472fa008a98c95083e6e2db4b66e28e4',1,'Labeldesc::nactvar()'],['../struct_func_state.html#a0e00cba6eaa6fc648b7762976e9b748b',1,'FuncState::nactvar()']]],
+  ['name_3383',['name',['../structlua_l___reg.html#a58b99f63b304e5c489b90d812f92cba2',1,'luaL_Reg::name()'],['../struct_s_parser.html#a303a67fb99cde1a14d0069de9bb3285a',1,'SParser::name()'],['../struct_upvaldesc.html#a8870289fbc6611275d093ef1c08cf9ed',1,'Upvaldesc::name()'],['../struct_labeldesc.html#adb07dc226860577090f82586ebfebd81',1,'Labeldesc::name()'],['../structlua___debug.html#a2978ab7f2ade479a003beb16d3b7a993',1,'lua_Debug::name()'],['../struct_load_state.html#a0cd70a73d5f61472258ebb5256abbaef',1,'LoadState::name()']]],
+  ['namewhat_3384',['namewhat',['../structlua___debug.html#a7e8c201950ea4dd3f2c7df9e1201019a',1,'lua_Debug']]],
+  ['nativeendian_3385',['nativeendian',['../lstrlib_8c.html#a5efc27971dd1400c5e2738a02410f39b',1,'lstrlib.c']]],
+  ['nccalls_3386',['nCcalls',['../structlua___state.html#ac388127d044b54d2e9779beb44398845',1,'lua_State']]],
+  ['nci_3387',['nci',['../structlua___state.html#affc91cc87a077d30cc812fed4769d967',1,'lua_State']]],
+  ['next_3388',['next',['../struct_up_val.html#a96c97bb937ea82be649e15a1a466ca09',1,'UpVal::next()'],['../union_t_key.html#a497dbe63310539554e33e055a0c1060c',1,'TKey::next()'],['../struct_call_info.html#a71b69e9acba8caa2d8e833d8a79fdf9d',1,'CallInfo::next()']]],
+  ['nh_3389',['nh',['../struct_cons_control.html#a852370c0a8dc4a0ca21756191f170ac5',1,'ConsControl']]],
+  ['nhsize_3390',['nhsize',['../struct_auxsetnode_t.html#aa0d92924e0921a5b67d8728d5bc375d7',1,'AuxsetnodeT']]],
+  ['nk_3391',['nk',['../union_t_key.html#a1cb36a88cec79c640b4d75dd38897ffa',1,'TKey::nk()'],['../struct_func_state.html#a51f2362dabbe7e117feb2f059253a01b',1,'FuncState::nk()']]],
+  ['nlocvars_3392',['nlocvars',['../struct_func_state.html#a5bc4b89742470aa42900e4a459db31df',1,'FuncState']]],
+  ['nny_3393',['nny',['../structlua___state.html#a24099a91bbfa23048f1b940f26819f44',1,'lua_State']]],
+  ['node_3394',['node',['../struct_table.html#a519f179c707cb4e93bb66d09151c89e5',1,'Table']]],
+  ['np_3395',['np',['../struct_func_state.html#aa6952cddc83bd271703e1458d012d67d',1,'FuncState']]],
+  ['nparams_3396',['nparams',['../structlua___debug.html#adb5efd1576224ce9d14f42f8bfee7a1a',1,'lua_Debug']]],
+  ['nresults_3397',['nresults',['../struct_call_s.html#ad786e0ae2bf61fad4a46b048830c9569',1,'CallS::nresults()'],['../struct_call_info.html#a0955b3fe49462610d53f082ac3cdac0e',1,'CallInfo::nresults()']]],
+  ['numblocks_3398',['numblocks',['../struct_memcontrol.html#a778e4b9876ef9c80325eae9a5a37738f',1,'Memcontrol']]],
+  ['numparams_3399',['numparams',['../struct_proto.html#a3f106f177af6c68ffd8b042713266b98',1,'Proto']]],
+  ['nups_3400',['nups',['../struct_func_state.html#aa6595513c43642ce3b506131d847dd7b',1,'FuncState::nups()'],['../structlua___debug.html#ab87c2a6ef686abf10da683f7e9af1b23',1,'lua_Debug::nups()']]],
+  ['nuse_3401',['nuse',['../structstringtable.html#a557fecd2a88632f53ac14bb5f933590a',1,'stringtable']]],
+  ['nval_3402',['nval',['../structexpdesc.html#ad7e0406615f459c8df64b2b7b86e6a0a',1,'expdesc']]]
+];
