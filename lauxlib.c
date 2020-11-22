@@ -1058,7 +1058,13 @@ static void* l_alloc(void* ud, void* ptr, size_t osize, size_t nsize)
         return NULL;
     }
     else
-        return realloc(ptr, nsize);
+    { /* cannot fail when shrinking a block */
+        void* newptr = realloc(ptr, nsize);
+        if (newptr == NULL && ptr != NULL && nsize <= osize)
+            return ptr;    /* keep the original block */
+        else               /* no fail or not shrinking */
+            return newptr; /* use the new block */
+    }
 }
 
 static int panic(lua_State* L)
