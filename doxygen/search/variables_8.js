@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['i_3992',['i',['../union_sem_info.html#a6ed52b8a8b415d8f16089445f93e5391',1,'SemInfo::i()'],['../union_value.html#a0d6f6bd1f2576b712e95aaffa0f87bab',1,'Value::i()'],['../structc_d.html#ae377276a71cc2b0d5a909ddcbee64fd6',1,'cD::i()']]],
+  ['i_5fci_3993',['i_ci',['../structlua___debug.html#a6cfa3d2272ea187b08164b0a2081d59d',1,'lua_Debug']]],
+  ['i_5fval_3994',['i_val',['../union_node.html#a79460c331faee0ef988637e92749e866',1,'Node']]],
+  ['idx_3995',['idx',['../struct_upvaldesc.html#a8478ecca9cb593200c562a0837aedfac',1,'Upvaldesc::idx()'],['../structexpdesc.html#a2333bf09cdfaeb847c56b2a13925ff11',1,'expdesc::idx()']]],
+  ['ind_3996',['ind',['../structexpdesc.html#a9e5691780e144132ad9108488cea7c20',1,'expdesc']]],
+  ['info_3997',['info',['../structexpdesc.html#a0b2f77c33e2412d54ec90f71030121e2',1,'expdesc']]],
+  ['init_3998',['init',['../structlua_l___buffer.html#aedfcf33c1d3a6bb7bee1f13e02d3b2b7',1,'luaL_Buffer::init()'],['../structstr___writer.html#a9b260bdd86544e4aff65d79ad49c6abd',1,'str_Writer::init()'],['../struct_match_state.html#a2b63cea9c88925a59ba9680d8c615dd7',1,'MatchState::init()']]],
+  ['insidetbc_3999',['insidetbc',['../struct_block_cnt.html#a33066e7c373e7732f5971d470f4580b7',1,'BlockCnt']]],
+  ['instack_4000',['instack',['../struct_upvaldesc.html#a1e5182ac7b8b72848ed71b7b4844e3d1',1,'Upvaldesc']]],
+  ['iolib_4001',['iolib',['../liolib_8c.html#a8fe96dd62a007daad3a18e43dd136a29',1,'liolib.c']]],
+  ['is_5fvararg_4002',['is_vararg',['../struct_proto.html#a82302f2e9040b681d5b34c1239dcd673',1,'Proto']]],
+  ['islittle_4003',['islittle',['../struct_header.html#abf580577b27ac36c8c26b86131a01b2b',1,'Header']]],
+  ['isloop_4004',['isloop',['../struct_block_cnt.html#a6434a0c8f9724248c839b6e9e6d9ec00',1,'BlockCnt']]],
+  ['istailcall_4005',['istailcall',['../structlua___debug.html#a08e9cf647790ffeb068db293c7572260',1,'lua_Debug']]],
+  ['isvararg_4006',['isvararg',['../structlua___debug.html#a943220c57a4dd46dcc1bcd1198cfea88',1,'lua_Debug']]],
+  ['ival_4007',['ival',['../structexpdesc.html#ab9299c85deaf83fd3f37c0f7d29639e0',1,'expdesc']]],
+  ['iwthabs_4008',['iwthabs',['../struct_func_state.html#a5ddc3f780b936d7f3e5936f8ec9eda79',1,'FuncState']]]
+];

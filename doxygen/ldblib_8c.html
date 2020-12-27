@@ -1,0 +1,1412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lua5.4: ldblib.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">lua5.4
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1d77ce7c9f7e81c3be5142cf18682616.html">lua</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">ldblib.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lprefix_8h_source.html">lprefix.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="lua_8h_source.html">lua.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lauxlib_8h_source.html">lauxlib.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lualib_8h_source.html">lualib.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ldblib.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c__incl.svg" width="608" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c__dep__incl.svg" width="82" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a45fbab86b0d9d4fa0676f993eba4bacf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a45fbab86b0d9d4fa0676f993eba4bacf">ldblib_c</a></td></tr>
+<tr class="separator:a45fbab86b0d9d4fa0676f993eba4bacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884b19ad6094d6238c4072a8064aeb12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a884b19ad6094d6238c4072a8064aeb12">LUA_LIB</a></td></tr>
+<tr class="separator:a884b19ad6094d6238c4072a8064aeb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aef541490d49259cf4cb14e7f9597600e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#aef541490d49259cf4cb14e7f9597600e">checkstack</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, <a class="el" href="structlua___state.html">lua_State</a> *L1, int n)</td></tr>
+<tr class="separator:aef541490d49259cf4cb14e7f9597600e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd12424841eb9d91aa28c7424d4e380"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a7dd12424841eb9d91aa28c7424d4e380">db_getregistry</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:a7dd12424841eb9d91aa28c7424d4e380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84da9dfea83fb9e516443b49b109044"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#aa84da9dfea83fb9e516443b49b109044">db_getmetatable</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:aa84da9dfea83fb9e516443b49b109044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3595aee1af712c0ba9c586feb763bffc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a3595aee1af712c0ba9c586feb763bffc">db_setmetatable</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:a3595aee1af712c0ba9c586feb763bffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a129f5b6b3a5f37b1b05a6db5b3a1e0be"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a129f5b6b3a5f37b1b05a6db5b3a1e0be">db_getuservalue</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:a129f5b6b3a5f37b1b05a6db5b3a1e0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a233c3c4d12bda0fdbf515a18b8961461"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a233c3c4d12bda0fdbf515a18b8961461">db_setuservalue</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:a233c3c4d12bda0fdbf515a18b8961461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75169427eed495886306b6236f365512"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structlua___state.html">lua_State</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a75169427eed495886306b6236f365512">getthread</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, int *arg)</td></tr>
+<tr class="separator:a75169427eed495886306b6236f365512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91baf8e0a21e990ffed4a8853fc584f3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a91baf8e0a21e990ffed4a8853fc584f3">settabss</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, const char *k, const char *v)</td></tr>
+<tr class="separator:a91baf8e0a21e990ffed4a8853fc584f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d25d4a90662ff3ed4d28104419c5b3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a32d25d4a90662ff3ed4d28104419c5b3">settabsi</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, const char *k, int v)</td></tr>
+<tr class="separator:a32d25d4a90662ff3ed4d28104419c5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88c1e9a59e65c7ffdacfb48b8defaa8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#af88c1e9a59e65c7ffdacfb48b8defaa8">settabsb</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, const char *k, int v)</td></tr>
+<tr class="separator:af88c1e9a59e65c7ffdacfb48b8defaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6269322ee4ae931654d7442fe2be6a46"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a6269322ee4ae931654d7442fe2be6a46">treatstackoption</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, <a class="el" href="structlua___state.html">lua_State</a> *L1, const char *fname)</td></tr>
+<tr class="separator:a6269322ee4ae931654d7442fe2be6a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb57e66c2efb2d31c9b9e1b01d27e13"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a4eb57e66c2efb2d31c9b9e1b01d27e13">db_getinfo</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:a4eb57e66c2efb2d31c9b9e1b01d27e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae802ce7397e9ebb08a90b69976578ecc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#ae802ce7397e9ebb08a90b69976578ecc">db_getlocal</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:ae802ce7397e9ebb08a90b69976578ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11cfe90e96e7ea907a767f5109f7ef4b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a11cfe90e96e7ea907a767f5109f7ef4b">db_setlocal</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:a11cfe90e96e7ea907a767f5109f7ef4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ebacb3668352430584fe277ac74923"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a31ebacb3668352430584fe277ac74923">auxupvalue</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, int get)</td></tr>
+<tr class="separator:a31ebacb3668352430584fe277ac74923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a4124c791de7d76bd4fa752eb1569b6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a7a4124c791de7d76bd4fa752eb1569b6">db_getupvalue</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:a7a4124c791de7d76bd4fa752eb1569b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd61487bdd057d6c668ec0bd88728670"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#acd61487bdd057d6c668ec0bd88728670">db_setupvalue</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:acd61487bdd057d6c668ec0bd88728670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b131e6d62c2b6abe34d7e7ebd23bd1d"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a3b131e6d62c2b6abe34d7e7ebd23bd1d">checkupval</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, int argf, int argnup, int *pnup)</td></tr>
+<tr class="separator:a3b131e6d62c2b6abe34d7e7ebd23bd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade86533c6188a941aae1be4396a20393"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#ade86533c6188a941aae1be4396a20393">db_upvalueid</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:ade86533c6188a941aae1be4396a20393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd80bdb3262b3580eb6955f6f3eb3549"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#acd80bdb3262b3580eb6955f6f3eb3549">db_upvaluejoin</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:acd80bdb3262b3580eb6955f6f3eb3549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caaa985f31fc5cbd014f831833205e7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a5caaa985f31fc5cbd014f831833205e7">hookf</a> (<a class="el" href="structlua___state.html">lua_State</a> *L, <a class="el" href="structlua___debug.html">lua_Debug</a> *ar)</td></tr>
+<tr class="separator:a5caaa985f31fc5cbd014f831833205e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565f59065c4ab878c3d49097a7f2c471"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a565f59065c4ab878c3d49097a7f2c471">makemask</a> (const char *smask, int count)</td></tr>
+<tr class="separator:a565f59065c4ab878c3d49097a7f2c471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21335f2f9cd444bde1f824b7bcc5659"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#aa21335f2f9cd444bde1f824b7bcc5659">unmakemask</a> (int mask, char *smask)</td></tr>
+<tr class="separator:aa21335f2f9cd444bde1f824b7bcc5659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c362d361f8f9bd8a002c34c393e2b0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#aa0c362d361f8f9bd8a002c34c393e2b0">db_sethook</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:aa0c362d361f8f9bd8a002c34c393e2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a624ae8d8ff673e72a317b280ed008d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#a6a624ae8d8ff673e72a317b280ed008d">db_gethook</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:a6a624ae8d8ff673e72a317b280ed008d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72cc206e90f6ebc343460376c950a14"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#ad72cc206e90f6ebc343460376c950a14">db_debug</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:ad72cc206e90f6ebc343460376c950a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0792d4f3f6eedd535895e05426b82df"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#ae0792d4f3f6eedd535895e05426b82df">db_traceback</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:ae0792d4f3f6eedd535895e05426b82df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addcdd421fc78c360575136d5faff8b9a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#addcdd421fc78c360575136d5faff8b9a">db_setcstacklimit</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:addcdd421fc78c360575136d5faff8b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94d3e2d0ca6d83a904a3ba9aad04f3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="luaconf_8h.html#a8e877216dd2f0cf9a68255b494f82f50">LUAMOD_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#ad94d3e2d0ca6d83a904a3ba9aad04f3b">luaopen_debug</a> (<a class="el" href="structlua___state.html">lua_State</a> *L)</td></tr>
+<tr class="separator:ad94d3e2d0ca6d83a904a3ba9aad04f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:af733d7d4bc619309441a5d1296a55c34"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#af733d7d4bc619309441a5d1296a55c34">HOOKKEY</a> = &quot;_HOOKKEY&quot;</td></tr>
+<tr class="separator:af733d7d4bc619309441a5d1296a55c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac91241d20cc27cd0d55e51f4c972101b"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structlua_l___reg.html">luaL_Reg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ldblib_8c.html#ac91241d20cc27cd0d55e51f4c972101b">dblib</a> []</td></tr>
+<tr class="separator:ac91241d20cc27cd0d55e51f4c972101b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a45fbab86b0d9d4fa0676f993eba4bacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45fbab86b0d9d4fa0676f993eba4bacf">&#9670;&nbsp;</a></span>ldblib_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ldblib_c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a884b19ad6094d6238c4072a8064aeb12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a884b19ad6094d6238c4072a8064aeb12">&#9670;&nbsp;</a></span>LUA_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUA_LIB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a31ebacb3668352430584fe277ac74923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ebacb3668352430584fe277ac74923">&#9670;&nbsp;</a></span>auxupvalue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int auxupvalue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>get</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a31ebacb3668352430584fe277ac74923_cgraph.svg" width="2066" height="1176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a31ebacb3668352430584fe277ac74923_icgraph.svg" width="250" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aef541490d49259cf4cb14e7f9597600e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef541490d49259cf4cb14e7f9597600e">&#9670;&nbsp;</a></span>checkstack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void checkstack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_aef541490d49259cf4cb14e7f9597600e_cgraph.svg" width="2319" height="756"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_aef541490d49259cf4cb14e7f9597600e_icgraph.svg" width="238" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3b131e6d62c2b6abe34d7e7ebd23bd1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b131e6d62c2b6abe34d7e7ebd23bd1d">&#9670;&nbsp;</a></span>checkupval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void* checkupval </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argnup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a3b131e6d62c2b6abe34d7e7ebd23bd1d_cgraph.svg" width="1722" height="1058"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a3b131e6d62c2b6abe34d7e7ebd23bd1d_icgraph.svg" width="252" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad72cc206e90f6ebc343460376c950a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72cc206e90f6ebc343460376c950a14">&#9670;&nbsp;</a></span>db_debug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_debug </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_ad72cc206e90f6ebc343460376c950a14_cgraph.svg" width="1476" height="1254"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6a624ae8d8ff673e72a317b280ed008d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a624ae8d8ff673e72a317b280ed008d">&#9670;&nbsp;</a></span>db_gethook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_gethook </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a6a624ae8d8ff673e72a317b280ed008d_cgraph.svg" width="1239" height="1024"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4eb57e66c2efb2d31c9b9e1b01d27e13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb57e66c2efb2d31c9b9e1b01d27e13">&#9670;&nbsp;</a></span>db_getinfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_getinfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a4eb57e66c2efb2d31c9b9e1b01d27e13_cgraph.svg" width="1634" height="1043"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae802ce7397e9ebb08a90b69976578ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae802ce7397e9ebb08a90b69976578ecc">&#9670;&nbsp;</a></span>db_getlocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_getlocal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_ae802ce7397e9ebb08a90b69976578ecc_cgraph.svg" width="2055" height="936"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa84da9dfea83fb9e516443b49b109044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84da9dfea83fb9e516443b49b109044">&#9670;&nbsp;</a></span>db_getmetatable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_getmetatable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_aa84da9dfea83fb9e516443b49b109044_cgraph.svg" width="1596" height="1003"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7dd12424841eb9d91aa28c7424d4e380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd12424841eb9d91aa28c7424d4e380">&#9670;&nbsp;</a></span>db_getregistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_getregistry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a7dd12424841eb9d91aa28c7424d4e380_cgraph.svg" width="403" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7a4124c791de7d76bd4fa752eb1569b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a4124c791de7d76bd4fa752eb1569b6">&#9670;&nbsp;</a></span>db_getupvalue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_getupvalue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a7a4124c791de7d76bd4fa752eb1569b6_cgraph.svg" width="2218" height="1176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a129f5b6b3a5f37b1b05a6db5b3a1e0be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a129f5b6b3a5f37b1b05a6db5b3a1e0be">&#9670;&nbsp;</a></span>db_getuservalue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_getuservalue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a129f5b6b3a5f37b1b05a6db5b3a1e0be_cgraph.svg" width="1862" height="1038"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="addcdd421fc78c360575136d5faff8b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addcdd421fc78c360575136d5faff8b9a">&#9670;&nbsp;</a></span>db_setcstacklimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_setcstacklimit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_addcdd421fc78c360575136d5faff8b9a_cgraph.svg" width="1854" height="972"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa0c362d361f8f9bd8a002c34c393e2b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c362d361f8f9bd8a002c34c393e2b0">&#9670;&nbsp;</a></span>db_sethook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_sethook </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>hooktable.__mode = "k"</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_aa0c362d361f8f9bd8a002c34c393e2b0_cgraph.svg" width="926" height="1203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a11cfe90e96e7ea907a767f5109f7ef4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11cfe90e96e7ea907a767f5109f7ef4b">&#9670;&nbsp;</a></span>db_setlocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_setlocal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a11cfe90e96e7ea907a767f5109f7ef4b_cgraph.svg" width="2038" height="950"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3595aee1af712c0ba9c586feb763bffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3595aee1af712c0ba9c586feb763bffc">&#9670;&nbsp;</a></span>db_setmetatable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_setmetatable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a3595aee1af712c0ba9c586feb763bffc_cgraph.svg" width="2563" height="595"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acd61487bdd057d6c668ec0bd88728670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd61487bdd057d6c668ec0bd88728670">&#9670;&nbsp;</a></span>db_setupvalue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_setupvalue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_acd61487bdd057d6c668ec0bd88728670_cgraph.svg" width="2078" height="1102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a233c3c4d12bda0fdbf515a18b8961461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a233c3c4d12bda0fdbf515a18b8961461">&#9670;&nbsp;</a></span>db_setuservalue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_setuservalue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a233c3c4d12bda0fdbf515a18b8961461_cgraph.svg" width="2146" height="1247"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae0792d4f3f6eedd535895e05426b82df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0792d4f3f6eedd535895e05426b82df">&#9670;&nbsp;</a></span>db_traceback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_traceback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_ae0792d4f3f6eedd535895e05426b82df_cgraph.svg" width="1551" height="1006"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ade86533c6188a941aae1be4396a20393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade86533c6188a941aae1be4396a20393">&#9670;&nbsp;</a></span>db_upvalueid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_upvalueid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_ade86533c6188a941aae1be4396a20393_cgraph.svg" width="1927" height="1082"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acd80bdb3262b3580eb6955f6f3eb3549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd80bdb3262b3580eb6955f6f3eb3549">&#9670;&nbsp;</a></span>db_upvaluejoin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int db_upvaluejoin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_acd80bdb3262b3580eb6955f6f3eb3549_cgraph.svg" width="1890" height="1291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a75169427eed495886306b6236f365512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75169427eed495886306b6236f365512">&#9670;&nbsp;</a></span>getthread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structlua___state.html">lua_State</a>* getthread </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a75169427eed495886306b6236f365512_cgraph.svg" width="366" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a75169427eed495886306b6236f365512_icgraph.svg" width="235" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5caaa985f31fc5cbd014f831833205e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5caaa985f31fc5cbd014f831833205e7">&#9670;&nbsp;</a></span>hookf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void hookf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlua___debug.html">lua_Debug</a> *&#160;</td>
+          <td class="paramname"><em>ar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a5caaa985f31fc5cbd014f831833205e7_cgraph.svg" width="1864" height="803"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a5caaa985f31fc5cbd014f831833205e7_icgraph.svg" width="202" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad94d3e2d0ca6d83a904a3ba9aad04f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad94d3e2d0ca6d83a904a3ba9aad04f3b">&#9670;&nbsp;</a></span>luaopen_debug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="luaconf_8h.html#a8e877216dd2f0cf9a68255b494f82f50">LUAMOD_API</a> int luaopen_debug </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a565f59065c4ab878c3d49097a7f2c471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a565f59065c4ab878c3d49097a7f2c471">&#9670;&nbsp;</a></span>makemask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int makemask </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>smask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a565f59065c4ab878c3d49097a7f2c471_icgraph.svg" width="235" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af88c1e9a59e65c7ffdacfb48b8defaa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88c1e9a59e65c7ffdacfb48b8defaa8">&#9670;&nbsp;</a></span>settabsb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void settabsb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_af88c1e9a59e65c7ffdacfb48b8defaa8_cgraph.svg" width="2384" height="835"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_af88c1e9a59e65c7ffdacfb48b8defaa8_icgraph.svg" width="212" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a32d25d4a90662ff3ed4d28104419c5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d25d4a90662ff3ed4d28104419c5b3">&#9670;&nbsp;</a></span>settabsi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void settabsi </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a32d25d4a90662ff3ed4d28104419c5b3_cgraph.svg" width="2375" height="835"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a32d25d4a90662ff3ed4d28104419c5b3_icgraph.svg" width="208" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a91baf8e0a21e990ffed4a8853fc584f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91baf8e0a21e990ffed4a8853fc584f3">&#9670;&nbsp;</a></span>settabss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void settabss </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a91baf8e0a21e990ffed4a8853fc584f3_cgraph.svg" width="2352" height="812"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a91baf8e0a21e990ffed4a8853fc584f3_icgraph.svg" width="212" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6269322ee4ae931654d7442fe2be6a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6269322ee4ae931654d7442fe2be6a46">&#9670;&nbsp;</a></span>treatstackoption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void treatstackoption </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlua___state.html">lua_State</a> *&#160;</td>
+          <td class="paramname"><em>L1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a6269322ee4ae931654d7442fe2be6a46_cgraph.svg" width="2394" height="835"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_a6269322ee4ae931654d7442fe2be6a46_icgraph.svg" width="255" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa21335f2f9cd444bde1f824b7bcc5659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21335f2f9cd444bde1f824b7bcc5659">&#9670;&nbsp;</a></span>unmakemask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static char* unmakemask </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>smask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ldblib_8c_aa21335f2f9cd444bde1f824b7bcc5659_icgraph.svg" width="248" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ac91241d20cc27cd0d55e51f4c972101b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac91241d20cc27cd0d55e51f4c972101b">&#9670;&nbsp;</a></span>dblib</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structlua_l___reg.html">luaL_Reg</a> dblib[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  {<span class="stringliteral">&quot;debug&quot;</span>, <a class="code" href="ldblib_8c.html#ad72cc206e90f6ebc343460376c950a14">db_debug</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;getuservalue&quot;</span>, <a class="code" href="ldblib_8c.html#a129f5b6b3a5f37b1b05a6db5b3a1e0be">db_getuservalue</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;gethook&quot;</span>, <a class="code" href="ldblib_8c.html#a6a624ae8d8ff673e72a317b280ed008d">db_gethook</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;getinfo&quot;</span>, <a class="code" href="ldblib_8c.html#a4eb57e66c2efb2d31c9b9e1b01d27e13">db_getinfo</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;getlocal&quot;</span>, <a class="code" href="ldblib_8c.html#ae802ce7397e9ebb08a90b69976578ecc">db_getlocal</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;getregistry&quot;</span>, <a class="code" href="ldblib_8c.html#a7dd12424841eb9d91aa28c7424d4e380">db_getregistry</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;getmetatable&quot;</span>, <a class="code" href="ldblib_8c.html#aa84da9dfea83fb9e516443b49b109044">db_getmetatable</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;getupvalue&quot;</span>, <a class="code" href="ldblib_8c.html#a7a4124c791de7d76bd4fa752eb1569b6">db_getupvalue</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;upvaluejoin&quot;</span>, <a class="code" href="ldblib_8c.html#acd80bdb3262b3580eb6955f6f3eb3549">db_upvaluejoin</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;upvalueid&quot;</span>, <a class="code" href="ldblib_8c.html#ade86533c6188a941aae1be4396a20393">db_upvalueid</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;setuservalue&quot;</span>, <a class="code" href="ldblib_8c.html#a233c3c4d12bda0fdbf515a18b8961461">db_setuservalue</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;sethook&quot;</span>, <a class="code" href="ldblib_8c.html#aa0c362d361f8f9bd8a002c34c393e2b0">db_sethook</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;setlocal&quot;</span>, <a class="code" href="ldblib_8c.html#a11cfe90e96e7ea907a767f5109f7ef4b">db_setlocal</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;setmetatable&quot;</span>, <a class="code" href="ldblib_8c.html#a3595aee1af712c0ba9c586feb763bffc">db_setmetatable</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;setupvalue&quot;</span>, <a class="code" href="ldblib_8c.html#acd61487bdd057d6c668ec0bd88728670">db_setupvalue</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;traceback&quot;</span>, <a class="code" href="ldblib_8c.html#ae0792d4f3f6eedd535895e05426b82df">db_traceback</a>},</div>
+<div class="line">  {<span class="stringliteral">&quot;setcstacklimit&quot;</span>, <a class="code" href="ldblib_8c.html#addcdd421fc78c360575136d5faff8b9a">db_setcstacklimit</a>},</div>
+<div class="line">  {NULL, NULL}</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af733d7d4bc619309441a5d1296a55c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af733d7d4bc619309441a5d1296a55c34">&#9670;&nbsp;</a></span>HOOKKEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const HOOKKEY = &quot;_HOOKKEY&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="aldblib_8c_html_a6a624ae8d8ff673e72a317b280ed008d"><div class="ttname"><a href="ldblib_8c.html#a6a624ae8d8ff673e72a317b280ed008d">db_gethook</a></div><div class="ttdeci">static int db_gethook(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:394</div></div>
+<div class="ttc" id="aldblib_8c_html_ade86533c6188a941aae1be4396a20393"><div class="ttname"><a href="ldblib_8c.html#ade86533c6188a941aae1be4396a20393">db_upvalueid</a></div><div class="ttdeci">static int db_upvalueid(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:297</div></div>
+<div class="ttc" id="aldblib_8c_html_ad72cc206e90f6ebc343460376c950a14"><div class="ttname"><a href="ldblib_8c.html#ad72cc206e90f6ebc343460376c950a14">db_debug</a></div><div class="ttdeci">static int db_debug(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:419</div></div>
+<div class="ttc" id="aldblib_8c_html_aa0c362d361f8f9bd8a002c34c393e2b0"><div class="ttname"><a href="ldblib_8c.html#aa0c362d361f8f9bd8a002c34c393e2b0">db_sethook</a></div><div class="ttdeci">static int db_sethook(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:364</div></div>
+<div class="ttc" id="aldblib_8c_html_ae0792d4f3f6eedd535895e05426b82df"><div class="ttname"><a href="ldblib_8c.html#ae0792d4f3f6eedd535895e05426b82df">db_traceback</a></div><div class="ttdeci">static int db_traceback(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:434</div></div>
+<div class="ttc" id="aldblib_8c_html_aa84da9dfea83fb9e516443b49b109044"><div class="ttname"><a href="ldblib_8c.html#aa84da9dfea83fb9e516443b49b109044">db_getmetatable</a></div><div class="ttdeci">static int db_getmetatable(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:47</div></div>
+<div class="ttc" id="aldblib_8c_html_a7a4124c791de7d76bd4fa752eb1569b6"><div class="ttname"><a href="ldblib_8c.html#a7a4124c791de7d76bd4fa752eb1569b6">db_getupvalue</a></div><div class="ttdeci">static int db_getupvalue(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:269</div></div>
+<div class="ttc" id="aldblib_8c_html_a129f5b6b3a5f37b1b05a6db5b3a1e0be"><div class="ttname"><a href="ldblib_8c.html#a129f5b6b3a5f37b1b05a6db5b3a1e0be">db_getuservalue</a></div><div class="ttdeci">static int db_getuservalue(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:65</div></div>
+<div class="ttc" id="aldblib_8c_html_acd80bdb3262b3580eb6955f6f3eb3549"><div class="ttname"><a href="ldblib_8c.html#acd80bdb3262b3580eb6955f6f3eb3549">db_upvaluejoin</a></div><div class="ttdeci">static int db_upvaluejoin(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:307</div></div>
+<div class="ttc" id="aldblib_8c_html_a233c3c4d12bda0fdbf515a18b8961461"><div class="ttname"><a href="ldblib_8c.html#a233c3c4d12bda0fdbf515a18b8961461">db_setuservalue</a></div><div class="ttdeci">static int db_setuservalue(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:77</div></div>
+<div class="ttc" id="aldblib_8c_html_addcdd421fc78c360575136d5faff8b9a"><div class="ttname"><a href="ldblib_8c.html#addcdd421fc78c360575136d5faff8b9a">db_setcstacklimit</a></div><div class="ttdeci">static int db_setcstacklimit(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:448</div></div>
+<div class="ttc" id="aldblib_8c_html_ae802ce7397e9ebb08a90b69976578ecc"><div class="ttname"><a href="ldblib_8c.html#ae802ce7397e9ebb08a90b69976578ecc">db_getlocal</a></div><div class="ttdeci">static int db_getlocal(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:202</div></div>
+<div class="ttc" id="aldblib_8c_html_a3595aee1af712c0ba9c586feb763bffc"><div class="ttname"><a href="ldblib_8c.html#a3595aee1af712c0ba9c586feb763bffc">db_setmetatable</a></div><div class="ttdeci">static int db_setmetatable(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:56</div></div>
+<div class="ttc" id="aldblib_8c_html_a11cfe90e96e7ea907a767f5109f7ef4b"><div class="ttname"><a href="ldblib_8c.html#a11cfe90e96e7ea907a767f5109f7ef4b">db_setlocal</a></div><div class="ttdeci">static int db_setlocal(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:233</div></div>
+<div class="ttc" id="aldblib_8c_html_acd61487bdd057d6c668ec0bd88728670"><div class="ttname"><a href="ldblib_8c.html#acd61487bdd057d6c668ec0bd88728670">db_setupvalue</a></div><div class="ttdeci">static int db_setupvalue(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:274</div></div>
+<div class="ttc" id="aldblib_8c_html_a4eb57e66c2efb2d31c9b9e1b01d27e13"><div class="ttname"><a href="ldblib_8c.html#a4eb57e66c2efb2d31c9b9e1b01d27e13">db_getinfo</a></div><div class="ttdeci">static int db_getinfo(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:149</div></div>
+<div class="ttc" id="aldblib_8c_html_a7dd12424841eb9d91aa28c7424d4e380"><div class="ttname"><a href="ldblib_8c.html#a7dd12424841eb9d91aa28c7424d4e380">db_getregistry</a></div><div class="ttdeci">static int db_getregistry(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:41</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

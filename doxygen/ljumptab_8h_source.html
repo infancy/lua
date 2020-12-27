@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lua5.4: ljumptab.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">lua5.4
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1d77ce7c9f7e81c3be5142cf18682616.html">lua</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ljumptab.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ljumptab_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">** $Id: ljumptab.h $</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">** Jump Table for the Lua interpreter</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">** See Copyright Notice in lua.h</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#undef vmdispatch</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#undef vmcase</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#undef vmbreak</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define vmdispatch(x)     goto *disptab[x];</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="ljumptab_8h.html#ae2328a135b54b42ce9ea3d808f6d7834">   13</a></span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define vmcase(l)     L_##l:</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="ljumptab_8h.html#a64ed762fd3da016b8792d4ac0d0cf17f">   15</a></span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define vmbreak     vmfetch(); vmdispatch(GET_OPCODE(i));</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="ljumptab_8h.html#a362451cac7ed1e9ebf8978cd761a01fb">   17</a></span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="ljumptab_8h.html#a702a7a7ef2c839cf996469121c2086b0">   19</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">void</span> *<span class="keyword">const</span> <a class="code" href="ljumptab_8h.html#a702a7a7ef2c839cf996469121c2086b0">disptab</a>[<a class="code" href="lopcodes_8h.html#a1fb469ba81540d3314cfbe37c675ba20">NUM_OPCODES</a>] = {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;** you can update the following list with <span class="keyword">this</span> command:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;**</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;**  sed -n <span class="stringliteral">&#39;/^OP_/\!d; s/OP_/\&amp;\&amp;L_OP_/ ; s/,.*/,/ ; s/\/.*// ; p&#39;</span>  lopcodes.h</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;**</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;&amp;&amp;L_OP_MOVE,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;&amp;&amp;L_OP_LOADI,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;&amp;&amp;L_OP_LOADF,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;&amp;&amp;L_OP_LOADK,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;&amp;&amp;L_OP_LOADKX,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;&amp;&amp;L_OP_LOADFALSE,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;&amp;&amp;L_OP_LFALSESKIP,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;&amp;&amp;L_OP_LOADTRUE,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;&amp;&amp;L_OP_LOADNIL,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;&amp;&amp;L_OP_GETUPVAL,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;&amp;&amp;L_OP_SETUPVAL,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;&amp;&amp;L_OP_GETTABUP,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;&amp;&amp;L_OP_GETTABLE,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;&amp;&amp;L_OP_GETI,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;&amp;&amp;L_OP_GETFIELD,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;&amp;&amp;L_OP_SETTABUP,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;&amp;&amp;L_OP_SETTABLE,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;&amp;&amp;L_OP_SETI,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;&amp;&amp;L_OP_SETFIELD,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;&amp;&amp;L_OP_NEWTABLE,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;&amp;&amp;L_OP_SELF,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;&amp;&amp;L_OP_ADDI,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;&amp;&amp;L_OP_ADDK,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;&amp;&amp;L_OP_SUBK,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;&amp;&amp;L_OP_MULK,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;&amp;&amp;L_OP_MODK,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;&amp;&amp;L_OP_POWK,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;&amp;&amp;L_OP_DIVK,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;&amp;&amp;L_OP_IDIVK,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;&amp;&amp;L_OP_BANDK,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;&amp;&amp;L_OP_BORK,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;&amp;&amp;L_OP_BXORK,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;&amp;&amp;L_OP_SHRI,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;&amp;&amp;L_OP_SHLI,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;&amp;&amp;L_OP_ADD,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;&amp;&amp;L_OP_SUB,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;&amp;&amp;L_OP_MUL,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;&amp;&amp;L_OP_MOD,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;&amp;&amp;L_OP_POW,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;&amp;&amp;L_OP_DIV,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;&amp;&amp;L_OP_IDIV,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;&amp;&amp;L_OP_BAND,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;&amp;&amp;L_OP_BOR,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;&amp;&amp;L_OP_BXOR,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;&amp;&amp;L_OP_SHL,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;&amp;&amp;L_OP_SHR,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;&amp;&amp;L_OP_MMBIN,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;&amp;&amp;L_OP_MMBINI,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;&amp;&amp;L_OP_MMBINK,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;&amp;&amp;L_OP_UNM,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;&amp;&amp;L_OP_BNOT,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;&amp;&amp;L_OP_NOT,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;&amp;&amp;L_OP_LEN,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;&amp;&amp;L_OP_CONCAT,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;&amp;&amp;L_OP_CLOSE,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;&amp;&amp;L_OP_TBC,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;&amp;&amp;L_OP_JMP,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;&amp;&amp;L_OP_EQ,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;&amp;&amp;L_OP_LT,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;&amp;&amp;L_OP_LE,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;&amp;&amp;L_OP_EQK,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;&amp;&amp;L_OP_EQI,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;&amp;&amp;L_OP_LTI,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;&amp;&amp;L_OP_LEI,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;&amp;&amp;L_OP_GTI,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;&amp;&amp;L_OP_GEI,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;&amp;&amp;L_OP_TEST,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;&amp;&amp;L_OP_TESTSET,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;&amp;&amp;L_OP_CALL,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;&amp;&amp;L_OP_TAILCALL,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;&amp;&amp;L_OP_RETURN,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;&amp;&amp;L_OP_RETURN0,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;&amp;&amp;L_OP_RETURN1,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;&amp;&amp;L_OP_FORLOOP,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;&amp;&amp;L_OP_FORPREP,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;&amp;&amp;L_OP_TFORPREP,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;&amp;&amp;L_OP_TFORCALL,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;&amp;&amp;L_OP_TFORLOOP,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;&amp;&amp;L_OP_SETLIST,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;&amp;&amp;L_OP_CLOSURE,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;&amp;&amp;L_OP_VARARG,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;&amp;&amp;L_OP_VARARGPREP,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;&amp;&amp;L_OP_EXTRAARG</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="alauxlib_8h_html_a732bc5882c4a5da46b236649ab6db47b"><div class="ttname"><a href="lauxlib_8h.html#a732bc5882c4a5da46b236649ab6db47b">luaL_optstring</a></div><div class="ttdeci">#define luaL_optstring(L, n, d)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:139</div></div>
+<div class="ttc" id="aliolib_8c_html_abb5b1c7bfa0e31613ed25ca2bb648381"><div class="ttname"><a href="liolib_8c.html#abb5b1c7bfa0e31613ed25ca2bb648381">l_popen</a></div><div class="ttdeci">#define l_popen(L, c, m)</div><div class="ttdef"><b>Definition:</b> liolib.c:76</div></div>
+<div class="ttc" id="alinit_8c_html_a5321f512e1b3ffd7650178131cfce442"><div class="ttname"><a href="linit_8c.html#a5321f512e1b3ffd7650178131cfce442">loadedlibs</a></div><div class="ttdeci">static const luaL_Reg loadedlibs[]</div><div class="ttdef"><b>Definition:</b> linit.c:42</div></div>
+<div class="ttc" id="aliolib_8c_html_ae697e23c2b1ea23d8935f579aa21200c"><div class="ttname"><a href="liolib_8c.html#ae697e23c2b1ea23d8935f579aa21200c">read_line</a></div><div class="ttdeci">static int read_line(lua_State *L, FILE *f, int chop)</div><div class="ttdef"><b>Definition:</b> liolib.c:519</div></div>
+<div class="ttc" id="alib22_8c_html_ac6e2474849509cf13bef9e6e66ef9a89"><div class="ttname"><a href="lib22_8c.html#ac6e2474849509cf13bef9e6e66ef9a89">luaopen_lib2</a></div><div class="ttdeci">LUAMOD_API int luaopen_lib2(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib22.c:17</div></div>
+<div class="ttc" id="alua_8h_html_a47854189a679002ed743ebbcb30b1b26"><div class="ttname"><a href="lua_8h.html#a47854189a679002ed743ebbcb30b1b26">lua_pushliteral</a></div><div class="ttdeci">#define lua_pushliteral(L, s)</div><div class="ttdef"><b>Definition:</b> lua.h:381</div></div>
+<div class="ttc" id="alapi_8c_html_af680e24129c0e021b4fbb7700cf185dc"><div class="ttname"><a href="lapi_8c.html#af680e24129c0e021b4fbb7700cf185dc">lua_rotate</a></div><div class="ttdeci">LUA_API void lua_rotate(lua_State *L, int idx, int n)</div><div class="ttdef"><b>Definition:</b> lapi.c:217</div></div>
+<div class="ttc" id="albaselib_8c_html_ae99bbf706d0fcfb0c1c7afbe3c4de382"><div class="ttname"><a href="lbaselib_8c.html#ae99bbf706d0fcfb0c1c7afbe3c4de382">luaopen_base</a></div><div class="ttdeci">LUAMOD_API int luaopen_base(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lbaselib.c:515</div></div>
+<div class="ttc" id="alauxlib_8h_html_a5978f5fda715bd80e845df1e16ad7780"><div class="ttname"><a href="lauxlib_8h.html#a5978f5fda715bd80e845df1e16ad7780">lua_assert</a></div><div class="ttdeci">#define lua_assert(c)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:169</div></div>
+<div class="ttc" id="aliolib_8c_html_a6735c0513432f83bfa1b88b056ab379b"><div class="ttname"><a href="liolib_8c.html#a6735c0513432f83bfa1b88b056ab379b">read_chars</a></div><div class="ttdeci">static int read_chars(lua_State *L, FILE *f, size_t n)</div><div class="ttdef"><b>Definition:</b> liolib.c:553</div></div>
+<div class="ttc" id="altests_8h_html_af360ad37a770dfdc29291a99c398f42d"><div class="ttname"><a href="ltests_8h.html#af360ad37a770dfdc29291a99c398f42d">LUAL_BUFFERSIZE</a></div><div class="ttdeci">#define LUAL_BUFFERSIZE</div><div class="ttdef"><b>Definition:</b> ltests.h:117</div></div>
+<div class="ttc" id="aliolib_8c_html_a7b8451d8d8fcbbe8f259375da540d12f"><div class="ttname"><a href="liolib_8c.html#a7b8451d8d8fcbbe8f259375da540d12f">io_noclose</a></div><div class="ttdeci">static int io_noclose(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:796</div></div>
+<div class="ttc" id="aliolib_8c_html_ad45f522bd561c05889799a66d9ffdb33"><div class="ttname"><a href="liolib_8c.html#ad45f522bd561c05889799a66d9ffdb33">f_flush</a></div><div class="ttdeci">static int f_flush(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:732</div></div>
+<div class="ttc" id="aliolib_8c_html_ac37d80ee2cc364b4adafcb6f7c20f28b"><div class="ttname"><a href="liolib_8c.html#ac37d80ee2cc364b4adafcb6f7c20f28b">io_readline</a></div><div class="ttdeci">static int io_readline(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:629</div></div>
+<div class="ttc" id="aliolib_8c_html_a3c1a27aacf1dd33edffa2422da638d0f"><div class="ttname"><a href="liolib_8c.html#a3c1a27aacf1dd33edffa2422da638d0f">IO_INPUT</a></div><div class="ttdeci">#define IO_INPUT</div><div class="ttdef"><b>Definition:</b> liolib.c:151</div></div>
+<div class="ttc" id="alapi_8c_html_aecf388efaede9d97581335998dfa243b"><div class="ttname"><a href="lapi_8c.html#aecf388efaede9d97581335998dfa243b">lua_setglobal</a></div><div class="ttdeci">LUA_API void lua_setglobal(lua_State *L, const char *name)</div><div class="ttdef"><b>Definition:</b> lapi.c:823</div></div>
+<div class="ttc" id="aluaconf_8h_html_ae3594e990592ab0bf7243dad64c76d2a"><div class="ttname"><a href="luaconf_8h.html#ae3594e990592ab0bf7243dad64c76d2a">LUAI_UACNUMBER</a></div><div class="ttdeci">#define LUAI_UACNUMBER</div><div class="ttdef"><b>Definition:</b> luaconf.h:458</div></div>
+<div class="ttc" id="alualib_8h_html_aa9da6ee4401c3ea9591a60ae5514a4dd"><div class="ttname"><a href="lualib_8h.html#aa9da6ee4401c3ea9591a60ae5514a4dd">LUA_TABLIBNAME</a></div><div class="ttdeci">#define LUA_TABLIBNAME</div><div class="ttdef"><b>Definition:</b> lualib.h:23</div></div>
+<div class="ttc" id="aliolib_8c_html_a8cc0b2b08409fb97e5cc80a0caf9b5fd"><div class="ttname"><a href="liolib_8c.html#a8cc0b2b08409fb97e5cc80a0caf9b5fd">io_popen</a></div><div class="ttdeci">static int io_popen(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:290</div></div>
+<div class="ttc" id="aliolib_8c_html_aa7d559e7d43a6133ec495d6b4e5d68f2"><div class="ttname"><a href="liolib_8c.html#aa7d559e7d43a6133ec495d6b4e5d68f2">f_setvbuf</a></div><div class="ttdeci">static int f_setvbuf(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:715</div></div>
+<div class="ttc" id="alua_8h_html_ac813fc3bc1886ba17c363d5b4c6e7ef1"><div class="ttname"><a href="lua_8h.html#ac813fc3bc1886ba17c363d5b4c6e7ef1">lua_tostring</a></div><div class="ttdeci">#define lua_tostring(L, i)</div><div class="ttdef"><b>Definition:</b> lua.h:386</div></div>
+<div class="ttc" id="alua_8h_html_ad0180b89de8a4425cb2a1a3e3f793aa5"><div class="ttname"><a href="lua_8h.html#ad0180b89de8a4425cb2a1a3e3f793aa5">LUA_MINSTACK</a></div><div class="ttdeci">#define LUA_MINSTACK</div><div class="ttdef"><b>Definition:</b> lua.h:80</div></div>
+<div class="ttc" id="aliolib_8c_html_ada35daf906cc262cc6944cad92b93ac3"><div class="ttname"><a href="liolib_8c.html#ada35daf906cc262cc6944cad92b93ac3">io_write</a></div><div class="ttdeci">static int io_write(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:684</div></div>
+<div class="ttc" id="aliolib_8c_html_a57c6c258a611b738f0ef34584ca6e7ab"><div class="ttname"><a href="liolib_8c.html#a57c6c258a611b738f0ef34584ca6e7ab">newfile</a></div><div class="ttdeci">static LStream * newfile(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:253</div></div>
+<div class="ttc" id="alualib_8h_html_af63b59938ae7be8ad222033217b99775"><div class="ttname"><a href="lualib_8h.html#af63b59938ae7be8ad222033217b99775">luaopen_utf8</a></div><div class="ttdeci">LUAMOD_API int() luaopen_utf8(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lutf8lib.c:283</div></div>
+<div class="ttc" id="alapi_8c_html_a771d300f2e64b2197d1df9bf31660ebf"><div class="ttname"><a href="lapi_8c.html#a771d300f2e64b2197d1df9bf31660ebf">lua_pushstring</a></div><div class="ttdeci">LUA_API const char * lua_pushstring(lua_State *L, const char *s)</div><div class="ttdef"><b>Definition:</b> lapi.c:514</div></div>
+<div class="ttc" id="alauxlib_8h_html_ad9917d22c79651fdd73d42c146b5056f"><div class="ttname"><a href="lauxlib_8h.html#ad9917d22c79651fdd73d42c146b5056f">luaL_checkstring</a></div><div class="ttdeci">#define luaL_checkstring(L, n)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:138</div></div>
+<div class="ttc" id="aliolib_8c_html_a48a16089fed2e802a76635a3f8bfe8e3"><div class="ttname"><a href="liolib_8c.html#a48a16089fed2e802a76635a3f8bfe8e3">read_all</a></div><div class="ttdeci">static void read_all(lua_State *L, FILE *f)</div><div class="ttdef"><b>Definition:</b> liolib.c:540</div></div>
+<div class="ttc" id="alua_8h_html_a09daca42852c6356e4b415c46eba5955"><div class="ttname"><a href="lua_8h.html#a09daca42852c6356e4b415c46eba5955">lua_replace</a></div><div class="ttdeci">#define lua_replace(L, idx)</div><div class="ttdef"><b>Definition:</b> lua.h:393</div></div>
+<div class="ttc" id="alapi_8c_html_a8b47f1b5685c3f8018ba926abb99af24"><div class="ttname"><a href="lapi_8c.html#a8b47f1b5685c3f8018ba926abb99af24">lua_getfield</a></div><div class="ttdeci">LUA_API int lua_getfield(lua_State *L, int idx, const char *k)</div><div class="ttdef"><b>Definition:</b> lapi.c:665</div></div>
+<div class="ttc" id="alauxlib_8c_html_a0830ef75e335f6d7590b0e058f82a5eb"><div class="ttname"><a href="lauxlib_8c.html#a0830ef75e335f6d7590b0e058f82a5eb">luaL_buffinit</a></div><div class="ttdeci">LUALIB_API void luaL_buffinit(lua_State *L, luaL_Buffer *B)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:620</div></div>
+<div class="ttc" id="aliolib_8c_html_ac0ab419b6e0666a091b66d7948fd4e2d"><div class="ttname"><a href="liolib_8c.html#ac0ab419b6e0666a091b66d7948fd4e2d">l_lockfile</a></div><div class="ttdeci">#define l_lockfile(f)</div><div class="ttdef"><b>Definition:</b> liolib.c:103</div></div>
+<div class="ttc" id="alapi_8c_html_adcec46ff05dfee9a3c4c05828b40c213"><div class="ttname"><a href="lapi_8c.html#adcec46ff05dfee9a3c4c05828b40c213">lua_pushinteger</a></div><div class="ttdeci">LUA_API void lua_pushinteger(lua_State *L, lua_Integer n)</div><div class="ttdef"><b>Definition:</b> lapi.c:489</div></div>
+<div class="ttc" id="alauxlib_8h_html_a074d53b3afd2b899d4b986c9643fb41a"><div class="ttname"><a href="lauxlib_8h.html#a074d53b3afd2b899d4b986c9643fb41a">LUA_GNAME</a></div><div class="ttdeci">#define LUA_GNAME</div><div class="ttdef"><b>Definition:</b> lauxlib.h:19</div></div>
+<div class="ttc" id="aliolib_8c_html_af35236400576d70739e09cc6a150b7c8"><div class="ttname"><a href="liolib_8c.html#af35236400576d70739e09cc6a150b7c8">metameth</a></div><div class="ttdeci">static const luaL_Reg metameth[]</div><div class="ttdef"><b>Definition:</b> liolib.c:774</div></div>
+<div class="ttc" id="alualib_8h_html_ac89a67224db2eecc20aded867531e26d"><div class="ttname"><a href="lualib_8h.html#ac89a67224db2eecc20aded867531e26d">LUA_OSLIBNAME</a></div><div class="ttdeci">#define LUA_OSLIBNAME</div><div class="ttdef"><b>Definition:</b> lualib.h:29</div></div>
+<div class="ttc" id="aliolib_8c_html_ac6ca58c960165047c3bf20e9546951b3"><div class="ttname"><a href="liolib_8c.html#ac6ca58c960165047c3bf20e9546951b3">IOPREF_LEN</a></div><div class="ttdeci">#define IOPREF_LEN</div><div class="ttdef"><b>Definition:</b> liolib.c:150</div></div>
+<div class="ttc" id="alauxlib_8h_html_a36f3babeb54bee1ebba63fe4fa94189a"><div class="ttname"><a href="lauxlib_8h.html#a36f3babeb54bee1ebba63fe4fa94189a">LUA_FILEHANDLE</a></div><div class="ttdeci">#define LUA_FILEHANDLE</div><div class="ttdef"><b>Definition:</b> lauxlib.h:233</div></div>
+<div class="ttc" id="alauxlib_8h_html_ad575a4fd1f53fa454b5d9745fedecdc4"><div class="ttname"><a href="lauxlib_8h.html#ad575a4fd1f53fa454b5d9745fedecdc4">luaL_newlibtable</a></div><div class="ttdeci">#define luaL_newlibtable(L, l)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:126</div></div>
+<div class="ttc" id="alua_8h_html_abb8eae2164badeafdb037bc1e03cc822"><div class="ttname"><a href="lua_8h.html#abb8eae2164badeafdb037bc1e03cc822">lua_pop</a></div><div class="ttdeci">#define lua_pop(L, n)</div><div class="ttdef"><b>Definition:</b> lua.h:364</div></div>
+<div class="ttc" id="aliolib_8c_html_addece2406777a40f0f591e3518293932"><div class="ttname"><a href="liolib_8c.html#addece2406777a40f0f591e3518293932">g_read</a></div><div class="ttdeci">static int g_read(lua_State *L, FILE *f, int first)</div><div class="ttdef"><b>Definition:</b> liolib.c:566</div></div>
+<div class="ttc" id="aliolib_8c_html_ab75f5f85c38ee22fc9884f0bd7ef836d"><div class="ttname"><a href="liolib_8c.html#ab75f5f85c38ee22fc9884f0bd7ef836d">nextc</a></div><div class="ttdeci">static int nextc(RN *rn)</div><div class="ttdef"><b>Definition:</b> liolib.c:438</div></div>
+<div class="ttc" id="aliolib_8c_html_ac885ae15fd14fc88058b0b8c1cf2b1d9"><div class="ttname"><a href="liolib_8c.html#ac885ae15fd14fc88058b0b8c1cf2b1d9">io_pclose</a></div><div class="ttdeci">static int io_pclose(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:283</div></div>
+<div class="ttc" id="alauxlib_8c_html_a7a3959469b5643d9ea2313eb11a3946f"><div class="ttname"><a href="lauxlib_8c.html#a7a3959469b5643d9ea2313eb11a3946f">luaL_checkoption</a></div><div class="ttdeci">LUALIB_API int luaL_checkoption(lua_State *L, int arg, const char *def, const char *const lst[])</div><div class="ttdef"><b>Definition:</b> lauxlib.c:360</div></div>
+<div class="ttc" id="aliolib_8c_html_a0a80ad2f9dbb3b7238efae7738bb7569"><div class="ttname"><a href="liolib_8c.html#a0a80ad2f9dbb3b7238efae7738bb7569">createstdfile</a></div><div class="ttdeci">static void createstdfile(lua_State *L, FILE *f, const char *k, const char *fname)</div><div class="ttdef"><b>Definition:</b> liolib.c:805</div></div>
+<div class="ttc" id="astruct_r_n_html_a16fa407d44704913972eebe2960ab323"><div class="ttname"><a href="struct_r_n.html#a16fa407d44704913972eebe2960ab323">RN::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> liolib.c:430</div></div>
+<div class="ttc" id="aliolib_8c_html_a71cbd8e6a0b23499a1aef7e03eedf400"><div class="ttname"><a href="liolib_8c.html#a71cbd8e6a0b23499a1aef7e03eedf400">MAXARGLINE</a></div><div class="ttdeci">#define MAXARGLINE</div><div class="ttdef"><b>Definition:</b> liolib.c:352</div></div>
+<div class="ttc" id="alauxlib_8c_html_a79405166c5a94624ebe0427e6b0c07e0"><div class="ttname"><a href="lauxlib_8c.html#a79405166c5a94624ebe0427e6b0c07e0">luaL_checklstring</a></div><div class="ttdeci">LUALIB_API const char * luaL_checklstring(lua_State *L, int arg, size_t *len)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:402</div></div>
+<div class="ttc" id="alapi_8c_html_a161e2baf3d7a6a84499f6a9010cf12c8"><div class="ttname"><a href="lapi_8c.html#a161e2baf3d7a6a84499f6a9010cf12c8">lua_rawlen</a></div><div class="ttdeci">LUA_API lua_Unsigned lua_rawlen(lua_State *L, int idx)</div><div class="ttdef"><b>Definition:</b> lapi.c:402</div></div>
+<div class="ttc" id="alua_8h_html_af51702bb75a31bb4a279953ee386d533"><div class="ttname"><a href="lua_8h.html#af51702bb75a31bb4a279953ee386d533">lua_isnoneornil</a></div><div class="ttdeci">#define lua_isnoneornil(L, n)</div><div class="ttdef"><b>Definition:</b> lua.h:379</div></div>
+<div class="ttc" id="aliolib_8c_html_afa9a1643bfb6b1928c256f818d8ee8d4"><div class="ttname"><a href="liolib_8c.html#afa9a1643bfb6b1928c256f818d8ee8d4">l_ftell</a></div><div class="ttdeci">#define l_ftell(f)</div><div class="ttdef"><b>Definition:</b> liolib.c:138</div></div>
+<div class="ttc" id="astructlua_l___stream_html"><div class="ttname"><a href="structlua_l___stream.html">luaL_Stream</a></div><div class="ttdef"><b>Definition:</b> lauxlib.h:236</div></div>
+<div class="ttc" id="alapi_8c_html_a652b273947f0656686f998d8e90cd3ea"><div class="ttname"><a href="lapi_8c.html#a652b273947f0656686f998d8e90cd3ea">lua_type</a></div><div class="ttdeci">LUA_API int lua_type(lua_State *L, int idx)</div><div class="ttdef"><b>Definition:</b> lapi.c:260</div></div>
+<div class="ttc" id="alib1_8c_html_ad8a3078ea763354a67decde1bca6bc6d"><div class="ttname"><a href="lib1_8c.html#ad8a3078ea763354a67decde1bca6bc6d">luaopen_lib1_sub</a></div><div class="ttdeci">LUAMOD_API int luaopen_lib1_sub(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib1.c:38</div></div>
+<div class="ttc" id="aloadlib_8c_html_ab732e1ec253c9b8dc0c2ce4d74cb0083"><div class="ttname"><a href="loadlib_8c.html#ab732e1ec253c9b8dc0c2ce4d74cb0083">luaopen_package</a></div><div class="ttdeci">LUAMOD_API int luaopen_package(lua_State *L)</div><div class="ttdef"><b>Definition:</b> loadlib.c:736</div></div>
+<div class="ttc" id="almathlib_8c_html_a78cbff06fd4d59cf3d7525fa6cc196ba"><div class="ttname"><a href="lmathlib_8c.html#a78cbff06fd4d59cf3d7525fa6cc196ba">luaopen_math</a></div><div class="ttdeci">LUAMOD_API int luaopen_math(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lmathlib.c:750</div></div>
+<div class="ttc" id="aliolib_8c_html_a2b331358ffb75b150c9490c2cc78aea2"><div class="ttname"><a href="liolib_8c.html#a2b331358ffb75b150c9490c2cc78aea2">f_close</a></div><div class="ttdeci">static int f_close(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:222</div></div>
+<div class="ttc" id="aliolib_8c_html_a98d71ac135df4047b2f051fcc7a1f40f"><div class="ttname"><a href="liolib_8c.html#a98d71ac135df4047b2f051fcc7a1f40f">L_MAXLENNUM</a></div><div class="ttdeci">#define L_MAXLENNUM</div><div class="ttdef"><b>Definition:</b> liolib.c:422</div></div>
+<div class="ttc" id="aliolib_8c_html_a933df16f547e59062271f306675f599c"><div class="ttname"><a href="liolib_8c.html#a933df16f547e59062271f306675f599c">isclosed</a></div><div class="ttdeci">#define isclosed(p)</div><div class="ttdef"><b>Definition:</b> liolib.c:160</div></div>
+<div class="ttc" id="aliolib_8c_html_a88c73a30c7d135dfb4958b7bfaa90cc7"><div class="ttname"><a href="liolib_8c.html#a88c73a30c7d135dfb4958b7bfaa90cc7">g_write</a></div><div class="ttdeci">static int g_write(lua_State *L, FILE *f, int arg)</div><div class="ttdef"><b>Definition:</b> liolib.c:660</div></div>
+<div class="ttc" id="aldblib_8c_html_ad94d3e2d0ca6d83a904a3ba9aad04f3b"><div class="ttname"><a href="ldblib_8c.html#ad94d3e2d0ca6d83a904a3ba9aad04f3b">luaopen_debug</a></div><div class="ttdeci">LUAMOD_API int luaopen_debug(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ldblib.c:478</div></div>
+<div class="ttc" id="aliolib_8c_html_a4464f89f0151ad432557b0a51258582c"><div class="ttname"><a href="liolib_8c.html#a4464f89f0151ad432557b0a51258582c">io_output</a></div><div class="ttdeci">static int io_output(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:340</div></div>
+<div class="ttc" id="alib21_8c_html_a97a27d66adb4129ac8d5b47e7741d58a"><div class="ttname"><a href="lib21_8c.html#a97a27d66adb4129ac8d5b47e7741d58a">luaopen_lib21</a></div><div class="ttdeci">LUAMOD_API int luaopen_lib21(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib21.c:6</div></div>
+<div class="ttc" id="altablib_8c_html_acfb66f04d8d0ea06cb1c4c059b9e142b"><div class="ttname"><a href="ltablib_8c.html#acfb66f04d8d0ea06cb1c4c059b9e142b">luaopen_table</a></div><div class="ttdeci">LUAMOD_API int luaopen_table(lua_State *L)</div><div class="ttdef"><b>Definition:</b> ltablib.c:424</div></div>
+<div class="ttc" id="aliolib_8c_html_a56a6e062eb06243c32928d1cfefba4f5"><div class="ttname"><a href="liolib_8c.html#a56a6e062eb06243c32928d1cfefba4f5">L_MODEEXT</a></div><div class="ttdeci">#define L_MODEEXT</div><div class="ttdef"><b>Definition:</b> liolib.c:36</div></div>
+<div class="ttc" id="alapi_8c_html_aba53e83eb1fff94b5ed96203bb52d8ae"><div class="ttname"><a href="lapi_8c.html#aba53e83eb1fff94b5ed96203bb52d8ae">lua_isinteger</a></div><div class="ttdeci">LUA_API int lua_isinteger(lua_State *L, int idx)</div><div class="ttdef"><b>Definition:</b> lapi.c:279</div></div>
+<div class="ttc" id="alauxlib_8c_html_a3a1f80033814e2057583a7d24cee23b4"><div class="ttname"><a href="lauxlib_8c.html#a3a1f80033814e2057583a7d24cee23b4">luaL_pushresult</a></div><div class="ttdeci">LUALIB_API void luaL_pushresult(luaL_Buffer *B)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:584</div></div>
+<div class="ttc" id="alauxlib_8c_html_af2ad56ae788ac3a59b4e0e29852ab460"><div class="ttname"><a href="lauxlib_8c.html#af2ad56ae788ac3a59b4e0e29852ab460">luaL_testudata</a></div><div class="ttdeci">LUALIB_API void * luaL_testudata(lua_State *L, int ud, const char *tname)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:330</div></div>
+<div class="ttc" id="alauxlib_8c_html_a86309080a5d45b232bcc240b45d06942"><div class="ttname"><a href="lauxlib_8c.html#a86309080a5d45b232bcc240b45d06942">luaL_fileresult</a></div><div class="ttdeci">LUALIB_API int luaL_fileresult(lua_State *L, int stat, const char *fname)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:245</div></div>
+<div class="ttc" id="alualib_8h_html_a875eb4d5f4d22b844254330b45f02b76"><div class="ttname"><a href="lualib_8h.html#a875eb4d5f4d22b844254330b45f02b76">LUA_LOADLIBNAME</a></div><div class="ttdeci">#define LUA_LOADLIBNAME</div><div class="ttdef"><b>Definition:</b> lualib.h:44</div></div>
+<div class="ttc" id="aliolib_8c_html_a039d3e5509ea3a88809269f400f58ba5"><div class="ttname"><a href="liolib_8c.html#a039d3e5509ea3a88809269f400f58ba5">l_getc</a></div><div class="ttdeci">#define l_getc(f)</div><div class="ttdef"><b>Definition:</b> liolib.c:102</div></div>
+<div class="ttc" id="alua_8h_html"><div class="ttname"><a href="lua_8h.html">lua.h</a></div></div>
+<div class="ttc" id="aliolib_8c_html_a4fb31ed5e0fc117ce51bc6e5391bb789"><div class="ttname"><a href="liolib_8c.html#a4fb31ed5e0fc117ce51bc6e5391bb789">l_unlockfile</a></div><div class="ttdeci">#define l_unlockfile(f)</div><div class="ttdef"><b>Definition:</b> liolib.c:104</div></div>
+<div class="ttc" id="alualib_8h_html_a8548d3b29e4dffa749a4ca4288bec7e3"><div class="ttname"><a href="lualib_8h.html#a8548d3b29e4dffa749a4ca4288bec7e3">LUA_COLIBNAME</a></div><div class="ttdeci">#define LUA_COLIBNAME</div><div class="ttdef"><b>Definition:</b> lualib.h:20</div></div>
+<div class="ttc" id="aliolib_8c_html_a2edb7e84ca2f51dafb5d77b9c81a804c"><div class="ttname"><a href="liolib_8c.html#a2edb7e84ca2f51dafb5d77b9c81a804c">createmeta</a></div><div class="ttdeci">static void createmeta(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:783</div></div>
+<div class="ttc" id="aliolib_8c_html_a7ab70833e31129b3a9d2b49869c72978"><div class="ttname"><a href="liolib_8c.html#a7ab70833e31129b3a9d2b49869c72978">readdigits</a></div><div class="ttdeci">static int readdigits(RN *rn, int hex)</div><div class="ttdef"><b>Definition:</b> liolib.c:464</div></div>
+<div class="ttc" id="alauxlib_8c_html_a2664eb7bcc85bbf6eeded2a81cf09b01"><div class="ttname"><a href="lauxlib_8c.html#a2664eb7bcc85bbf6eeded2a81cf09b01">luaL_newmetatable</a></div><div class="ttdeci">LUALIB_API int luaL_newmetatable(lua_State *L, const char *tname)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:311</div></div>
+<div class="ttc" id="alib1_8c_html_ab6ef220e3370055a772ec72785efa9aa"><div class="ttname"><a href="lib1_8c.html#ab6ef220e3370055a772ec72785efa9aa">onefunction</a></div><div class="ttdeci">LUAMOD_API int onefunction(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib1.c:22</div></div>
+<div class="ttc" id="alib22_8c_html_a51a7df9f6b43b92fb6b4a9d941d762ad"><div class="ttname"><a href="lib22_8c.html#a51a7df9f6b43b92fb6b4a9d941d762ad">funcs</a></div><div class="ttdeci">static const struct luaL_Reg funcs[]</div><div class="ttdef"><b>Definition:</b> lib22.c:11</div></div>
+<div class="ttc" id="alualib_8h_html_abc11555bcb492e59444d8774bd8970d8"><div class="ttname"><a href="lualib_8h.html#abc11555bcb492e59444d8774bd8970d8">LUA_UTF8LIBNAME</a></div><div class="ttdeci">#define LUA_UTF8LIBNAME</div><div class="ttdef"><b>Definition:</b> lualib.h:35</div></div>
+<div class="ttc" id="aliolib_8c_html_a130a4b6b5500c2a2d53c8e4b82db6bac"><div class="ttname"><a href="liolib_8c.html#a130a4b6b5500c2a2d53c8e4b82db6bac">meth</a></div><div class="ttdeci">static const luaL_Reg meth[]</div><div class="ttdef"><b>Definition:</b> liolib.c:759</div></div>
+<div class="ttc" id="alua_8h_html_a1ba55afa0e7f756a4599e86cf46d92e0"><div class="ttname"><a href="lua_8h.html#a1ba55afa0e7f756a4599e86cf46d92e0">lua_insert</a></div><div class="ttdeci">#define lua_insert(L, idx)</div><div class="ttdef"><b>Definition:</b> lua.h:389</div></div>
+<div class="ttc" id="astruct_r_n_html_a4bde0e5bdac9a0c81aca986195a3871c"><div class="ttname"><a href="struct_r_n.html#a4bde0e5bdac9a0c81aca986195a3871c">RN::buff</a></div><div class="ttdeci">char buff[L_MAXLENNUM+1]</div><div class="ttdef"><b>Definition:</b> liolib.c:431</div></div>
+<div class="ttc" id="aliolib_8c_html_a66325940a0248cee288153edb061c0c4"><div class="ttname"><a href="liolib_8c.html#a66325940a0248cee288153edb061c0c4">aux_lines</a></div><div class="ttdeci">static void aux_lines(lua_State *L, int toclose)</div><div class="ttdef"><b>Definition:</b> liolib.c:363</div></div>
+<div class="ttc" id="alua_8h_html_a1365e48377a3b567e9d88423b2a6345c"><div class="ttname"><a href="lua_8h.html#a1365e48377a3b567e9d88423b2a6345c">lua_tointeger</a></div><div class="ttdeci">#define lua_tointeger(L, i)</div><div class="ttdef"><b>Definition:</b> lua.h:362</div></div>
+<div class="ttc" id="alapi_8c_html_a3f2f542ee6728d82e51b1c302f9606df"><div class="ttname"><a href="lapi_8c.html#a3f2f542ee6728d82e51b1c302f9606df">lua_setfield</a></div><div class="ttdeci">LUA_API void lua_setfield(lua_State *L, int idx, const char *k)</div><div class="ttdef"><b>Definition:</b> lapi.c:847</div></div>
+<div class="ttc" id="alapi_8c_html_a142802b91cdd22516b54599f51e101e4"><div class="ttname"><a href="lapi_8c.html#a142802b91cdd22516b54599f51e101e4">lua_pushcclosure</a></div><div class="ttdeci">LUA_API void lua_pushcclosure(lua_State *L, lua_CFunction fn, int n)</div><div class="ttdef"><b>Definition:</b> lapi.c:555</div></div>
+<div class="ttc" id="alualib_8h_html_a4c656e7d665aa72e62976adc701795f9"><div class="ttname"><a href="lualib_8h.html#a4c656e7d665aa72e62976adc701795f9">LUA_DBLIBNAME</a></div><div class="ttdeci">#define LUA_DBLIBNAME</div><div class="ttdef"><b>Definition:</b> lualib.h:41</div></div>
+<div class="ttc" id="aliolib_8c_html_a2d3f245e532f3d582a4ff62bbd567149"><div class="ttname"><a href="liolib_8c.html#a2d3f245e532f3d582a4ff62bbd567149">luaopen_io</a></div><div class="ttdeci">LUAMOD_API int luaopen_io(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:818</div></div>
+<div class="ttc" id="alauxlib_8h_html_aa538485cd28f143fabea2325b9ecd477"><div class="ttname"><a href="lauxlib_8h.html#aa538485cd28f143fabea2325b9ecd477">luaL_checkversion</a></div><div class="ttdeci">#define luaL_checkversion(L)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:46</div></div>
+<div class="ttc" id="aliolib_8c_html_a6a36f72d8b3966c1ebafab8a4791cb6c"><div class="ttname"><a href="liolib_8c.html#a6a36f72d8b3966c1ebafab8a4791cb6c">f_lines</a></div><div class="ttdeci">static int f_lines(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:374</div></div>
+<div class="ttc" id="alinit_8c_html_a975e179a76941267d2fa773a703d6199"><div class="ttname"><a href="linit_8c.html#a975e179a76941267d2fa773a703d6199">luaL_openlibs</a></div><div class="ttdeci">LUALIB_API void luaL_openlibs(lua_State *L)</div><div class="ttdef"><b>Definition:</b> linit.c:57</div></div>
+<div class="ttc" id="astructlua_l___reg_html"><div class="ttname"><a href="structlua_l___reg.html">luaL_Reg</a></div><div class="ttdef"><b>Definition:</b> lauxlib.h:37</div></div>
+<div class="ttc" id="aliolib_8c_html_afdee2306a2ebaf7fd48d13fa65714054"><div class="ttname"><a href="liolib_8c.html#afdee2306a2ebaf7fd48d13fa65714054">LStream</a></div><div class="ttdeci">luaL_Stream LStream</div><div class="ttdef"><b>Definition:</b> liolib.c:155</div></div>
+<div class="ttc" id="astructlua_l___reg_html_a58b99f63b304e5c489b90d812f92cba2"><div class="ttname"><a href="structlua_l___reg.html#a58b99f63b304e5c489b90d812f92cba2">luaL_Reg::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> lauxlib.h:38</div></div>
+<div class="ttc" id="alprefix_8h_html"><div class="ttname"><a href="lprefix_8h.html">lprefix.h</a></div></div>
+<div class="ttc" id="alib21_8c_html_ab456f192d7085cab2b40bbabe4c2349a"><div class="ttname"><a href="lib21_8c.html#ab456f192d7085cab2b40bbabe4c2349a">luaopen_lib2</a></div><div class="ttdeci">int luaopen_lib2(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib2.c:15</div></div>
+<div class="ttc" id="alib22_8c_html_a5b7698eb506b131c904617522bcfd291"><div class="ttname"><a href="lib22_8c.html#a5b7698eb506b131c904617522bcfd291">id</a></div><div class="ttdeci">static int id(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib22.c:4</div></div>
+<div class="ttc" id="alib11_8c_html_a64d19e8f85d9faf4291d67a0f26ff60c"><div class="ttname"><a href="lib11_8c.html#a64d19e8f85d9faf4291d67a0f26ff60c">lib1_export</a></div><div class="ttdeci">int lib1_export(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib1.c:16</div></div>
+<div class="ttc" id="alauxlib_8c_html_a3db3f3a0c7de522b5e494c3ad06186d8"><div class="ttname"><a href="lauxlib_8c.html#a3db3f3a0c7de522b5e494c3ad06186d8">luaL_execresult</a></div><div class="ttdeci">LUALIB_API int luaL_execresult(lua_State *L, int stat)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:285</div></div>
+<div class="ttc" id="aliolib_8c_html_a8fe96dd62a007daad3a18e43dd136a29"><div class="ttname"><a href="liolib_8c.html#a8fe96dd62a007daad3a18e43dd136a29">iolib</a></div><div class="ttdeci">static const luaL_Reg iolib[]</div><div class="ttdef"><b>Definition:</b> liolib.c:740</div></div>
+<div class="ttc" id="alua_8h_html_a7f62ecb240cb38da9c8a53b41fe21ed9"><div class="ttname"><a href="lua_8h.html#a7f62ecb240cb38da9c8a53b41fe21ed9">LUA_TNUMBER</a></div><div class="ttdeci">#define LUA_TNUMBER</div><div class="ttdef"><b>Definition:</b> lua.h:68</div></div>
+<div class="ttc" id="aliolib_8c_html_a693d26c59aa9f6a298ac288cb1a5c38d"><div class="ttname"><a href="liolib_8c.html#a693d26c59aa9f6a298ac288cb1a5c38d">io_fclose</a></div><div class="ttdeci">static int io_fclose(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:246</div></div>
+<div class="ttc" id="alauxlib_8c_html_ac607576dd107a3120cd51948989f1ed2"><div class="ttname"><a href="lauxlib_8c.html#ac607576dd107a3120cd51948989f1ed2">luaL_argerror</a></div><div class="ttdeci">LUALIB_API int luaL_argerror(lua_State *L, int arg, const char *extramsg)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:175</div></div>
+<div class="ttc" id="alib1_8c_html_a5b7698eb506b131c904617522bcfd291"><div class="ttname"><a href="lib1_8c.html#a5b7698eb506b131c904617522bcfd291">id</a></div><div class="ttdeci">static int id(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib1.c:4</div></div>
+<div class="ttc" id="alapi_8c_html_ab190c226d38b289e6ca57683a9d4e0f0"><div class="ttname"><a href="lapi_8c.html#ab190c226d38b289e6ca57683a9d4e0f0">lua_pushfstring</a></div><div class="ttdeci">LUA_API const char * lua_pushfstring(lua_State *L, const char *fmt,...)</div><div class="ttdef"><b>Definition:</b> lapi.c:542</div></div>
+<div class="ttc" id="alauxlib_8c_html_a8ebfe706b773eaaf50283e6583d4642e"><div class="ttname"><a href="lauxlib_8c.html#a8ebfe706b773eaaf50283e6583d4642e">luaL_checkany</a></div><div class="ttdeci">LUALIB_API void luaL_checkany(lua_State *L, int arg)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:396</div></div>
+<div class="ttc" id="aliolib_8c_html_aae942558ff528b4e1a483297c64e6886"><div class="ttname"><a href="liolib_8c.html#aae942558ff528b4e1a483297c64e6886">g_iofile</a></div><div class="ttdeci">static int g_iofile(lua_State *L, const char *f, const char *mode)</div><div class="ttdef"><b>Definition:</b> liolib.c:318</div></div>
+<div class="ttc" id="aliolib_8c_html_a17cd174f91e6d1fdf0de674448dc84f2"><div class="ttname"><a href="liolib_8c.html#a17cd174f91e6d1fdf0de674448dc84f2">aux_close</a></div><div class="ttdeci">static int aux_close(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:214</div></div>
+<div class="ttc" id="aliolib_8c_html_a2ab03e50e416477fb612dc808c6e2951"><div class="ttname"><a href="liolib_8c.html#a2ab03e50e416477fb612dc808c6e2951">l_pclose</a></div><div class="ttdeci">#define l_pclose(L, file)</div><div class="ttdef"><b>Definition:</b> liolib.c:80</div></div>
+<div class="ttc" id="alua_8h_html_a3524c2bbc8fcf847dc083246b62945dd"><div class="ttname"><a href="lua_8h.html#a3524c2bbc8fcf847dc083246b62945dd">LUA_REGISTRYINDEX</a></div><div class="ttdeci">#define LUA_REGISTRYINDEX</div><div class="ttdef"><b>Definition:</b> lua.h:44</div></div>
+<div class="ttc" id="aliolib_8c_html_a5345908bf60e4bd37d768b052ac26ec7"><div class="ttname"><a href="liolib_8c.html#a5345908bf60e4bd37d768b052ac26ec7">read_number</a></div><div class="ttdeci">static int read_number(lua_State *L, FILE *f)</div><div class="ttdef"><b>Definition:</b> liolib.c:477</div></div>
+<div class="ttc" id="alapi_8c_html_a0444ddf13e5618bca969e4b3b47bc0cc"><div class="ttname"><a href="lapi_8c.html#a0444ddf13e5618bca969e4b3b47bc0cc">lua_touserdata</a></div><div class="ttdeci">LUA_API void * lua_touserdata(lua_State *L, int idx)</div><div class="ttdef"><b>Definition:</b> lapi.c:432</div></div>
+<div class="ttc" id="aliolib_8c_html_add5250a74576076467531e4eb8f5f68e"><div class="ttname"><a href="liolib_8c.html#add5250a74576076467531e4eb8f5f68e">f_read</a></div><div class="ttdeci">static int f_read(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:621</div></div>
+<div class="ttc" id="alib1_8c_html_a51a7df9f6b43b92fb6b4a9d941d762ad"><div class="ttname"><a href="lib1_8c.html#a51a7df9f6b43b92fb6b4a9d941d762ad">funcs</a></div><div class="ttdeci">static const struct luaL_Reg funcs[]</div><div class="ttdef"><b>Definition:</b> lib1.c:9</div></div>
+<div class="ttc" id="aliolib_8c_html_a3a596f9304846a90435b75c75c55acda"><div class="ttname"><a href="liolib_8c.html#a3a596f9304846a90435b75c75c55acda">tofile</a></div><div class="ttdeci">static FILE * tofile(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:187</div></div>
+<div class="ttc" id="astructlua_l___buffer_html"><div class="ttname"><a href="structlua_l___buffer.html">luaL_Buffer</a></div><div class="ttdef"><b>Definition:</b> lauxlib.h:182</div></div>
+<div class="ttc" id="aliolib_8c_html_a54d23ecdc47341b1ab23dd572a011efb"><div class="ttname"><a href="liolib_8c.html#a54d23ecdc47341b1ab23dd572a011efb">f_gc</a></div><div class="ttdeci">static int f_gc(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:235</div></div>
+<div class="ttc" id="alauxlib_8h_html_acc49fd35fabb25016f7de3256eb9bc6c"><div class="ttname"><a href="lauxlib_8h.html#acc49fd35fabb25016f7de3256eb9bc6c">luaL_prepbuffer</a></div><div class="ttdeci">#define luaL_prepbuffer(B)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:215</div></div>
+<div class="ttc" id="alauxlib_8h_html_a48ce6cd86a7448e97f258097a7abc44d"><div class="ttname"><a href="lauxlib_8h.html#a48ce6cd86a7448e97f258097a7abc44d">luaL_argcheck</a></div><div class="ttdeci">#define luaL_argcheck(L, cond, arg, extramsg)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:132</div></div>
+<div class="ttc" id="alauxlib_8h_html_a63935c5b4cf5d45930c875f6cc5e1432"><div class="ttname"><a href="lauxlib_8h.html#a63935c5b4cf5d45930c875f6cc5e1432">luaL_addchar</a></div><div class="ttdeci">#define luaL_addchar(B, c)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:198</div></div>
+<div class="ttc" id="alib2_8c_html_a51a7df9f6b43b92fb6b4a9d941d762ad"><div class="ttname"><a href="lib2_8c.html#a51a7df9f6b43b92fb6b4a9d941d762ad">funcs</a></div><div class="ttdeci">static const struct luaL_Reg funcs[]</div><div class="ttdef"><b>Definition:</b> lib2.c:9</div></div>
+<div class="ttc" id="alapi_8c_html_afbb08ecb69421875494105d4de68e5bf"><div class="ttname"><a href="lapi_8c.html#afbb08ecb69421875494105d4de68e5bf">lua_gettop</a></div><div class="ttdeci">LUA_API int lua_gettop(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lapi.c:168</div></div>
+<div class="ttc" id="astructlua___state_html"><div class="ttname"><a href="structlua___state.html">lua_State</a></div><div class="ttdef"><b>Definition:</b> lstate.h:273</div></div>
+<div class="ttc" id="alua_8h_html_a362144baa0cfb14dc38fd21438053d73"><div class="ttname"><a href="lua_8h.html#a362144baa0cfb14dc38fd21438053d73">lua_Integer</a></div><div class="ttdeci">LUA_INTEGER lua_Integer</div><div class="ttdef"><b>Definition:</b> lua.h:94</div></div>
+<div class="ttc" id="alua_8h_html_a86d737d7002e7e94023765397c6eef20"><div class="ttname"><a href="lua_8h.html#a86d737d7002e7e94023765397c6eef20">lua_isnil</a></div><div class="ttdeci">#define lua_isnil(L, n)</div><div class="ttdef"><b>Definition:</b> lua.h:375</div></div>
+<div class="ttc" id="aloslib_8c_html_a03d1c1c58e52032aee542b65a2b1c3ca"><div class="ttname"><a href="loslib_8c.html#a03d1c1c58e52032aee542b65a2b1c3ca">luaopen_os</a></div><div class="ttdeci">LUAMOD_API int luaopen_os(lua_State *L)</div><div class="ttdef"><b>Definition:</b> loslib.c:426</div></div>
+<div class="ttc" id="alapi_8c_html_adaa30f0d34786144c94644039d1d1b6e"><div class="ttname"><a href="lapi_8c.html#adaa30f0d34786144c94644039d1d1b6e">lua_settop</a></div><div class="ttdeci">LUA_API void lua_settop(lua_State *L, int idx)</div><div class="ttdef"><b>Definition:</b> lapi.c:173</div></div>
+<div class="ttc" id="alstrlib_8c_html_ab65aeff75cb100dde75e955c698c83b8"><div class="ttname"><a href="lstrlib_8c.html#ab65aeff75cb100dde75e955c698c83b8">luaopen_string</a></div><div class="ttdeci">LUAMOD_API int luaopen_string(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lstrlib.c:1797</div></div>
+<div class="ttc" id="alauxlib_8h_html"><div class="ttname"><a href="lauxlib_8h.html">lauxlib.h</a></div></div>
+<div class="ttc" id="alualib_8h_html"><div class="ttname"><a href="lualib_8h.html">lualib.h</a></div></div>
+<div class="ttc" id="alapi_8c_html_a56bbb7479265e38da2e2596e6ec25faa"><div class="ttname"><a href="lapi_8c.html#a56bbb7479265e38da2e2596e6ec25faa">lua_pushboolean</a></div><div class="ttdeci">LUA_API void lua_pushboolean(lua_State *L, int b)</div><div class="ttdef"><b>Definition:</b> lapi.c:581</div></div>
+<div class="ttc" id="aluaconf_8h_html_a8d91a1bf1619825be5a0275c36f20216"><div class="ttname"><a href="luaconf_8h.html#a8d91a1bf1619825be5a0275c36f20216">LUA_NUMBER_FMT</a></div><div class="ttdeci">#define LUA_NUMBER_FMT</div><div class="ttdef"><b>Definition:</b> luaconf.h:461</div></div>
+<div class="ttc" id="alapi_8c_html_a602f61a9b583d69dc1c72c8970bd65e8"><div class="ttname"><a href="lapi_8c.html#a602f61a9b583d69dc1c72c8970bd65e8">lua_pushvalue</a></div><div class="ttdeci">LUA_API void lua_pushvalue(lua_State *L, int idx)</div><div class="ttdef"><b>Definition:</b> lapi.c:246</div></div>
+<div class="ttc" id="aluaconf_8h_html_a7a9d650ef5ea12d81160db595fe9f177"><div class="ttname"><a href="luaconf_8h.html#a7a9d650ef5ea12d81160db595fe9f177">LUAI_UACINT</a></div><div class="ttdeci">#define LUAI_UACINT</div><div class="ttdef"><b>Definition:</b> luaconf.h:496</div></div>
+<div class="ttc" id="astruct_r_n_html"><div class="ttname"><a href="struct_r_n.html">RN</a></div><div class="ttdef"><b>Definition:</b> liolib.c:427</div></div>
+<div class="ttc" id="aliolib_8c_html_ab4a969d43dbe0f89e98307e5b421f8a7"><div class="ttname"><a href="liolib_8c.html#ab4a969d43dbe0f89e98307e5b421f8a7">io_open</a></div><div class="ttdeci">static int io_open(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:269</div></div>
+<div class="ttc" id="alualib_8h_html_a18b55f45d0662ae9c460e4607913bbd7"><div class="ttname"><a href="lualib_8h.html#a18b55f45d0662ae9c460e4607913bbd7">LUA_MATHLIBNAME</a></div><div class="ttdeci">#define LUA_MATHLIBNAME</div><div class="ttdef"><b>Definition:</b> lualib.h:38</div></div>
+<div class="ttc" id="aliolib_8c_html_afaec8b8506a424b1b5f342037ae6350a"><div class="ttname"><a href="liolib_8c.html#afaec8b8506a424b1b5f342037ae6350a">f_tostring</a></div><div class="ttdeci">static int f_tostring(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:177</div></div>
+<div class="ttc" id="alib11_8c_html_aff53864675443c919c5a0351a98679f9"><div class="ttname"><a href="lib11_8c.html#aff53864675443c919c5a0351a98679f9">luaopen_lib11</a></div><div class="ttdeci">LUAMOD_API int luaopen_lib11(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib11.c:6</div></div>
+<div class="ttc" id="aliolib_8c_html_a0347de9dda8be02044075c96482eddb3"><div class="ttname"><a href="liolib_8c.html#a0347de9dda8be02044075c96482eddb3">io_tmpfile</a></div><div class="ttdeci">static int io_tmpfile(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:301</div></div>
+<div class="ttc" id="aliolib_8c_html_a827044fde6f2c21ab965ba3d729f6a0f"><div class="ttname"><a href="liolib_8c.html#a827044fde6f2c21ab965ba3d729f6a0f">io_input</a></div><div class="ttdeci">static int io_input(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:335</div></div>
+<div class="ttc" id="alualib_8h_html_aa973f7834b4cbf409e5a2752d91cf2c0"><div class="ttname"><a href="lualib_8h.html#aa973f7834b4cbf409e5a2752d91cf2c0">LUA_STRLIBNAME</a></div><div class="ttdeci">#define LUA_STRLIBNAME</div><div class="ttdef"><b>Definition:</b> lualib.h:32</div></div>
+<div class="ttc" id="aliolib_8c_html_a0cbd6f87dda88adaa6e189c8490319a3"><div class="ttname"><a href="liolib_8c.html#a0cbd6f87dda88adaa6e189c8490319a3">l_seeknum</a></div><div class="ttdeci">#define l_seeknum</div><div class="ttdef"><b>Definition:</b> liolib.c:139</div></div>
+<div class="ttc" id="aliolib_8c_html_ab08031b51605d4ef676ec33a3b96a286"><div class="ttname"><a href="liolib_8c.html#ab08031b51605d4ef676ec33a3b96a286">io_lines</a></div><div class="ttdeci">static int io_lines(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:386</div></div>
+<div class="ttc" id="aliolib_8c_html_ace61fce0bdea311d6d7c2206881165c7"><div class="ttname"><a href="liolib_8c.html#ace61fce0bdea311d6d7c2206881165c7">test_eof</a></div><div class="ttdeci">static int test_eof(lua_State *L, FILE *f)</div><div class="ttdef"><b>Definition:</b> liolib.c:511</div></div>
+<div class="ttc" id="astructlua_l___reg_html_a54aa8f9955870caf78148514e61196ce"><div class="ttname"><a href="structlua_l___reg.html#a54aa8f9955870caf78148514e61196ce">luaL_Reg::func</a></div><div class="ttdeci">lua_CFunction func</div><div class="ttdef"><b>Definition:</b> lauxlib.h:39</div></div>
+<div class="ttc" id="aluaconf_8h_html_a20bcdecbc9221570e70455f767061698"><div class="ttname"><a href="luaconf_8h.html#a20bcdecbc9221570e70455f767061698">lua_getlocaledecpoint</a></div><div class="ttdeci">#define lua_getlocaledecpoint()</div><div class="ttdef"><b>Definition:</b> luaconf.h:659</div></div>
+<div class="ttc" id="alcorolib_8c_html_a8515aa0d6a2e901a5397afd5e4250db2"><div class="ttname"><a href="lcorolib_8c.html#a8515aa0d6a2e901a5397afd5e4250db2">luaopen_coroutine</a></div><div class="ttdeci">LUAMOD_API int luaopen_coroutine(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lcorolib.c:203</div></div>
+<div class="ttc" id="aliolib_8c_html_a62de3640998d6fbb4148ee251244bf85"><div class="ttname"><a href="liolib_8c.html#a62de3640998d6fbb4148ee251244bf85">l_fseek</a></div><div class="ttdeci">#define l_fseek(f, o, w)</div><div class="ttdef"><b>Definition:</b> liolib.c:137</div></div>
+<div class="ttc" id="alauxlib_8c_html_ae695ed340bec54979c499b70d7d29318"><div class="ttname"><a href="lauxlib_8c.html#ae695ed340bec54979c499b70d7d29318">luaL_prepbuffsize</a></div><div class="ttdeci">LUALIB_API char * luaL_prepbuffsize(luaL_Buffer *B, size_t sz)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:565</div></div>
+<div class="ttc" id="aliolib_8c_html_aae48313230e7f773bf495ada1171c506"><div class="ttname"><a href="liolib_8c.html#aae48313230e7f773bf495ada1171c506">IO_OUTPUT</a></div><div class="ttdeci">#define IO_OUTPUT</div><div class="ttdef"><b>Definition:</b> liolib.c:152</div></div>
+<div class="ttc" id="aliolib_8c_html_a2bd80ae170dce6c29d385b71398fd7c2"><div class="ttname"><a href="liolib_8c.html#a2bd80ae170dce6c29d385b71398fd7c2">io_type</a></div><div class="ttdeci">static int io_type(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:163</div></div>
+<div class="ttc" id="alualib_8h_html_a54fc1c91f79390071a7b7fc341c9aac0"><div class="ttname"><a href="lualib_8h.html#a54fc1c91f79390071a7b7fc341c9aac0">LUA_IOLIBNAME</a></div><div class="ttdeci">#define LUA_IOLIBNAME</div><div class="ttdef"><b>Definition:</b> lualib.h:26</div></div>
+<div class="ttc" id="aliolib_8c_html_ace5e1a23cc9e2ffe7ae6cc523e54de73"><div class="ttname"><a href="liolib_8c.html#ace5e1a23cc9e2ffe7ae6cc523e54de73">f_seek</a></div><div class="ttdeci">static int f_seek(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:696</div></div>
+<div class="ttc" id="aliolib_8c_html_a3bccbdacdc9f21f22a603525be1f3699"><div class="ttname"><a href="liolib_8c.html#a3bccbdacdc9f21f22a603525be1f3699">getiofile</a></div><div class="ttdeci">static FILE * getiofile(lua_State *L, const char *findex)</div><div class="ttdef"><b>Definition:</b> liolib.c:308</div></div>
+<div class="ttc" id="aluaconf_8h_html_a8e877216dd2f0cf9a68255b494f82f50"><div class="ttname"><a href="luaconf_8h.html#a8e877216dd2f0cf9a68255b494f82f50">LUAMOD_API</a></div><div class="ttdeci">#define LUAMOD_API</div><div class="ttdef"><b>Definition:</b> luaconf.h:286</div></div>
+<div class="ttc" id="aliolib_8c_html_aa3d5752e1676a0c9559b617972d90360"><div class="ttname"><a href="liolib_8c.html#aa3d5752e1676a0c9559b617972d90360">l_checkmodep</a></div><div class="ttdeci">#define l_checkmodep(m)</div><div class="ttdef"><b>Definition:</b> liolib.c:89</div></div>
+<div class="ttc" id="aluaconf_8h_html_a0147f0a7d04c83b70f691a7549c1e3ed"><div class="ttname"><a href="luaconf_8h.html#a0147f0a7d04c83b70f691a7549c1e3ed">LUA_INTEGER_FMT</a></div><div class="ttdeci">#define LUA_INTEGER_FMT</div><div class="ttdef"><b>Definition:</b> luaconf.h:494</div></div>
+<div class="ttc" id="alauxlib_8c_html_a4cab22d0cb403fa6b94f2542f4303096"><div class="ttname"><a href="lauxlib_8c.html#a4cab22d0cb403fa6b94f2542f4303096">luaL_setfuncs</a></div><div class="ttdeci">LUALIB_API void luaL_setfuncs(lua_State *L, const luaL_Reg *l, int nup)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:916</div></div>
+<div class="ttc" id="alauxlib_8c_html_ab10ff110a5ba19b4385947de7834ee3c"><div class="ttname"><a href="lauxlib_8c.html#ab10ff110a5ba19b4385947de7834ee3c">luaL_optinteger</a></div><div class="ttdeci">LUALIB_API lua_Integer luaL_optinteger(lua_State *L, int arg, lua_Integer def)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:452</div></div>
+<div class="ttc" id="astruct_r_n_html_a9d7b56aab73d879bea32047ccef65c19"><div class="ttname"><a href="struct_r_n.html#a9d7b56aab73d879bea32047ccef65c19">RN::c</a></div><div class="ttdeci">int c</div><div class="ttdef"><b>Definition:</b> liolib.c:429</div></div>
+<div class="ttc" id="aljumptab_8h_html_a702a7a7ef2c839cf996469121c2086b0"><div class="ttname"><a href="ljumptab_8h.html#a702a7a7ef2c839cf996469121c2086b0">disptab</a></div><div class="ttdeci">static const void *const disptab[NUM_OPCODES]</div><div class="ttdef"><b>Definition:</b> ljumptab.h:19</div></div>
+<div class="ttc" id="alib1_8c_html_a2e31d55777c7f5f306ab4252803af836"><div class="ttname"><a href="lib1_8c.html#a2e31d55777c7f5f306ab4252803af836">lib1_export</a></div><div class="ttdeci">LUAMOD_API int lib1_export(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib1.c:16</div></div>
+<div class="ttc" id="alopcodes_8h_html_a1fb469ba81540d3314cfbe37c675ba20"><div class="ttname"><a href="lopcodes_8h.html#a1fb469ba81540d3314cfbe37c675ba20">NUM_OPCODES</a></div><div class="ttdeci">#define NUM_OPCODES</div><div class="ttdef"><b>Definition:</b> lopcodes.h:312</div></div>
+<div class="ttc" id="alauxlib_8c_html_a7c46517055e0e8cb25e61b959709083a"><div class="ttname"><a href="lauxlib_8c.html#a7c46517055e0e8cb25e61b959709083a">luaL_checkstack</a></div><div class="ttdeci">LUALIB_API void luaL_checkstack(lua_State *L, int space, const char *msg)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:380</div></div>
+<div class="ttc" id="alua_8h_html_a3237a0507d51d772dadd4c560a75af17"><div class="ttname"><a href="lua_8h.html#a3237a0507d51d772dadd4c560a75af17">lua_tonumber</a></div><div class="ttdeci">#define lua_tonumber(L, i)</div><div class="ttdef"><b>Definition:</b> lua.h:361</div></div>
+<div class="ttc" id="alauxlib_8h_html_a5088ff720ec66200d83eb78467b77239"><div class="ttname"><a href="lauxlib_8h.html#a5088ff720ec66200d83eb78467b77239">luaL_newlib</a></div><div class="ttdeci">#define luaL_newlib(L, l)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:129</div></div>
+<div class="ttc" id="alauxlib_8c_html_a6c51d83d29244779392551388913e08a"><div class="ttname"><a href="lauxlib_8c.html#a6c51d83d29244779392551388913e08a">luaL_error</a></div><div class="ttdeci">LUALIB_API int luaL_error(lua_State *L, const char *fmt,...)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:234</div></div>
+<div class="ttc" id="alib2_8c_html_a5b7698eb506b131c904617522bcfd291"><div class="ttname"><a href="lib2_8c.html#a5b7698eb506b131c904617522bcfd291">id</a></div><div class="ttdeci">static int id(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib2.c:4</div></div>
+<div class="ttc" id="alauxlib_8c_html_a3cb8205f86c838d8f82b7d2360b1b0f4"><div class="ttname"><a href="lauxlib_8c.html#a3cb8205f86c838d8f82b7d2360b1b0f4">luaL_requiref</a></div><div class="ttdeci">LUALIB_API void luaL_requiref(lua_State *L, const char *modname, lua_CFunction openf, int glb)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:957</div></div>
+<div class="ttc" id="alua_8h_html_ad054300429f1094d3692313abc733ddf"><div class="ttname"><a href="lua_8h.html#ad054300429f1094d3692313abc733ddf">lua_isnone</a></div><div class="ttdeci">#define lua_isnone(L, n)</div><div class="ttdef"><b>Definition:</b> lua.h:378</div></div>
+<div class="ttc" id="alapi_8c_html_a9c09a58b86c71e997d7ccabb67f18c12"><div class="ttname"><a href="lapi_8c.html#a9c09a58b86c71e997d7ccabb67f18c12">lua_newuserdatauv</a></div><div class="ttdeci">LUA_API void * lua_newuserdatauv(lua_State *L, size_t size, int nuvalue)</div><div class="ttdef"><b>Definition:</b> lapi.c:1318</div></div>
+<div class="ttc" id="alauxlib_8c_html_aa15bea412c49bfdee1f3dbff096ce7d2"><div class="ttname"><a href="lauxlib_8c.html#aa15bea412c49bfdee1f3dbff096ce7d2">luaL_checkinteger</a></div><div class="ttdeci">LUALIB_API lua_Integer luaL_checkinteger(lua_State *L, int arg)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:442</div></div>
+<div class="ttc" id="alapi_8c_html_ab9c2fb9e2b2c7dad7474dd4b6f1bbcd0"><div class="ttname"><a href="lapi_8c.html#ab9c2fb9e2b2c7dad7474dd4b6f1bbcd0">lua_stringtonumber</a></div><div class="ttdeci">LUA_API size_t lua_stringtonumber(lua_State *L, const char *s)</div><div class="ttdef"><b>Definition:</b> lapi.c:347</div></div>
+<div class="ttc" id="alua_8h_html_a878b7e392e78661a374cf1c3073029b9"><div class="ttname"><a href="lua_8h.html#a878b7e392e78661a374cf1c3073029b9">lua_CFunction</a></div><div class="ttdeci">int(* lua_CFunction)(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lua.h:106</div></div>
+<div class="ttc" id="alapi_8c_html_a1b4cd0d80f51e5545a97ca6c28c03c50"><div class="ttname"><a href="lapi_8c.html#a1b4cd0d80f51e5545a97ca6c28c03c50">lua_pushnil</a></div><div class="ttdeci">LUA_API void lua_pushnil(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lapi.c:473</div></div>
+<div class="ttc" id="alapi_8c_html_a444aee9aa56b0b06175ee3c7bcf7927c"><div class="ttname"><a href="lapi_8c.html#a444aee9aa56b0b06175ee3c7bcf7927c">lua_toboolean</a></div><div class="ttdeci">LUA_API int lua_toboolean(lua_State *L, int idx)</div><div class="ttdef"><b>Definition:</b> lapi.c:375</div></div>
+<div class="ttc" id="aliolib_8c_html_a91ec9c6fa0ef33085f29a15532ac80a7"><div class="ttname"><a href="liolib_8c.html#a91ec9c6fa0ef33085f29a15532ac80a7">opencheck</a></div><div class="ttdeci">static void opencheck(lua_State *L, const char *fname, const char *mode)</div><div class="ttdef"><b>Definition:</b> liolib.c:261</div></div>
+<div class="ttc" id="aliolib_8c_html_a2f93672e01db50e1e5361f5f01c71bd6"><div class="ttname"><a href="liolib_8c.html#a2f93672e01db50e1e5361f5f01c71bd6">io_flush</a></div><div class="ttdeci">static int io_flush(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:727</div></div>
+<div class="ttc" id="alua_8h_html_ac3aa6665c25070f282c9827ec919fe6a"><div class="ttname"><a href="lua_8h.html#ac3aa6665c25070f282c9827ec919fe6a">lua_upvalueindex</a></div><div class="ttdeci">#define lua_upvalueindex(i)</div><div class="ttdef"><b>Definition:</b> lua.h:45</div></div>
+<div class="ttc" id="astructlua_l___stream_html_a50fc81b2c6481ab7768e41bdd3793bab"><div class="ttname"><a href="structlua_l___stream.html#a50fc81b2c6481ab7768e41bdd3793bab">luaL_Stream::f</a></div><div class="ttdeci">FILE * f</div><div class="ttdef"><b>Definition:</b> lauxlib.h:237</div></div>
+<div class="ttc" id="aliolib_8c_html_a45307aa59a628966c6ea270e9b476d9a"><div class="ttname"><a href="liolib_8c.html#a45307aa59a628966c6ea270e9b476d9a">io_read</a></div><div class="ttdeci">static int io_read(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:616</div></div>
+<div class="ttc" id="aliolib_8c_html_aa4a3ca333e58733b833a0395c5742fc2"><div class="ttname"><a href="liolib_8c.html#aa4a3ca333e58733b833a0395c5742fc2">tolstream</a></div><div class="ttdeci">#define tolstream(L)</div><div class="ttdef"><b>Definition:</b> liolib.c:158</div></div>
+<div class="ttc" id="astructlua_l___stream_html_a98731a1b0b1e28336d7206798895e62f"><div class="ttname"><a href="structlua_l___stream.html#a98731a1b0b1e28336d7206798895e62f">luaL_Stream::closef</a></div><div class="ttdeci">lua_CFunction closef</div><div class="ttdef"><b>Definition:</b> lauxlib.h:238</div></div>
+<div class="ttc" id="alauxlib_8h_html_a7c0adb7401e0be1a843946cee0556684"><div class="ttname"><a href="lauxlib_8h.html#a7c0adb7401e0be1a843946cee0556684">luaL_addsize</a></div><div class="ttdeci">#define luaL_addsize(B, s)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:202</div></div>
+<div class="ttc" id="alib2_8c_html_ac6e2474849509cf13bef9e6e66ef9a89"><div class="ttname"><a href="lib2_8c.html#ac6e2474849509cf13bef9e6e66ef9a89">luaopen_lib2</a></div><div class="ttdeci">LUAMOD_API int luaopen_lib2(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib2.c:15</div></div>
+<div class="ttc" id="alauxlib_8h_html_a8666135f7a1412f5eaa14857aec279f0"><div class="ttname"><a href="lauxlib_8h.html#a8666135f7a1412f5eaa14857aec279f0">luaL_pushfail</a></div><div class="ttdeci">#define luaL_pushfail(L)</div><div class="ttdef"><b>Definition:</b> lauxlib.h:157</div></div>
+<div class="ttc" id="aluaconf_8h_html_a373d5a572c4c65a5f35a6e4ee9293c95"><div class="ttname"><a href="luaconf_8h.html#a373d5a572c4c65a5f35a6e4ee9293c95">LUALIB_API</a></div><div class="ttdeci">#define LUALIB_API</div><div class="ttdef"><b>Definition:</b> luaconf.h:285</div></div>
+<div class="ttc" id="aliolib_8c_html_adba67ef94aaa532d9224ca04f8126ac2"><div class="ttname"><a href="liolib_8c.html#adba67ef94aaa532d9224ca04f8126ac2">f_write</a></div><div class="ttdeci">static int f_write(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:689</div></div>
+<div class="ttc" id="aliolib_8c_html_a5c7dc3feb7edf50432b742767d4748f4"><div class="ttname"><a href="liolib_8c.html#a5c7dc3feb7edf50432b742767d4748f4">test2</a></div><div class="ttdeci">static int test2(RN *rn, const char *set)</div><div class="ttdef"><b>Definition:</b> liolib.c:454</div></div>
+<div class="ttc" id="aliolib_8c_html_a1c6f8e04184b0f7939e45e24d2d7ef8a"><div class="ttname"><a href="liolib_8c.html#a1c6f8e04184b0f7939e45e24d2d7ef8a">io_close</a></div><div class="ttdeci">static int io_close(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:228</div></div>
+<div class="ttc" id="aliolib_8c_html_ab456fc51383d039a5a24c702060aba8e"><div class="ttname"><a href="liolib_8c.html#ab456fc51383d039a5a24c702060aba8e">newprefile</a></div><div class="ttdeci">static LStream * newprefile(lua_State *L)</div><div class="ttdef"><b>Definition:</b> liolib.c:201</div></div>
+<div class="ttc" id="alauxlib_8c_html_ae3907fc11c3e2af69f00ab4a37872cae"><div class="ttname"><a href="lauxlib_8c.html#ae3907fc11c3e2af69f00ab4a37872cae">luaL_setmetatable</a></div><div class="ttdeci">LUALIB_API void luaL_setmetatable(lua_State *L, const char *tname)</div><div class="ttdef"><b>Definition:</b> lauxlib.c:324</div></div>
+<div class="ttc" id="aliolib_8c_html_ab187d8eb3cf2b49793e4020547525905"><div class="ttname"><a href="liolib_8c.html#ab187d8eb3cf2b49793e4020547525905">l_checkmode</a></div><div class="ttdeci">static int l_checkmode(const char *mode)</div><div class="ttdef"><b>Definition:</b> liolib.c:40</div></div>
+<div class="ttc" id="alib1_8c_html_a7efe4b0c1877d4d10076ec9407b4e4dc"><div class="ttname"><a href="lib1_8c.html#a7efe4b0c1877d4d10076ec9407b4e4dc">anotherfunc</a></div><div class="ttdeci">LUAMOD_API int anotherfunc(lua_State *L)</div><div class="ttdef"><b>Definition:</b> lib1.c:30</div></div>
+<div class="ttc" id="astruct_r_n_html_a128e9ea8208c8492733ed6e8fe80f206"><div class="ttname"><a href="struct_r_n.html#a128e9ea8208c8492733ed6e8fe80f206">RN::f</a></div><div class="ttdeci">FILE * f</div><div class="ttdef"><b>Definition:</b> liolib.c:428</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

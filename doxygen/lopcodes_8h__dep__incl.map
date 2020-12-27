@@ -1,0 +1,12 @@
+<map id="lopcodes.h" name="lopcodes.h">
+<area shape="rect" id="node1" title=" " alt="" coords="248,5,333,32"/>
+<area shape="rect" id="node2" href="$lcode_8h.html" title=" " alt="" coords="224,80,288,107"/>
+<area shape="rect" id="node3" href="$lcode_8c.html" title=" " alt="" coords="179,155,243,181"/>
+<area shape="rect" id="node5" href="$ldebug_8c.html" title=" " alt="" coords="357,155,427,181"/>
+<area shape="rect" id="node6" href="$lparser_8c.html" title=" " alt="" coords="83,155,155,181"/>
+<area shape="rect" id="node7" href="$ltests_8c.html" title=" " alt="" coords="267,155,333,181"/>
+<area shape="rect" id="node8" href="$ldo_8c.html" title=" " alt="" coords="491,80,541,107"/>
+<area shape="rect" id="node9" href="$lopcodes_8c.html" title=" " alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node10" href="$lvm_8c.html" title=" " alt="" coords="414,80,466,107"/>
+<area shape="rect" id="node4" href="$onelua_8c.html" title=" " alt="" coords="266,229,337,256"/>
+</map>

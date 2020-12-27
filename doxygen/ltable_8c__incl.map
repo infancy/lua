@@ -1,0 +1,23 @@
+<map id="ltable.c" name="ltable.c">
+<area shape="rect" id="node1" title=" " alt="" coords="521,5,585,32"/>
+<area shape="rect" id="node2" href="$lprefix_8h.html" title=" " alt="" coords="5,80,72,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="97,80,159,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="349,677,413,704"/>
+<area shape="rect" id="node5" href="$lua_8h.html" title=" " alt="" coords="607,528,657,555"/>
+<area shape="rect" id="node9" href="$ldebug_8h.html" title=" " alt="" coords="518,155,589,181"/>
+<area shape="rect" id="node10" href="$lstate_8h.html" title=" " alt="" coords="569,229,634,256"/>
+<area shape="rect" id="node11" href="$lobject_8h.html" title=" " alt="" coords="681,379,751,405"/>
+<area shape="rect" id="node15" href="$lmem_8h.html" title=" " alt="" coords="349,379,414,405"/>
+<area shape="rect" id="node17" href="$ldo_8h.html" title=" " alt="" coords="392,155,443,181"/>
+<area shape="rect" id="node18" href="$lgc_8h.html" title=" " alt="" coords="816,155,867,181"/>
+<area shape="rect" id="node19" href="$lstring_8h.html" title=" " alt="" coords="745,80,813,107"/>
+<area shape="rect" id="node20" href="$ltable_8h.html" title=" " alt="" coords="693,229,757,256"/>
+<area shape="rect" id="node21" href="$lvm_8h.html" title=" " alt="" coords="397,80,449,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="820,603,889,629"/>
+<area shape="rect" id="node7" title=" " alt="" coords="486,677,554,704"/>
+<area shape="rect" id="node8" href="$luaconf_8h.html" title=" " alt="" coords="520,603,595,629"/>
+<area shape="rect" id="node13" href="$ltm_8h.html" title=" " alt="" coords="464,304,515,331"/>
+<area shape="rect" id="node14" href="$lzio_8h.html" title=" " alt="" coords="285,304,339,331"/>
+<area shape="rect" id="node16" title=" " alt="" coords="539,304,605,331"/>
+<area shape="rect" id="node12" href="$llimits_8h.html" title=" " alt="" coords="437,453,504,480"/>
+</map>
