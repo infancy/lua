@@ -9,7 +9,7 @@ INCLUDE_DIRECTORIES(.)
 
 # remove the lua.c/luac.c from teh all file lists
 SET(LIB_SRC ${ALL_SRC})
-LIST(REMOVE_ITEM LIB_SRC lua.c onelua.c)
+LIST(REMOVE_ITEM LIB_SRC lua.c luac.c onelua.c)
 
 ADD_LIBRARY(lua ${LIB_SRC})
 
@@ -17,5 +17,5 @@ ADD_EXECUTABLE(luaexec lua.c)
 target_link_libraries(luaexec lua)
 set_target_properties(luaexec PROPERTIES OUTPUT_NAME lua)
 
-#add_executable(luac luac.c)
-#target_link_libraries(luac lua)
+add_executable(luac luac.c)
+target_link_libraries(luac lua)
