@@ -13,3 +13,8 @@ testes/libs/all
 
 temp
 lua
+
+.vs
+build
+out
+CppProperties.json
