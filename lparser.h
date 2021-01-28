@@ -69,6 +69,8 @@ typedef struct expdesc
     int f; /* patch list of 'exit when false' */
 } expdesc;
 
+
+
 /* description of active local variable */
 typedef struct Vardesc
 {
@@ -105,6 +107,8 @@ typedef struct Dyndata
     Labellist label; /* list of active labels */
 } Dyndata;
 
+
+
 /* control of blocks */
 struct BlockCnt; /* defined in lparser.c */
 
@@ -118,12 +122,15 @@ typedef struct FuncState
     int pc;                 /* next position to code (equivalent to 'ncode') */
     int lasttarget;         /* 'label' of last 'jump label' */
     int jpc;                /* list of pending jumps to 'pc' */
+
     int nk;                 /* number of elements in 'k' */
     int np;                 /* number of elements in 'p' */
+
     int firstlocal;         /* index of first local var (in Dyndata array) */
     short nlocvars;         /* number of elements in 'f->locvars' */
     lu_byte nactvar;        /* number of active local variables */
     lu_byte nups;           /* number of upvalues */
+
     lu_byte freereg;        /* first free register */
 } FuncState;
 

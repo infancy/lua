@@ -79,6 +79,19 @@ enum OpMode
 /* creates a mask with 'n' 1 bits at position 'p' */
 #define MASK1(n, p) ((~((~(Instruction)0) << (n))) << (p))
 
+/*
+int mask1(size, pos)
+{
+    // e.g. size=2, pos=4
+    int all_1 = ~(Instruction)0; // 11111111
+    int left = all_1 << (size); // 11111100
+    int anti = ~(left);  // 00000011
+    int left2 = anti << pos;   // 00110000
+
+    return left2;
+}
+*/
+
 /* creates a mask with 'n' 0 bits at position 'p' */
 #define MASK0(n, p) (~MASK1(n, p))
 
@@ -158,8 +171,8 @@ enum OpMode
 typedef enum
 {
     /*----------------------------------------------------------------------
-name		args	description
-------------------------------------------------------------------------*/
+    name		args	description
+    ------------------------------------------------------------------------*/
     OP_MOVE,     /*	A B	R(A) := R(B)					*/
     OP_LOADK,    /*	A Bx	R(A) := Kst(Bx)					*/
     OP_LOADKX,   /*	A 	R(A) := Kst(extra arg)				*/

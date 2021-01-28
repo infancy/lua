@@ -48,6 +48,14 @@
     if ((nelems) + 1 > (size))                           \
     ((v) = cast(t*, luaM_growaux_(L, v, &(size), sizeof(t), limit, e)))
 
+/*
+void luaM_grow_vector(lua_State* L, LocVar* v, int nelems, int size, char* e)
+{
+    if ((nelems)+1 > (size))
+        v = cast(LocVar*, luaM_growaux_(L, v, &(size), sizeof(LocVar), 32767, e));
+}
+*/
+
 #define luaM_reallocvector(L, v, oldn, n, t) ((v) = cast(t*, luaM_reallocv(L, v, oldn, n, sizeof(t))))
 
 LUAI_FUNC l_noret luaM_toobig(lua_State* L);

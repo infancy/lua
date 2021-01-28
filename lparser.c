@@ -26,6 +26,8 @@
 #include "lstring.h"
 #include "ltable.h"
 
+#pragma region marco, define
+
 /* maximum number of local variables per function (must be smaller
    than 250, due to the bytecode format) */
 #define MAXVARS 200
@@ -48,6 +50,10 @@ typedef struct BlockCnt
     lu_byte upval;             /* true if some variable in the block is an upvalue */
     lu_byte isloop;            /* true if 'block' is a loop */
 } BlockCnt;
+
+#pragma endregion marco, define
+
+#pragma region aux
 
 /*
 ** prototypes for recursive non-terminal functions
@@ -146,16 +152,23 @@ static void codestring(LexState* ls, expdesc* e, TString* s) { init_exp(e, VK, l
 
 static void checkname(LexState* ls, expdesc* e) { codestring(ls, e, str_checkname(ls)); }
 
+#pragma region localvar
+
+
+
 static int registerlocalvar(LexState* ls, TString* varname)
 {
     FuncState* fs = ls->fs;
     Proto* f = fs->f;
     int oldsize = f->sizelocvars;
+
     luaM_growvector(ls->L, f->locvars, fs->nlocvars, f->sizelocvars, LocVar, SHRT_MAX, "local variables");
     while (oldsize < f->sizelocvars)
         f->locvars[oldsize++].varname = NULL;
+
     f->locvars[fs->nlocvars].varname = varname;
     luaC_objbarrier(ls->L, f, varname);
+
     return fs->nlocvars++;
 }
 
@@ -199,6 +212,11 @@ static void removevars(FuncState* fs, int tolevel)
     while (fs->nactvar > tolevel)
         getlocvar(fs, --fs->nactvar)->endpc = fs->pc;
 }
+
+#pragma endregion localvar
+
+
+#pragma region upvalue
 
 static int searchupvalue(FuncState* fs, TString* name)
 {
@@ -250,6 +268,8 @@ static void markupval(FuncState* fs, int level)
     bl->upval = 1;
 }
 
+#pragma endregion upvalue
+
 /*
   Find variable with given name 'n'. If it is an upvalue, add this
   upvalue into all intermediate functions.
@@ -287,7 +307,9 @@ static void singlevar(LexState* ls, expdesc* var)
 {
     TString* varname = str_checkname(ls);
     FuncState* fs = ls->fs;
+
     singlevaraux(fs, varname, var, 1);
+    
     if (var->k == VVOID)
     { /* global name? */
         expdesc key;
@@ -575,6 +597,12 @@ static void close_func(LexState* ls)
     luaC_checkGC(L);
 }
 
+
+#pragma endregion aux
+
+
+#pragma region grammar rules
+
 /*============================================================*/
 /* GRAMMAR RULES */
 /*============================================================*/
@@ -630,6 +658,10 @@ static void yindex(LexState* ls, expdesc* v)
     luaK_exp2val(ls->fs, v);
     checknext(ls, ']');
 }
+
+#pragma endregion grammar rules
+
+#pragma region Constructors
 
 /*
 ** {======================================================================
@@ -764,6 +796,10 @@ static void constructor(LexState* ls, expdesc* t)
 
 /* }====================================================================== */
 
+#pragma endregion Constructors
+
+#pragma region 
+
 static void parlist(LexState* ls)
 {
     /* parlist -> [ param { ',' param } ] */
@@ -824,14 +860,17 @@ static void body(LexState* ls, expdesc* e, int ismethod, int line)
 static int explist(LexState* ls, expdesc* v)
 {
     /* explist -> expr { ',' expr } */
+
     int n = 1; /* at least one expression */
     expr(ls, v);
+
     while (testnext(ls, ','))
     {
         luaK_exp2nextreg(ls->fs, v);
         expr(ls, v);
         n++;
     }
+
     return n;
 }
 
@@ -886,6 +925,10 @@ static void funcargs(LexState* ls, expdesc* f, int line)
     fs->freereg = base + 1; /* call remove function and arguments and leaves
                             (unless changed) one result */
 }
+
+#pragma endregion 
+
+#pragma region Expression parsing
 
 /*
 ** {======================================================================
@@ -1099,7 +1142,9 @@ static BinOpr subexpr(LexState* ls, expdesc* v, int limit)
 {
     BinOpr op;
     UnOpr uop;
+
     enterlevel(ls);
+
     uop = getunopr(ls->t.token);
     if (uop != OPR_NOUNOPR)
     {
@@ -1110,6 +1155,7 @@ static BinOpr subexpr(LexState* ls, expdesc* v, int limit)
     }
     else
         simpleexp(ls, v);
+
     /* expand while operators have priorities higher than 'limit' */
     op = getbinopr(ls->t.token);
     while (op != OPR_NOBINOPR && priority[op].left > limit)
@@ -1124,13 +1170,19 @@ static BinOpr subexpr(LexState* ls, expdesc* v, int limit)
         luaK_posfix(ls->fs, op, v, &v2, line);
         op = nextop;
     }
+
     leavelevel(ls);
+
     return op; /* return first untreated operator */
 }
 
 static void expr(LexState* ls, expdesc* v) { subexpr(ls, v, 0); }
 
 /* }==================================================================== */
+
+#pragma endregion Expression parsing
+
+#pragma region Rules for Statements
 
 /*
 ** {======================================================================
@@ -1691,7 +1743,11 @@ static void statement(LexState* ls)
     leavelevel(ls);
 }
 
+
 /* }====================================================================== */
+
+
+#pragma endregion Rules for Statements
 
 /*
 ** compiles the main function, which is a regular vararg function with an
